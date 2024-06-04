@@ -112,7 +112,7 @@ $(document).ready(function () {
                     autoAlpha: 1,
                 },
                 {
-                    delay: 2,
+                    delay: 1,
                     clipPath: "inset(0 0 100% 0)",
                     autoAlpha: 0,
                     duration: 0.8,
