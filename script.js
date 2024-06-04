@@ -126,7 +126,7 @@ $(document).ready(function () {
                     autoAlpha: 1,
                     duration: 0.6,
                 },
-                "<0.4"
+                "<0.6"
             )
             .fromTo(toShowSecondary, 
                 {
@@ -134,10 +134,10 @@ $(document).ready(function () {
                 },
                 {
                     height: "auto",
-                    duration: 0.4,
-                    stagger: 0.14
+                    duration: 0.6,
+                    stagger: 0.2
                 },
-                "<0.3"
+                "<0.5"
             )
         })
     }
