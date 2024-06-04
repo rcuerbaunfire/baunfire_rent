@@ -108,11 +108,14 @@ $(document).ready(function () {
             timeline
             .fromTo(toExit, 
                 {
-                    clipPath: "inset(0 0 0 0)"
+                    clipPath: "inset(0 0 0 0)",
+                    autoAlpha: 1,
                 },
                 {
+                    delay: 2,
                     clipPath: "inset(0 0 100% 0)",
-                    duration: 0.6,
+                    autoAlpha: 0,
+                    duration: 0.8,
                 },
             )
             .fromTo(toShowMain, 
@@ -121,7 +124,7 @@ $(document).ready(function () {
                 },
                 {
                     autoAlpha: 1,
-                    duration: 0.4,
+                    duration: 0.6,
                 },
                 "<0.4"
             )
