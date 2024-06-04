@@ -1,0 +1,186 @@
+$color_1: #bebec4;
+$color_2: #4561ec;
+$font-family_1: "Inter", sans-serif;
+
+.owl-carousel.owl-loaded {
+	display: flex;
+}
+
+.owl-stage-outer {
+	width: 100%;
+}
+
+.owl-nav {
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	gap: 20px;
+	right: 0;
+	svg {
+		circle {
+			fill: #4561ec;
+			transition: fill 0.3s ease-in-out;
+		}
+	}
+	.owl-prev.disabled {
+		svg {
+			circle {
+				fill: #7e93fb;
+			}
+		}
+	}
+	.owl-next.disabled {
+		svg {
+			circle {
+				fill: #7e93fb;
+			}
+		}
+	}
+	.owl-prev {
+		padding: 0;
+		background: none;
+		border: none;
+		outline: none;
+		display: flex;
+	}
+	.owl-next {
+		padding: 0;
+		background: none;
+		border: none;
+		outline: none;
+		display: flex;
+	}
+}
+
+.owl-dots {
+	position: absolute;
+	bottom: 0;
+	display: flex;
+}
+
+.owl-nav.disabled {
+	display: none !important;
+}
+
+.tes-items {
+	.owl-stage {
+		display: flex;
+	}
+	.owl-item {
+		display: flex;
+		&:not(.active) {
+			.tes-item {
+				* {
+					color: $color_1;
+				}
+			}
+		}
+	}
+	.owl-dots {
+		gap: 4px;
+		counter-reset: dots;
+		font-family: $font-family_1;
+		font-size: 16px;
+		font-weight: 600;
+		color: $color_2;
+	}
+	.owl-dot {
+		background: none;
+		padding: 0;
+		display: none;
+		&:last-child {
+			display: block;
+			display: flex;
+			gap: 4px;
+			span {
+				&:first-of-type {
+					display: none;
+				}
+			}
+		}
+		&:last-child.active {
+			span {
+				&:first-of-type {
+					display: block;
+				}
+			}
+		}
+	}
+	.owl-dot.active {
+		display: block;
+	}
+}
+
+.sol-items {
+	.owl-stage {
+		display: flex;
+	}
+	.owl-item {
+		display: flex;
+	}
+	.owl-dots {
+		height: 32px;
+		display: flex;
+		align-items: center;
+		width: calc(100% - 182px);
+	}
+	.owl-dot {
+		background: #373839;
+		height: 1px;
+		padding: 0;
+		border: none;
+		flex: 1;
+	}
+	.owl-dot.active {
+		background: #7e93fb;
+		height: 4px;
+	}
+}
+
+.res-items {
+	.owl-stage {
+		display: flex;
+	}
+	.owl-dots {
+		height: 32px;
+		display: flex;
+		align-items: center;
+		width: calc(100% - 182px);
+		width: 100%;
+	}
+	.owl-dot {
+		background: #373839;
+		height: 1px;
+		padding: 0;
+		border: none;
+		flex: 1;
+		background: #adbbff;
+	}
+	.owl-dot.active {
+		background: #7e93fb;
+		height: 4px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.sol-items {
+		.owl-nav {
+			display: none;
+		}
+		.owl-dots {
+			width: 100%;
+		}
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.tes-items {
+		.owl-item {
+			&:last-child {
+				.tes-item {
+					border: none;
+				}
+			}
+		}
+	}
+}
