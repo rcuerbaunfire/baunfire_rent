@@ -200,6 +200,14 @@ code {
 	color: #fff;
 }
 
+.testimonial[data-background="white"] {
+    background-color: white;
+}
+
+.testimonial[data-background="gray"] {
+    background-color: #F4F6FF;
+}
+
 .blog-details code {
 	font-family: "Inter Tight";
 	color: var(--indigo);
