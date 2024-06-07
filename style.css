@@ -81,15 +81,6 @@
   width: calc(100% - 182px);
 }
 
-.res-items .owl-dots,
-.fc-items .owl-dots {
-  width: 100%;
-}
-.res-items .owl-dot,
-.fc-items .owl-dot {
-  background: #adbbff;
-}
-
 .fc-items .owl-dot,
 .res-items .owl-dot,
 .sol-items .owl-dot {
@@ -106,6 +97,15 @@
 .sol-items .owl-dot.active {
   background: #7e93fb;
   height: 4px;
+}
+
+.res-items .owl-dots,
+.fc-items .owl-dots {
+  width: 100%;
+}
+.res-items .owl-dot,
+.fc-items .owl-dot {
+  background: #adbbff;
 }
 
 .tes-items .owl-item:not(.active) .tes-item * {

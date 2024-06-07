@@ -70,17 +70,6 @@
 	}
 }
 
-.res-items,
-.fc-items {
-	.owl-dots {
-		width: 100%;
-	}
-
-	.owl-dot {
-		background: #adbbff;
-	}
-}
-
 .fc-items,
 .res-items,
 .sol-items {
@@ -95,6 +84,17 @@
 			background: #7e93fb;
 			height: 4px;
 		}
+	}
+}
+
+.res-items,
+.fc-items {
+	.owl-dots {
+		width: 100%;
+	}
+
+	.owl-dot {
+		background: #adbbff;
 	}
 }
 
