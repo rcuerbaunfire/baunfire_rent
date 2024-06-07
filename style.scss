@@ -41,80 +41,100 @@
 	display: flex;
 }
 
-.tes-items .owl-stage,
-.tes-items .owl-item,
-.sol-items .owl-stage,
-.sol-items .owl-item,
 .res-items .owl-stage {
 	display: flex;
 }
 
-.sol-items .owl-dots,
-.res-items .owl-dots {
-	height: 32px;
-	display: flex;
-	align-items: center;
-	width: calc(100% - 182px);
+.tes-items,
+.sol-items,
+.fc-items {
+	.owl-stage,
+	.owl-item {
+		display: flex;
+	}
 }
 
-.res-items .owl-dots {
-	width: 100%;
+.res-items,
+.sol-items,
+.fc-items {
+	.owl-dots {
+		height: 32px;
+		display: flex;
+		align-items: center;
+	}
 }
 
-.res-items .owl-dot,
-.sol-items .owl-dot {
-	background: #373839;
-	height: 1px;
-	padding: 0;
-	border: none;
-	flex: 1;
+.sol-items {
+	.owl-dots {
+		width: calc(100% - 182px);
+	}
 }
 
-.res-items .owl-dot {
-	background: #adbbff;
+.res-items,
+.fc-items {
+	.owl-dots {
+		width: 100%;
+	}
+
+	.owl-dot {
+		background: #adbbff;
+	}
 }
 
-.res-items .owl-dot.active,
-.sol-items .owl-dot.active {
-	background: #7e93fb;
-	height: 4px;
+.fc-items,
+.res-items,
+.sol-items {
+	.owl-dot {
+		background: #373839;
+		height: 1px;
+		padding: 0;
+		border: none;
+		flex: 1;
+
+		&.active {
+			background: #7e93fb;
+			height: 4px;
+		}
+	}
 }
 
-.tes-items .owl-item:not(.active) .tes-item * {
-	color: #bebec4;
-}
+.tes-items {
+	.owl-item:not(.active) .tes-item * {
+		color: #bebec4;
+	}
 
-.tes-items .owl-dots {
-	gap: 4px;
-	counter-reset: dots;
-	font-family: Inter, sans-serif;
-	font-size: 16px;
-	font-weight: 600;
-	color: #4561ec;
-}
+	.owl-dots {
+		gap: 4px;
+		counter-reset: dots;
+		font-family: Inter, sans-serif;
+		font-size: 16px;
+		font-weight: 600;
+		color: #4561ec;
+	}
 
-.tes-items .owl-dot {
-	background: none;
-	padding: 0;
-	display: none;
-}
+	.owl-dot {
+		background: none;
+		padding: 0;
+		display: none;
+	}
 
-.tes-items .owl-dot.active,
-.tes-items .owl-dot:last-child {
-	display: block;
-}
+	.owl-dot.active,
+	.owl-dot:last-child {
+		display: block;
+	}
 
-.tes-items .owl-dot:last-child {
-	display: flex;
-	gap: 4px;
-}
+	.owl-dot:last-child {
+		display: flex;
+		gap: 4px;
+	}
 
-.tes-items .owl-dot:last-child span:first-of-type {
-	display: none;
-}
+	.owl-dot:last-child span:first-of-type {
+		display: none;
+	}
 
-.tes-items .owl-dot:last-child.active span:first-of-type {
-	display: block;
+	.owl-dot:last-child.active span:first-of-type {
+		display: block;
+	}
 }
 
 @media only screen and (max-width: 767px) {
@@ -197,6 +217,7 @@ code {
 	line-height: 16px;
 	text-align: left;
 }
+
 @media screen and (max-width: 767px) {
 	.blog-details h3 {
 		font-size: 20px;
