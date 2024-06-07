@@ -46,7 +46,7 @@ $(document).ready(function () {
                         768: { autoWidth: true, margin: 24 },
                     },
                 });
-            } else if (self.hasClass("res-items")) {
+            } else if (self.hasClass("res-items") || self.hasClass("fc-items")) {
                 const mm = gsap.matchMedia();
                 let carouselInstance = null;
 
