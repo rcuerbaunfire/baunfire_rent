@@ -67,4 +67,5 @@
             "quote_style": "best"
         }
     },
+    "liveSassCompile.settings.showOutputWindowOn": "None",
 }

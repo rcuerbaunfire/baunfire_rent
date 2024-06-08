@@ -251,6 +251,6 @@ code {
 .hero .w-richtext h1 {
   margin-top: 0;
 }
-.hero .w-richtext h1:not(:last-child) {
+.hero .w-richtext h1:not(:first-child) {
   margin-bottom: 0;
 }
