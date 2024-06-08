@@ -153,7 +153,7 @@ $(document).ready(function () {
                 const self = $(this);
                 const videoID = self.data("video-id");
 
-                var player = new Vimeo.Player(videoContainer, {
+                var player = new Vimeo.Player(self, {
                     id: videoID,
                     autoplay: true,
                     muted: false
