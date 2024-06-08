@@ -169,7 +169,7 @@ $(document).ready(function () {
             const targetScriptTag = document.getElementsByTagName('script')[1];
             targetScriptTag.parentNode.insertBefore(tag, targetScriptTag);
 
-            tag.onreadystatechange = function () { 
+            tag.onload = function () { 
                 loadVideos();
                 console.log('yey');
             }
