@@ -264,7 +264,7 @@ code {
         transition: opacity 0.4s ease-in-out;
     }
 
-    &.active {
+    &.open {
         gap: 10px;
 
         img,
@@ -273,7 +273,7 @@ code {
         }
 
         .cl-accordion-desc {
-            height: 100%;
+            height: auto;
         }
     }
 }

@@ -256,15 +256,15 @@ code {
   -webkit-transition: opacity 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out;
 }
-.cl-accordion-data.active {
+.cl-accordion-data.open {
   gap: 10px;
 }
-.cl-accordion-data.active img,
-.cl-accordion-data.active .cl-accord-heading {
+.cl-accordion-data.open img,
+.cl-accordion-data.open .cl-accord-heading {
   opacity: 100%;
 }
-.cl-accordion-data.active .cl-accordion-desc {
-  height: 100%;
+.cl-accordion-data.open .cl-accordion-desc {
+  height: auto;
 }
 
 .w-container:before,

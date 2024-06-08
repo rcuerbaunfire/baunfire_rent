@@ -184,8 +184,8 @@ $(document).ready(function () {
             const subSelf = $(this);
             const body = subSelf.find(".cl-accordion-desc");
 
-            if (!subSelf.hasClass("active")) {
-                subSelf.addClass("active");
+            if (!subSelf.hasClass("open")) {
+                subSelf.addClass("open");
 
                 gsap.fromTo(body,
                     {
@@ -193,7 +193,7 @@ $(document).ready(function () {
                         autoAlpha: 0,
                     },
                     {
-                        height: "100%",
+                        height: "auto",
                         duration: 0.6,
                         autoAlpha: 1,
                         ease: Power2.easeOut,
@@ -202,25 +202,25 @@ $(document).ready(function () {
                 )
 
             } else {
-                subSelf.removeClass("active");
+                subSelf.removeClass("open");
 
-                gsap.fromTo(body,
-                    {
-                        height: "100%",
-                        autoAlpha: 1,
-                    },
+                gsap.to(body,
                     {
                         height: 0,
                         duration: 0.6,
-                        autoAlpha: 0,
                         ease: Power2.easeOut,
-                        overwrite: true
+                        overwrite: true,
+                        onStart: () => {
+                            gsap.set(body, {
+                                autoAlpha: 0,
+                            })
+                        }
                     }
                 )
             }
         });
 
-        items.find
+        $(".cl-accordion-data.active").click();
     }
 
     carousels();
