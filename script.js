@@ -194,7 +194,7 @@ $(document).ready(function () {
                     },
                     {
                         height: "auto",
-                        duration: duration,
+                        duration: 0.6,
                         autoAlpha: 1,
                         ease: Power2.easeOut,
                         overwrite: true
@@ -207,7 +207,7 @@ $(document).ready(function () {
                 gsap.to(body,
                     {
                         height: 0,
-                        duration: duration,
+                        duration: 0.6,
                         ease: Power2.easeOut,
                         overwrite: true,
                         onStart: () => {
