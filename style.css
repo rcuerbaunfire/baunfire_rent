@@ -263,6 +263,9 @@ code {
 .cl-accordion-data.active .cl-accord-heading {
   opacity: 100%;
 }
+.cl-accordion-data.active .cl-accordion-desc {
+  height: auto;
+}
 
 .w-container:before,
 .w-container:after {
