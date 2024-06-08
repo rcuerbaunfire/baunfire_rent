@@ -158,6 +158,7 @@ $(document).ready(function () {
                     controls: false,
                     autoplay: true,
                     muted: true,
+                    loop: true
                 });
             });
         }
