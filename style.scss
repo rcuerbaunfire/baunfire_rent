@@ -260,5 +260,12 @@ code {
 }
 
 .cl-accordion-data {
-    
+    &.active {
+        gap: 10px;
+    }
+}
+
+.w-container:before, 
+.w-container:after {
+    content: none;
 }

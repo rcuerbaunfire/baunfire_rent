@@ -251,3 +251,12 @@ code {
 .hero .w-richtext h1 {
   margin: 0;
 }
+
+.cl-accordion-data.active {
+  gap: 10px;
+}
+
+.w-container:before,
+.w-container:after {
+  content: none;
+}
