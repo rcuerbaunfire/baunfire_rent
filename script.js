@@ -172,7 +172,6 @@ $(document).ready(function () {
 
             tag.onload = function () { 
                 loadVideos();
-                console.log('yey');
             }
         }
     };
