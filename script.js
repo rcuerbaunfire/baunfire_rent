@@ -151,8 +151,7 @@ $(document).ready(function () {
         containers.each(function () {
             const self = $(this);
             const videoID = self.data("video-id");
-            
-            var player = player = new Vimeo.Player(videoContainer, {
+            var player = new Vimeo.Player(videoContainer, {
                 id: videoID,
                 autoplay: true,
                 muted: false
