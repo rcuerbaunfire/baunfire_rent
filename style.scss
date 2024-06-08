@@ -201,11 +201,11 @@ code {
 }
 
 .testimonial[data-background="white"] {
-    background-color: white;
+	background-color: white;
 }
 
 .testimonial[data-background="gray"] {
-    background-color: #F4F6FF;
+	background-color: #f4f6ff;
 }
 
 .blog-details code {
@@ -230,4 +230,13 @@ code {
 	.blog-details h3 {
 		font-size: 20px;
 	}
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
