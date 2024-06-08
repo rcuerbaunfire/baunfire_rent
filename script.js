@@ -106,39 +106,39 @@ $(document).ready(function () {
             });
 
             timeline
-            .fromTo(toExit, 
-                {
-                    clipPath: "inset(0 0 0 0)",
-                    autoAlpha: 1,
-                },
-                {
-                    delay: 1,
-                    clipPath: "inset(0 0 100% 0)",
-                    autoAlpha: 0,
-                    duration: 0.8,
-                },
-            )
-            .fromTo(toShowMain, 
-                {
-                    autoAlpha: 0
-                },
-                {
-                    autoAlpha: 1,
-                    duration: 0.8,
-                },
-                "<0.7"
-            )
-            .fromTo(toShowSecondary, 
-                {
-                    height: 0
-                },
-                {
-                    height: "auto",
-                    duration: 0.6,
-                    stagger: 0.2
-                },
-                "<0.7"
-            )
+                .fromTo(toExit,
+                    {
+                        clipPath: "inset(0 0 0 0)",
+                        autoAlpha: 1,
+                    },
+                    {
+                        delay: 1,
+                        clipPath: "inset(0 0 100% 0)",
+                        autoAlpha: 0,
+                        duration: 0.8,
+                    },
+                )
+                .fromTo(toShowMain,
+                    {
+                        autoAlpha: 0
+                    },
+                    {
+                        autoAlpha: 1,
+                        duration: 0.8,
+                    },
+                    "<0.7"
+                )
+                .fromTo(toShowSecondary,
+                    {
+                        height: 0
+                    },
+                    {
+                        height: "auto",
+                        duration: 0.6,
+                        stagger: 0.2
+                    },
+                    "<0.7"
+                )
         })
     }
 
@@ -148,22 +148,31 @@ $(document).ready(function () {
 
         attachScript();
 
-        containers.each(function () {
-            const self = $(this);
-            const videoID = self.data("video-id");
+        function loadVideos() {
+            containers.each(function () {
+                const self = $(this);
+                const videoID = self.data("video-id");
 
-            var player = new Vimeo.Player(videoContainer, {
-                id: videoID,
-                autoplay: true,
-                muted: false
+                var player = new Vimeo.Player(videoContainer, {
+                    id: videoID,
+                    autoplay: true,
+                    muted: false
+                });
             });
-        });
+        }
 
         function attachScript() {
             const tag = document.createElement('script');
             tag.src = `https://player.vimeo.com/api/player.js`;
+            tag.async = true;
+            tag.id = "vimeo-script"
             const targetScriptTag = document.getElementsByTagName('script')[1];
             targetScriptTag.parentNode.insertBefore(tag, targetScriptTag);
+
+            tag.onreadystatechange = function () { 
+                loadVideos();
+                console.log('yey');
+            }
         }
     };
 
