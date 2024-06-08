@@ -159,6 +159,8 @@ $(document).ready(function () {
                     muted: false,
                     controls: false
                 });
+
+                player.play();
             });
         }
 
