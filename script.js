@@ -193,7 +193,7 @@ $(document).ready(function () {
                         autoAlpha: 0,
                     },
                     {
-                        height: "auto",
+                        height: "100%",
                         duration: 0.6,
                         autoAlpha: 1,
                         ease: Power2.easeOut,
@@ -219,6 +219,8 @@ $(document).ready(function () {
                 )
             }
         });
+
+        items.find
     }
 
     carousels();

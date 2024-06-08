@@ -264,7 +264,7 @@ code {
   opacity: 100%;
 }
 .cl-accordion-data.active .cl-accordion-desc {
-  height: auto;
+  height: 100%;
 }
 
 .w-container:before,
