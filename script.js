@@ -179,66 +179,35 @@ $(document).ready(function () {
 
     function accordion() {
         const items = $(".cl-accordion-data");
-        if (!items.length) return;
 
         items.click(function () {
             const subSelf = $(this);
-            const heading = subSelf.find(".cl-accord-heading");
-            const orb = subSelf.find("img");
-            const body = subSelf.find(".cl-accord-desc");
+            const body = subSelf.find(".cl-accordion-desc");
 
             if (!subSelf.hasClass("active")) {
                 subSelf.addClass("active");
 
-                gsap.timeline()
-                .add("phase-1")
-                .fromTo(heading,
-                    {
-                        opacity: 0.5,
-                    },
-                    {
-                        opacity: 1,
-                        duration: 0.4,
-                        ease: Power2.easeOut,
-                        overwrite: true
-                    },
-                    "phase-1"
-                )
-                .fromTo(orb,
-                    {
-                        opacity: 0,
-                    },
-                    {
-                        opacity: 1,
-                        duration: 0.4,
-                        ease: Power2.easeOut,
-                        overwrite: true
-                    },
-                    "phase-1"
-                )
-                .fromTo(body,
+                gsap.fromTo(body,
                     {
                         height: 0,
                         autoAlpha: 0,
                     },
                     {
                         height: "auto",
-                        duration: 0.6,
+                        duration: duration,
                         autoAlpha: 1,
                         ease: Power2.easeOut,
                         overwrite: true
-                    },
-                    "<0.2"
+                    }
                 )
 
             } else {
                 subSelf.removeClass("active");
 
-                gsap.timeline()
-                .to(body,
+                gsap.to(body,
                     {
                         height: 0,
-                        duration: 0.6,
+                        duration: duration,
                         ease: Power2.easeOut,
                         overwrite: true,
                         onStart: () => {
@@ -247,31 +216,6 @@ $(document).ready(function () {
                             })
                         }
                     }
-                )
-                .add("phase-1", "<0.2")
-                .fromTo(heading,
-                    {
-                        opacity: 1,
-                    },
-                    {
-                        opacity: 0.5,
-                        duration: 0.4,
-                        ease: Power2.easeOut,
-                        overwrite: true
-                    },
-                    "phase-1"
-                )
-                .fromTo(orb,
-                    {
-                        opacity: 1,
-                    },
-                    {
-                        opacity: 0,
-                        duration: 0.4,
-                        ease: Power2.easeOut,
-                        overwrite: true
-                    },
-                    "phase-1"
                 )
             }
         });

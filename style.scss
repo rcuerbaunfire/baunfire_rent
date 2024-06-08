@@ -260,8 +260,17 @@ code {
 }
 
 .cl-accordion-data {
+    img, .cl-accord-heading {
+        transition: opacity 0.4s ease-in-out;
+    }
+
     &.active {
         gap: 10px;
+
+        img,
+        .cl-accord-heading {
+            opacity: 100%;
+        }
     }
 }
 

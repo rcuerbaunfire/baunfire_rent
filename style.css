@@ -252,8 +252,16 @@ code {
   margin: 0;
 }
 
+.cl-accordion-data img, .cl-accordion-data .cl-accord-heading {
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
 .cl-accordion-data.active {
   gap: 10px;
+}
+.cl-accordion-data.active img,
+.cl-accordion-data.active .cl-accord-heading {
+  opacity: 100%;
 }
 
 .w-container:before,
