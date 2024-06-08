@@ -206,7 +206,7 @@ $(document).ready(function () {
 
                 gsap.fromTo(body,
                     {
-                        height: "auto",
+                        height: "100%",
                         autoAlpha: 1,
                     },
                     {
