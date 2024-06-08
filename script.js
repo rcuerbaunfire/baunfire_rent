@@ -157,7 +157,7 @@ $(document).ready(function () {
                     id: videoID,
                     controls: false,
                     autoplay: true,
-                    muted: false,
+                    muted: true,
                 });
             });
         }
