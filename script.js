@@ -155,10 +155,8 @@ $(document).ready(function () {
 
                 var player = new Vimeo.Player(self, {
                     id: videoID,
-                    controls: false,
-                    autoplay: true,
+                    background: true,
                     muted: true,
-                    loop: true
                 });
             });
         }
