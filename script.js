@@ -204,17 +204,17 @@ $(document).ready(function () {
             } else {
                 subSelf.removeClass("active");
 
-                gsap.to(body,
+                gsap.fromTo(body,
+                    {
+                        height: "auto",
+                        autoAlpha: 1,
+                    },
                     {
                         height: 0,
                         duration: 0.6,
+                        autoAlpha: 0,
                         ease: Power2.easeOut,
-                        overwrite: true,
-                        onStart: () => {
-                            gsap.set(body, {
-                                autoAlpha: 0,
-                            })
-                        }
+                        overwrite: true
                     }
                 )
             }
