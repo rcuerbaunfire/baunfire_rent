@@ -155,12 +155,10 @@ $(document).ready(function () {
 
                 var player = new Vimeo.Player(self, {
                     id: videoID,
+                    controls: false,
                     autoplay: true,
                     muted: false,
-                    controls: false
                 });
-
-                player.play();
             });
         }
 
