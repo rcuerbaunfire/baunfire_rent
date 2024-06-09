@@ -3,7 +3,7 @@ $(document).ready(function () {
         const container = $(".feature-cards");
         if (!container.length) return;
 
-        carousels.each(function () {
+        container.each(function () {
             const self = $(this);
             const targetContainer = self.find(".fc-inner.mobile-owl-carousel");
             const whiteboxes = self.find(".whitebox")
