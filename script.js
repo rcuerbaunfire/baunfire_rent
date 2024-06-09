@@ -1,4 +1,16 @@
 $(document).ready(function () {
+    function featuredCards() {
+        const container = $(".feature-cards");
+        if (!container.length) return;
+
+        carousels.each(function () {
+            const self = $(this);
+            const targetContainer = self.find(".fc-inner.mobile-owl-carousel");
+            const whiteboxes = self.find(".whitebox")
+            whiteboxes.clone().appendTo(targetContainer);
+        });
+    }
+
     function carousels() {
         const carousels = $(".owl-carousel, .mobile-owl-carousel");
         if (!carousels.length) return;
@@ -223,6 +235,7 @@ $(document).ready(function () {
         $(".cl-accordion-data.active").click();
     }
 
+    featuredCards();
     carousels();
     handleVideo();
     animatedContactHeading();
