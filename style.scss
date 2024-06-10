@@ -125,8 +125,7 @@
 }
 
 .res-items,
-.fc-items,
-.sh-items {
+.fc-items {
 	.owl-dots {
 		width: 100%;
 	}
@@ -176,13 +175,16 @@
 }
 
 @media only screen and (max-width: 767px) {
-	.sol-items .owl-nav {
-		display: none;
-	}
-
-	.sol-items .owl-dots {
-		width: 100%;
-	}
+	.sol-items,
+    .sh-items {
+        .owl-nav {
+            display: none;
+        }
+        
+        .owl-dots {
+            width: 100%;
+        }
+    }
 }
 
 @media only screen and (min-width: 992px) {
