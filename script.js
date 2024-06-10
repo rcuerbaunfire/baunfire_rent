@@ -106,7 +106,7 @@ $(document).ready(function () {
                     navText: [leftArrow, rightArrow],
                     responsive: {
                         0: { autoWidth: false, margin: 16, items: 1 },
-                        768: { autoWidth: true, margin: 24 },
+                        768: { autoWidth: true, margin: 32 },
                     },
                 });
             }
