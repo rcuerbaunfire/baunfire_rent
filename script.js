@@ -18,9 +18,10 @@ $(document).ready(function () {
 
             container.each(function () {
                 const self = $(this);
-                const sourceContainer = self.find(".sh-phone-bg.is-mobile");
                 const targetContainer = self.find(".sh-phone-bg.is-desktop");
                 targetContainer.children().remove();
+                
+                const sourceContainer = self.find(".sh-phone-bg.is-mobile");
                 sourceContainer.children().clone().appendTo(targetContainer);
             });
         }
