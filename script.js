@@ -1,14 +1,31 @@
 $(document).ready(function () {
-    function featuredCards() {
-        const container = $(".feature-cards");
-        if (!container.length) return;
+    function duplicatesForMobile() {
+        function featureCards() {
+            const container = $(".feature-cards");
+            if (!container.length) return;
 
-        container.each(function () {
-            const self = $(this);
-            const targetContainer = self.find(".fc-inner.mobile-owl-carousel");
-            const whiteboxes = self.find(".whitebox")
-            whiteboxes.clone().appendTo(targetContainer);
-        });
+            container.each(function () {
+                const self = $(this);
+                const targetContainer = self.find(".fc-inner.mobile-owl-carousel");
+                const whiteboxes = self.find(".whitebox")
+                whiteboxes.clone().appendTo(targetContainer);
+            });
+        }
+
+        function solutionHero() {
+            const container = $(".solutions-hero");
+            if (!container.length) return;
+
+            container.each(function () {
+                const self = $(this);
+                const sourceContainer = self.find(".sol-phone-bg.is-desktop");
+                const targetContainer = self.find(".sol-phone-bg.is-mobile");
+                sourceContainer.children().clone().appendTo(targetContainer);
+            });
+        }
+
+        featureCards();
+        solutionHero();
     }
 
     function carousels() {
@@ -249,7 +266,7 @@ $(document).ready(function () {
         $(".cl-accordion-data.active").click();
     }
 
-    featuredCards();
+    duplicatesForMobile();
     carousels();
     handleVideo();
     animatedContactHeading();
