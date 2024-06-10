@@ -66,8 +66,7 @@
 	}
 }
 
-.sol-items,
-.sh-items {
+.sol-items {
 	.owl-dots {
 		width: calc(100% - 182px);
 	}
@@ -115,7 +114,12 @@
 
     .owl-stage-outer {
         min-width: calc(100% + 60px);
+        overflow: hidden;
     }
+
+    .owl-dots {
+		width: calc(100% - 112px);
+	}
 }
 
 .tes-items {

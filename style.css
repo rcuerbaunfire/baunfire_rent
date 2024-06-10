@@ -80,8 +80,7 @@
           align-items: center;
 }
 
-.sol-items .owl-dots,
-.sh-items .owl-dots {
+.sol-items .owl-dots {
   width: calc(100% - 182px);
 }
 
@@ -122,6 +121,10 @@
 }
 .sh-items .owl-stage-outer {
   min-width: calc(100% + 60px);
+  overflow: hidden;
+}
+.sh-items .owl-dots {
+  width: calc(100% - 112px);
 }
 
 .tes-items .owl-item:not(.active) .tes-item * {
