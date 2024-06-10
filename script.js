@@ -168,7 +168,7 @@ $(document).ready(function () {
     }
 
     function handleVideo() {
-        const containers = $(".vimeo-container");
+        const containers = $(".video-block");
         if (!containers.length) return;
 
         attachScript();
@@ -176,9 +176,10 @@ $(document).ready(function () {
         function loadVideos() {
             containers.each(function () {
                 const self = $(this);
-                const videoID = self.data("video-id");
+                const videoID = self.find("#video-id");
+                const videoBox = sel.find(".vimeo-container");
 
-                var player = new Vimeo.Player(self, {
+                var player = new Vimeo.Player(videoBox, {
                     id: videoID,
                     controls: false,
                     autoplay: true,
