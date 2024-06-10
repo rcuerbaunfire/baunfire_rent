@@ -110,9 +110,11 @@
 .sh-items.owl-loaded {
   overflow: visible;
 }
-.sh-items .owl-stage-outer {
-  min-width: calc(100% + 60px);
-  overflow: hidden;
+@media only screen and (min-width: 992px) {
+  .sh-items .owl-stage-outer {
+    min-width: calc(100% + 60px);
+    overflow: hidden;
+  }
 }
 .sh-items .owl-dots {
   width: calc(100% - 112px);
