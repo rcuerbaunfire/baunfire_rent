@@ -96,7 +96,7 @@ $(document).ready(function () {
                         return () => { };
                     }
                 );
-            } else if (self.hasClass("sh-items")) {
+            } else if (self.hasClass("sol-items")) {
                 const carouselInstance = self.owlCarousel({
                     nav: true,
                     smartSpeed: 1000,
@@ -106,9 +106,10 @@ $(document).ready(function () {
                     navText: [leftArrow, rightArrow],
                     responsive: {
                         0: { autoWidth: false, margin: 16, items: 1 },
-                        768: { autoWidth: true, margin: 32 },
+                        768: { autoWidth: true, margin: 24 },
                     },
                 });
+            }
         });
     }
 

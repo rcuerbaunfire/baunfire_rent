@@ -160,6 +160,7 @@
   }
 }
 @media only screen and (min-width: 992px) {
+  .sh-items .owl-item:last-child .sh-item,
   .tes-items .owl-item:last-child .tes-item {
     border: none;
   }
