@@ -96,7 +96,7 @@ $(document).ready(function () {
                         return () => { };
                     }
                 );
-            } else if (self.hasClass("sol-items")) {
+            } else if (self.hasClass("sh-items")) {
                 const carouselInstance = self.owlCarousel({
                     nav: true,
                     smartSpeed: 1000,
