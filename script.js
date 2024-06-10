@@ -187,7 +187,7 @@ $(document).ready(function () {
     }
 
     function handleVideo() {
-        const containers = $(".video-block");
+        const containers = $(".video-block, .hero");
         if (!containers.length) return;
 
         attachScript();
