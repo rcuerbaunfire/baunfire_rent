@@ -177,7 +177,7 @@ $(document).ready(function () {
             containers.each(function () {
                 const self = $(this);
                 const videoID = self.find("#video-id");
-                const videoBox = sel.find(".vimeo-container");
+                const videoBox = self.find(".vimeo-container");
 
                 var player = new Vimeo.Player(videoBox, {
                     id: videoID,
