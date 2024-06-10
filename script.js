@@ -20,6 +20,7 @@ $(document).ready(function () {
                 const self = $(this);
                 const sourceContainer = self.find(".sol-phone-bg.is-desktop");
                 const targetContainer = self.find(".sol-phone-bg.is-mobile");
+                targetContainer.children().remove();
                 sourceContainer.children().clone().appendTo(targetContainer);
             });
         }
