@@ -90,17 +90,6 @@
 	}
 }
 
-.res-items,
-.fc-items {
-	.owl-dots {
-		width: 100%;
-	}
-
-	.owl-dot {
-		background: #adbbff;
-	}
-}
-
 .sh-items {
     .owl-dot {
         &:not(.active) {
@@ -133,6 +122,18 @@
     .sh-item {
         transition: opacity 0.3s ease-in-out;
     }
+}
+
+.res-items,
+.fc-items,
+.sh-items {
+	.owl-dots {
+		width: 100%;
+	}
+
+	.owl-dot:not(.active) {
+		background: #adbbff;
+	}
 }
 
 .tes-items {

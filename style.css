@@ -104,15 +104,6 @@
   height: 4px;
 }
 
-.res-items .owl-dots,
-.fc-items .owl-dots {
-  width: 100%;
-}
-.res-items .owl-dot,
-.fc-items .owl-dot {
-  background: #adbbff;
-}
-
 .sh-items .owl-dot:not(.active) {
   background: #BEBEC4;
 }
@@ -132,6 +123,17 @@
 .sh-items .sh-item {
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
+}
+
+.res-items .owl-dots,
+.fc-items .owl-dots,
+.sh-items .owl-dots {
+  width: 100%;
+}
+.res-items .owl-dot:not(.active),
+.fc-items .owl-dot:not(.active),
+.sh-items .owl-dot:not(.active) {
+  background: #adbbff;
 }
 
 .tes-items .owl-item:not(.active) .tes-item * {
