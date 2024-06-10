@@ -125,7 +125,7 @@ $(document).ready(function () {
                     navText: [leftArrow, rightArrow],
                     responsive: {
                         0: { margin: 16 },
-                        768: { margin: 32 },
+                        990: { margin: 32 },
                     },
                 });
             }
