@@ -126,6 +126,13 @@
 .sh-items .owl-dots {
   width: calc(100% - 112px);
 }
+.sh-items .owl-item:not(.active) .sh-item, .sh-items .owl-item.active + .active + .active .sh-item {
+  opacity: 0.24;
+}
+.sh-items .sh-item {
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
 
 .tes-items .owl-item:not(.active) .tes-item * {
   color: #bebec4;

@@ -120,6 +120,19 @@
     .owl-dots {
 		width: calc(100% - 112px);
 	}
+
+    .owl-item {
+        &:not(.active),
+        &.active + .active + .active {
+            .sh-item {
+                opacity: 0.24;
+            }
+        }
+    }
+
+    .sh-item {
+        transition: opacity 0.3s ease-in-out;
+    }
 }
 
 .tes-items {
