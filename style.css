@@ -114,7 +114,7 @@
   background: #adbbff;
 }
 
-.sh-item .owl-dot:not(.active) {
+.sh-items .owl-dot:not(.active) {
   background: #BEBEC4;
 }
 
