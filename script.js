@@ -96,7 +96,19 @@ $(document).ready(function () {
                         return () => { };
                     }
                 );
-            }
+            } else if (self.hasClass("sh-items")) {
+                const carouselInstance = self.owlCarousel({
+                    nav: true,
+                    smartSpeed: 1000,
+                    loop: false,
+                    navRewind: false,
+                    dotsEach: true,
+                    navText: [leftArrow, rightArrow],
+                    responsive: {
+                        0: { autoWidth: false, margin: 16, items: 1 },
+                        768: { autoWidth: true, margin: 32 },
+                    },
+                });
         });
     }
 
