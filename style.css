@@ -117,6 +117,12 @@
 .sh-items .owl-dot:not(.active) {
   background: #BEBEC4;
 }
+.sh-items.owl-loaded {
+  overflow: visible;
+}
+.sh-items .owl-stage-outer {
+  min-width: calc(100% + 60px);
+}
 
 .tes-items .owl-item:not(.active) .tes-item * {
   color: #bebec4;

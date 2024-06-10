@@ -108,6 +108,14 @@
             background: #BEBEC4;
         }
     }
+
+    &.owl-loaded {
+        overflow: visible;
+    }
+
+    .owl-stage-outer {
+        min-width: calc(100% + 60px);
+    }
 }
 
 .tes-items {
