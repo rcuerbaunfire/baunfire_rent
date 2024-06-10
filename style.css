@@ -122,6 +122,9 @@
 .sh-items .owl-item:not(.active) .sh-item, .sh-items .owl-item.active + .active + .active .sh-item {
   opacity: 0.24;
 }
+.sh-items .owl-item:last-child .sh-item {
+  border: none;
+}
 .sh-items .sh-item {
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
@@ -180,7 +183,6 @@
   }
 }
 @media only screen and (min-width: 992px) {
-  .sh-items .owl-item:last-child .sh-item,
   .tes-items .owl-item:last-child .tes-item {
     border: none;
   }
