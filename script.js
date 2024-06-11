@@ -240,7 +240,7 @@ $(document).ready(function () {
 
                 gsap.to(allBody, {
                     height: 0,
-                    duration: duration,
+                    duration: 0.6,
                     ease: Power2.easeOut,
                     overwrite: true,
                     onStart: () => {
