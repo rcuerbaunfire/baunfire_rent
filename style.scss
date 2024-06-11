@@ -53,7 +53,8 @@ html * {
 .tes-items,
 .sol-items,
 .fc-items,
-.sh-items {
+.sh-items,
+.lp-items {
 	.owl-stage,
 	.owl-item {
 		display: flex;
@@ -108,13 +109,6 @@ html * {
 		overflow: visible;
 	}
 
-	@media only screen and (min-width: 992px) {
-		.owl-stage-outer {
-			min-width: calc(100% + 60px);
-			overflow: hidden;
-		}
-	}
-
 	.owl-dots {
 		width: calc(100% - 112px);
 	}
@@ -136,6 +130,13 @@ html * {
 
 	.sh-item {
 		transition: opacity 0.3s ease-in-out;
+	}
+
+	@media only screen and (min-width: 992px) {
+		.owl-stage-outer {
+			min-width: calc(100% + 60px);
+			overflow: hidden;
+		}
 	}
 }
 

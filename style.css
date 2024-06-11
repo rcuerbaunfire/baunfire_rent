@@ -66,7 +66,9 @@ html * {
 .fc-items .owl-stage,
 .fc-items .owl-item,
 .sh-items .owl-stage,
-.sh-items .owl-item {
+.sh-items .owl-item,
+.lp-items .owl-stage,
+.lp-items .owl-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,13 +120,6 @@ html * {
 .lp-items.owl-loaded {
   overflow: visible;
 }
-@media only screen and (min-width: 992px) {
-  .sh-items .owl-stage-outer,
-  .lp-items .owl-stage-outer {
-    min-width: calc(100% + 60px);
-    overflow: hidden;
-  }
-}
 .sh-items .owl-dots,
 .lp-items .owl-dots {
   width: calc(100% - 112px);
@@ -139,6 +134,12 @@ html * {
 .sh-items .sh-item {
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
+}
+@media only screen and (min-width: 992px) {
+  .sh-items .owl-stage-outer {
+    min-width: calc(100% + 60px);
+    overflow: hidden;
+  }
 }
 
 .res-items .owl-dots,
