@@ -239,6 +239,7 @@ $(document).ready(function () {
                 const subSelf = $(this);
                 const body = subSelf.find(".cl-accordion-desc");
 
+                allBody.removeClass("open");
                 gsap.to(allBody, {
                     height: 0,
                     duration: 0.6,
