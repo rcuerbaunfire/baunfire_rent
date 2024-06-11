@@ -235,16 +235,28 @@ $(document).ready(function () {
         containers.each(function () {
             const self = $(this);
             const items = self.find(".cl-accordion-data");
+            const allImages = self.find(".sol-acc-img");
             const allBody = self.find(".cl-accordion-desc");
+
+            addIndex(items);
+            addIndex(images);
 
             items.click(function () {
                 const subSelf = $(this);
+                const index = subSelf.data("index");
+                
+                const targetImage = images.filter(function () {
+                    return $(this).data('index') === index;
+                });
 
                 if (!subSelf.hasClass("open")) {
                     const body = subSelf.find(".cl-accordion-desc");
 
                     resetItems(allBody);
                     items.removeClass("open");
+
+                    allImages.removeClass("active");
+                    targetImage.addClass("active");
 
                     subSelf.addClass("open");
                     gsap.fromTo(body,
@@ -266,8 +278,15 @@ $(document).ready(function () {
             items[0].click();
         })
 
+        function addIndex(items) {
+            items.each(function (index) {
+                const self = $(this);
+                self.data('index', index);
+            })
+        }
+
         function resetItems(items) {
-            items.each(function() {
+            items.each(function () {
                 const self = $(this);
 
                 gsap.to(self, {
