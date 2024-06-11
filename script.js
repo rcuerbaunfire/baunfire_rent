@@ -234,18 +234,18 @@ $(document).ready(function () {
 
         containers.each(function () {
             const self = $(this);
-            const items = self.find(".cl-accordion-data");
+            const allItems = self.find(".cl-accordion-data");
             const allImages = self.find(".sol-acc-img");
             const allBody = self.find(".cl-accordion-desc");
 
-            addIndex(items);
-            addIndex(images);
+            addIndex(allItems);
+            addIndex(allImages);
 
-            items.click(function () {
+            allItems.click(function () {
                 const subSelf = $(this);
                 const index = subSelf.data("index");
-                
-                const targetImage = images.filter(function () {
+
+                const targetImage = allImages.filter(function () {
                     return $(this).data('index') === index;
                 });
 
@@ -253,7 +253,7 @@ $(document).ready(function () {
                     const body = subSelf.find(".cl-accordion-desc");
 
                     resetItems(allBody);
-                    items.removeClass("open");
+                    allItems.removeClass("open");
 
                     allImages.removeClass("active");
                     targetImage.addClass("active");
@@ -275,7 +275,7 @@ $(document).ready(function () {
                 }
             });
 
-            items[0].click();
+            allItems[0].click();
         })
 
         function addIndex(items) {
