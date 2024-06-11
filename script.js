@@ -269,7 +269,6 @@ $(document).ready(function () {
         function resetItems(items) {
             items.each(function() {
                 const self = $(this);
-                const body = self.find(".cl-accordion-desc");
 
                 gsap.to(self, {
                     height: 0,
@@ -277,7 +276,7 @@ $(document).ready(function () {
                     ease: Power2.easeOut,
                     overwrite: true,
                     onStart: () => {
-                        gsap.set(body, {
+                        gsap.set(self, {
                             autoAlpha: 0,
                         });
                     },
