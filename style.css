@@ -339,3 +339,6 @@ code {
 .faq-item .faq-body p:last-child {
   margin: 0;
 }
+.faq-item .faq-body a {
+  color: white;
+}
