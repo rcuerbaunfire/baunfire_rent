@@ -321,3 +321,21 @@ code {
 .cl-accordion-data .cl-accordion-desc p:last-child {
   margin: 0;
 }
+
+.faq-item.open {
+  gap: 16px;
+}
+.faq-item.open .faq-body {
+  height: auto;
+}
+.faq-item.open .faq-minus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.faq-item.open .faq-plus {
+  display: none;
+}
+.faq-item .faq-body p:last-child {
+  margin: 0;
+}

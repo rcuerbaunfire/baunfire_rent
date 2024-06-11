@@ -350,3 +350,27 @@ code {
         }
     }    
 }
+
+.faq-item {
+	&.open {
+        gap: 16px;
+
+		.faq-body {
+			height: auto;
+		}
+
+        .faq-minus {
+            display: flex;
+        }
+
+        .faq-plus {
+            display: none;
+        }
+	}
+    
+    .faq-body {
+        p:last-child {
+            margin: 0;
+        }
+    }    
+}

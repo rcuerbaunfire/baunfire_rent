@@ -228,7 +228,7 @@ $(document).ready(function () {
         }
     };
 
-    function accordion() {
+    function solutionAccordion() {
         const containers = $(".solutions-accordion");
         if (!containers.length) return;
 
@@ -304,9 +304,67 @@ $(document).ready(function () {
         }
     }
 
+    function faq() {
+        const containers = $(".faq");
+        if (!containers.length) return;
+
+        containers.each(function () {
+            const self = $(this);
+            const allItems = self.find(".faq-item");
+            const allBody = self.find(".faq-body");
+
+            allItems.click(function () {
+                const subSelf = $(this);
+
+                if (!subSelf.hasClass("open")) {
+                    const body = subSelf.find(".faq-body");
+
+                    resetItems(allBody);
+                    allItems.removeClass("open");
+
+                    subSelf.addClass("open");
+                    gsap.fromTo(body,
+                        {
+                            height: 0,
+                            autoAlpha: 0,
+                        },
+                        {
+                            height: "auto",
+                            duration: 0.6,
+                            autoAlpha: 1,
+                            ease: Power2.easeOut,
+                            overwrite: true
+                        }
+                    )
+                }
+            });
+
+            allItems[0].click();
+        })
+
+        function resetItems(items) {
+            items.each(function () {
+                const self = $(this);
+
+                gsap.to(self, {
+                    height: 0,
+                    duration: 0.6,
+                    ease: Power2.easeOut,
+                    overwrite: true,
+                    onStart: () => {
+                        gsap.set(self, {
+                            autoAlpha: 0,
+                        });
+                    },
+                });
+            })
+        }
+    }
+
     duplicatesForMobile();
     carousels();
     handleVideo();
     animatedContactHeading();
-    accordion();
+    solutionAccordion();
+    faq();
 });
