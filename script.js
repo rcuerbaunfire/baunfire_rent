@@ -237,22 +237,23 @@ $(document).ready(function () {
 
             items.click(function () {
                 const subSelf = $(this);
-                const body = subSelf.find(".cl-accordion-desc");
-
-                allBody.removeClass("open");
-                gsap.to(allBody, {
-                    height: 0,
-                    duration: 0.6,
-                    ease: Power2.easeOut,
-                    overwrite: true,
-                    onStart: () => {
-                        gsap.set(body, {
-                            autoAlpha: 0,
-                        });
-                    },
-                });
-
+                
                 if (!subSelf.hasClass("open")) {
+                    const body = subSelf.find(".cl-accordion-desc");
+
+                    allBody.removeClass("open");
+                    gsap.to(allBody, {
+                        height: 0,
+                        duration: 0.6,
+                        ease: Power2.easeOut,
+                        overwrite: true,
+                        onStart: () => {
+                            gsap.set(body, {
+                                autoAlpha: 0,
+                            });
+                        },
+                    });
+
                     subSelf.addClass("open");
 
                     gsap.fromTo(body,
