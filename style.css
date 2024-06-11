@@ -300,7 +300,7 @@ code {
   -webkit-transition: opacity 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out;
 }
-.cl-accordion-data.open {
+.cl-accordion-data.open .sol-acc-item-inner {
   gap: 10px;
 }
 .cl-accordion-data.open img,

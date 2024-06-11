@@ -322,7 +322,9 @@ code {
 	}
 
 	&.open {
-		gap: 10px;
+        .sol-acc-item-inner {
+            gap: 10px;
+        }
 
 		img,
 		.cl-accord-heading {
