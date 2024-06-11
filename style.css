@@ -290,6 +290,11 @@ code {
   margin: 0;
 }
 
+.w-container:before,
+.w-container:after {
+  content: none;
+}
+
 .cl-accordion-data img,
 .cl-accordion-data .cl-accord-heading {
   -webkit-transition: opacity 0.4s ease-in-out;
@@ -305,13 +310,10 @@ code {
 .cl-accordion-data.open .cl-accordion-desc {
   height: auto;
 }
-
-.w-container:before,
-.w-container:after {
-  content: none;
-}
-
 @media screen and (max-width: 991px) {
+  .cl-accordion-data.open {
+    gap: 60px;
+  }
   .cl-accordion-data.open .sol-acc-img.is-mobile {
     display: block;
   }

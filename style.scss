@@ -310,6 +310,11 @@ code {
 	}
 }
 
+.w-container:before,
+.w-container:after {
+	content: none;
+}
+
 .cl-accordion-data {
 	img,
 	.cl-accord-heading {
@@ -327,23 +332,16 @@ code {
 		.cl-accordion-desc {
 			height: auto;
 		}
-	}
-}
 
-.w-container:before,
-.w-container:after {
-	content: none;
-}
-
-.cl-accordion-data {
-    &.open {
         @media screen and (max-width: 991px) {
+            gap: 60px;
+            
             .sol-acc-img.is-mobile {
                 display: block;
             }
         }
-    }
-
+	}
+    
     .cl-accordion-desc {
         p:last-child {
             margin: 0;
