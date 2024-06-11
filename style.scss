@@ -1,5 +1,6 @@
-html, html * {
-    -webkit-font-smoothing: antialiased;
+html,
+html * {
+	-webkit-font-smoothing: antialiased;
 }
 
 .owl-carousel.owl-loaded {
@@ -95,43 +96,43 @@ html, html * {
 }
 
 .sh-items {
-    .owl-dot {
-        &:not(.active) {
-            background: #BEBEC4;
-        }
-    }
+	.owl-dot {
+		&:not(.active) {
+			background: #bebec4;
+		}
+	}
 
-    &.owl-loaded {
-        overflow: visible;
-    }
+	&.owl-loaded {
+		overflow: visible;
+	}
 
-    @media only screen and (min-width: 992px) {
-        .owl-stage-outer {
-            min-width: calc(100% + 60px);
-            overflow: hidden;
-        }
-    }
+	@media only screen and (min-width: 992px) {
+		.owl-stage-outer {
+			min-width: calc(100% + 60px);
+			overflow: hidden;
+		}
+	}
 
-    .owl-dots {
+	.owl-dots {
 		width: calc(100% - 112px);
 	}
 
-    .owl-item {
-        &:not(.active),
-        &.active + .active + .active {
-            .sh-item {
-                opacity: 0.24;
-            }
-        }
+	.owl-item {
+		&:not(.active),
+		&.active + .active + .active {
+			.sh-item {
+				opacity: 0.24;
+			}
+		}
 
-        &:last-child .sh-item {
-            border: none;
-        }
-    }
+		&:last-child .sh-item {
+			border: none;
+		}
+	}
 
-    .sh-item {
-        transition: opacity 0.3s ease-in-out;
-    }
+	.sh-item {
+		transition: opacity 0.3s ease-in-out;
+	}
 }
 
 .res-items,
@@ -186,15 +187,15 @@ html, html * {
 
 @media only screen and (max-width: 767px) {
 	.sol-items,
-    .sh-items {
-        .owl-nav {
-            display: none;
-        }
-        
-        .owl-dots {
-            width: 100%;
-        }
-    }
+	.sh-items {
+		.owl-nav {
+			display: none;
+		}
+
+		.owl-dots {
+			width: 100%;
+		}
+	}
 }
 
 @media only screen and (min-width: 992px) {
@@ -283,58 +284,59 @@ code {
 }
 
 .hide-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
+	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
 
-    &::-webkit-scrollbar {
-        display: none;
-    }
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
 
 .vimeo-container {
-    iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
 }
 
 .hero {
-    .w-richtext {
-        h1 {
-            margin: 0;
-        }
-    }
+	.w-richtext {
+		h1 {
+			margin: 0;
+		}
+	}
 }
 
 .cl-accordion-data {
-    img, .cl-accord-heading {
-        transition: opacity 0.4s ease-in-out;
-    }
+	img,
+	.cl-accord-heading {
+		transition: opacity 0.4s ease-in-out;
+	}
 
-    &.open {
-        gap: 10px;
+	&.open {
+		gap: 10px;
 
-        img,
-        .cl-accord-heading {
-            opacity: 100%;
-        }
+		img,
+		.cl-accord-heading {
+			opacity: 100%;
+		}
 
-        .cl-accordion-desc {
-            height: auto;
-        }
-    }
+		.cl-accordion-desc {
+			height: auto;
+		}
+	}
 }
 
-.w-container:before, 
+.w-container:before,
 .w-container:after {
-    content: none;
+	content: none;
 }
 
 .cl-accordion-desc {
-    & > p:last-child {
-        margin: 0;
-    }
+	p:last-child {
+		margin: 0;
+	}
 }

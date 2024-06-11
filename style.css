@@ -1,4 +1,5 @@
-html, html * {
+html,
+html * {
   -webkit-font-smoothing: antialiased;
 }
 
@@ -109,7 +110,7 @@ html, html * {
 }
 
 .sh-items .owl-dot:not(.active) {
-  background: #BEBEC4;
+  background: #bebec4;
 }
 .sh-items.owl-loaded {
   overflow: visible;
@@ -289,7 +290,8 @@ code {
   margin: 0;
 }
 
-.cl-accordion-data img, .cl-accordion-data .cl-accord-heading {
+.cl-accordion-data img,
+.cl-accordion-data .cl-accord-heading {
   -webkit-transition: opacity 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out;
 }
@@ -309,6 +311,6 @@ code {
   content: none;
 }
 
-.cl-accordion-desc > p:last-child {
+.cl-accordion-desc p:last-child {
   margin: 0;
 }
