@@ -311,7 +311,7 @@ code {
   content: none;
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 991px) {
   .cl-accordion-data.open .sol-acc-img.is-mobile {
     display: block;
   }
