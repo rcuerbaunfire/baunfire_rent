@@ -235,8 +235,20 @@ $(document).ready(function () {
             const items = self.find(".cl-accordion-data");
             const allBody = self.find(".cl-accordion-desc");
 
-            items.each(function () {
-                const body = subSelf.find(".cl-accordion-desc");
+            items.click(function () {
+                const body = self.find(".cl-accordion-desc");
+
+                gsap.to(allBody, {
+                    height: 0,
+                    duration: duration,
+                    ease: Power2.easeOut,
+                    overwrite: true,
+                    onStart: () => {
+                        gsap.set(body, {
+                            autoAlpha: 0,
+                        });
+                    },
+                });
 
                 if (!subSelf.hasClass("open")) {
                     subSelf.addClass("open");
