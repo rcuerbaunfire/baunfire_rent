@@ -334,7 +334,7 @@ code {
 }
 
 .cl-accordion-desc {
-    & > *:last-child {
+    & > p:last-child {
         margin: 0;
     }
 }

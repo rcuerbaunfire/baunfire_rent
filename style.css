@@ -309,6 +309,6 @@ code {
   content: none;
 }
 
-.cl-accordion-desc > *:last-child {
+.cl-accordion-desc > p:last-child {
   margin: 0;
 }
