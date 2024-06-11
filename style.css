@@ -95,7 +95,8 @@ html * {
 .fc-items .owl-dot,
 .res-items .owl-dot,
 .sol-items .owl-dot,
-.sh-items .owl-dot {
+.sh-items .owl-dot,
+.lp-items .owl-dot {
   background: #373839;
   height: 1px;
   padding: 0;
@@ -107,7 +108,8 @@ html * {
 .fc-items .owl-dot.active,
 .res-items .owl-dot.active,
 .sol-items .owl-dot.active,
-.sh-items .owl-dot.active {
+.sh-items .owl-dot.active,
+.lp-items .owl-dot.active {
   background: #7e93fb;
   height: 4px;
 }
