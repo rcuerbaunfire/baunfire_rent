@@ -335,8 +335,18 @@ code {
 	content: none;
 }
 
-.cl-accordion-desc {
-	p:last-child {
-		margin: 0;
-	}
+.cl-accordion-data {
+    &.open {
+        @media screen and (max-width: 990px) {
+            .sol-acc-img.is-mobile {
+                display: block;
+            }
+        }
+    }
+
+    .cl-accordion-desc {
+        p:last-child {
+            margin: 0;
+        }
+    }    
 }

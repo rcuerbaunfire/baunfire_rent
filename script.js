@@ -235,7 +235,7 @@ $(document).ready(function () {
         containers.each(function () {
             const self = $(this);
             const allItems = self.find(".cl-accordion-data");
-            const allImages = self.find(".sol-acc-img");
+            const allImages = self.find(".sol-acc-img.is-desktop");
             const allBody = self.find(".cl-accordion-desc");
 
             addIndex(allItems);

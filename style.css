@@ -311,6 +311,11 @@ code {
   content: none;
 }
 
-.cl-accordion-desc p:last-child {
+@media screen and (max-width: 990px) {
+  .cl-accordion-data.open .sol-acc-img.is-mobile {
+    display: block;
+  }
+}
+.cl-accordion-data .cl-accordion-desc p:last-child {
   margin: 0;
 }
