@@ -1,6 +1,6 @@
 $(document).ready(function () {
     console.log('bf script init');
-    
+
     function duplicatesForMobile() {
         function featureCards() {
             const container = $(".feature-cards");
@@ -243,7 +243,7 @@ $(document).ready(function () {
                 if (!subSelf.hasClass("open")) {
                     const body = subSelf.find(".cl-accordion-desc");
 
-                    allBody.removeClass("open");
+                    items.removeClass("open");
                     gsap.to(allBody, {
                         height: 0,
                         duration: 0.6,
