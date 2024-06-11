@@ -20,7 +20,7 @@ $(document).ready(function () {
                 const self = $(this);
                 const targetContainer = self.find(".sh-phone-bg.is-desktop");
                 targetContainer.children().remove();
-                
+
                 const sourceContainer = self.find(".sh-phone-bg.is-mobile");
                 sourceContainer.children().clone().appendTo(targetContainer);
             });
@@ -45,7 +45,7 @@ $(document).ready(function () {
                     nav: true,
                     smartSpeed: 1000,
                     items: 1,
-                    loop: false,
+                    loop: true,
                     navRewind: false,
                     dotsEach: true,
                     navText: [leftArrow, rightArrow],
@@ -64,6 +64,7 @@ $(document).ready(function () {
                         dot.children("span").text(num);
                     }
                 });
+
             } else if (self.hasClass("sol-items")) {
                 const carouselInstance = self.owlCarousel({
                     nav: true,
@@ -77,6 +78,7 @@ $(document).ready(function () {
                         768: { autoWidth: true, margin: 24 },
                     },
                 });
+
             } else if (self.hasClass("res-items") || self.hasClass("fc-items")) {
                 const mm = gsap.matchMedia();
                 let carouselInstance = null;
@@ -115,6 +117,7 @@ $(document).ready(function () {
                         return () => { };
                     }
                 );
+
             } else if (self.hasClass("sh-items")) {
                 const carouselInstance = self.owlCarousel({
                     nav: true,
@@ -224,49 +227,38 @@ $(document).ready(function () {
     };
 
     function accordion() {
-        const items = $(".cl-accordion-data");
+        const containers = $(".solutions-accordion");
+        if (!containers.length) return;
 
-        items.click(function () {
-            const subSelf = $(this);
-            const body = subSelf.find(".cl-accordion-desc");
+        containers.each(function () {
+            const self = $(this);
+            const items = self.find(".cl-accordion-data");
+            const allBody = self.find(".cl-accordion-desc");
 
-            if (!subSelf.hasClass("open")) {
-                subSelf.addClass("open");
+            items.each(function () {
+                const body = subSelf.find(".cl-accordion-desc");
 
-                gsap.fromTo(body,
-                    {
-                        height: 0,
-                        autoAlpha: 0,
-                    },
-                    {
-                        height: "auto",
-                        duration: 0.6,
-                        autoAlpha: 1,
-                        ease: Power2.easeOut,
-                        overwrite: true
-                    }
-                )
+                if (!subSelf.hasClass("open")) {
+                    subSelf.addClass("open");
 
-            } else {
-                subSelf.removeClass("open");
-
-                gsap.to(body,
-                    {
-                        height: 0,
-                        duration: 0.6,
-                        ease: Power2.easeOut,
-                        overwrite: true,
-                        onStart: () => {
-                            gsap.set(body, {
-                                autoAlpha: 0,
-                            })
+                    gsap.fromTo(body,
+                        {
+                            height: 0,
+                            autoAlpha: 0,
+                        },
+                        {
+                            height: "auto",
+                            duration: 0.6,
+                            autoAlpha: 1,
+                            ease: Power2.easeOut,
+                            overwrite: true
                         }
-                    }
-                )
-            }
-        });
+                    )
+                }
+            });
 
-        $(".cl-accordion-data.active").click();
+            self.find(".cl-accordion-data.active").click();
+        })
     }
 
     duplicatesForMobile();
