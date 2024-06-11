@@ -1,3 +1,7 @@
+html, html * {
+    -webkit-font-smoothing: antialiased;
+}
+
 .owl-carousel.owl-loaded {
 	display: flex;
 }
