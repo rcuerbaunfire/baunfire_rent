@@ -234,17 +234,16 @@ $(document).ready(function () {
 
         containers.each(function () {
             const self = $(this);
-            const items = self.find(".cl-accordion-data");
+            const allItems = self.find(".cl-accordion-data");
             const allBody = self.find(".cl-accordion-desc");
 
-            items.click(function () {
+            allItems.click(function () {
                 const subSelf = $(this);
 
                 if (!subSelf.hasClass("open")) {
                     const body = subSelf.find(".cl-accordion-desc");
 
-                    resetItems(allBody);
-                    items.removeClass("open");
+                    resetItems(allItems);
 
                     subSelf.addClass("open");
                     gsap.fromTo(body,
@@ -266,12 +265,12 @@ $(document).ready(function () {
             self.find(".cl-accordion-data.active").click();
         })
 
-        function resetItems(items) {
-            items.each(function() {
+        function resetItems(allItems) {
+            allItems.each(function() {
                 const self = $(this);
                 const body = self.find(".cl-accordion-desc");
 
-                gsap.to(items, {
+                gsap.to(self, {
                     height: 0,
                     duration: 0.6,
                     ease: Power2.easeOut,
@@ -281,8 +280,11 @@ $(document).ready(function () {
                             autoAlpha: 0,
                         });
                     },
+                    onComplete: () => {
+                        self.removeClass("open");
+                    }
                 });
-            })
+            });
         }
     }
 
