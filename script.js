@@ -263,7 +263,7 @@ $(document).ready(function () {
                 }
             });
 
-            self.find(".cl-accordion-data.active").click();
+            items[0].click();
         })
 
         function resetItems(items) {

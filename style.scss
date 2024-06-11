@@ -332,3 +332,9 @@ code {
 .w-container:after {
     content: none;
 }
+
+.cl-accordion-desc {
+    & > *:last-child {
+        margin: 0;
+    }
+}
