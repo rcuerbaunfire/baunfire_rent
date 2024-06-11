@@ -75,7 +75,8 @@ html * {
 .res-items .owl-dots,
 .sol-items .owl-dots,
 .fc-items .owl-dots,
-.sh-items .owl-dots {
+.sh-items .owl-dots,
+.lp-items .owl-dots {
   height: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -109,21 +110,26 @@ html * {
   height: 4px;
 }
 
-.sh-items .owl-dot:not(.active) {
+.sh-items .owl-dot:not(.active),
+.lp-items .owl-dot:not(.active) {
   background: #bebec4;
 }
-.sh-items.owl-loaded {
+.sh-items.owl-loaded,
+.lp-items.owl-loaded {
   overflow: visible;
 }
 @media only screen and (min-width: 992px) {
-  .sh-items .owl-stage-outer {
+  .sh-items .owl-stage-outer,
+  .lp-items .owl-stage-outer {
     min-width: calc(100% + 60px);
     overflow: hidden;
   }
 }
-.sh-items .owl-dots {
+.sh-items .owl-dots,
+.lp-items .owl-dots {
   width: calc(100% - 112px);
 }
+
 .sh-items .owl-item:not(.active) .sh-item, .sh-items .owl-item.active + .active + .active .sh-item {
   opacity: 0.24;
 }
@@ -179,11 +185,13 @@ html * {
 
 @media only screen and (max-width: 767px) {
   .sol-items .owl-nav,
-  .sh-items .owl-nav {
+  .sh-items .owl-nav,
+  .lp-items .owl-nav {
     display: none;
   }
   .sol-items .owl-dots,
-  .sh-items .owl-dots {
+  .sh-items .owl-dots,
+  .lp-items .owl-dots {
     width: 100%;
   }
 }

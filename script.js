@@ -134,6 +134,21 @@ $(document).ready(function () {
                         990: { margin: 32 },
                     },
                 });
+            
+            } else if (self.hasClass("lp-items")) {
+                const carouselInstance = self.owlCarousel({
+                    nav: true,
+                    smartSpeed: 1000,
+                    loop: false,
+                    navRewind: false,
+                    dotsEach: true,
+                    autoWidth: true,
+                    navText: [leftArrow, rightArrow],
+                    responsive: {
+                        0: { margin: 20 },
+                        990: { margin: 24 },
+                    },
+                });
             }
         });
     }

@@ -63,7 +63,8 @@ html * {
 .res-items,
 .sol-items,
 .fc-items,
-.sh-items {
+.sh-items,
+.lp-items {
 	.owl-dots {
 		height: 32px;
 		display: flex;
@@ -95,7 +96,8 @@ html * {
 	}
 }
 
-.sh-items {
+.sh-items,
+.lp-items {
 	.owl-dot {
 		&:not(.active) {
 			background: #bebec4;
@@ -116,7 +118,9 @@ html * {
 	.owl-dots {
 		width: calc(100% - 112px);
 	}
+}
 
+.sh-items {
 	.owl-item {
 		&:not(.active),
 		&.active + .active + .active {
@@ -187,7 +191,8 @@ html * {
 
 @media only screen and (max-width: 767px) {
 	.sol-items,
-	.sh-items {
+	.sh-items,
+    .lp-items {
 		.owl-nav {
 			display: none;
 		}
