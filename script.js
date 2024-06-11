@@ -236,7 +236,8 @@ $(document).ready(function () {
             const allBody = self.find(".cl-accordion-desc");
 
             items.click(function () {
-                const body = self.find(".cl-accordion-desc");
+                const subSelf = $(this);
+                const body = subSelf.find(".cl-accordion-desc");
 
                 gsap.to(allBody, {
                     height: 0,
