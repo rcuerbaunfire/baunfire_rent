@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    console.log('bf script init');
+    
     function duplicatesForMobile() {
         function featureCards() {
             const container = $(".feature-cards");
@@ -237,7 +239,7 @@ $(document).ready(function () {
 
             items.click(function () {
                 const subSelf = $(this);
-                
+
                 if (!subSelf.hasClass("open")) {
                     const body = subSelf.find(".cl-accordion-desc");
 
