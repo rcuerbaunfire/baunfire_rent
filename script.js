@@ -382,19 +382,13 @@ $(document).ready(function () {
         containers.each(function () {
             const self = $(this);
             const allItems = self.find(".lp-item");
-            // const allOverlays = self.find(".lp-overlay");
-            console.log(allItems);
 
             allItems.each(function () {
                 const subSelf = $(this);
                 const overlay = subSelf.find(".lp-arrow");
-                console.log(overlay);
 
                 overlay.click(function() {
                     allItems.addClass("open");
-                    console.log("click");
-                    // overlay.remove();
-                    // allOverlays.remove();
                 })
             });
         })
