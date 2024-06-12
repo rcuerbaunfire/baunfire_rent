@@ -364,7 +364,7 @@ code {
   visibility: visible;
 }
 .lp-item.open .lp-feat {
-  height: "auto";
+  height: auto;
 }
 .lp-item.open .lp-overlay {
   opacity: 0;
