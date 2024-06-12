@@ -375,10 +375,33 @@ $(document).ready(function () {
         }
     }
 
+    function packages() {
+        const containers = $(".listing-package");
+        if (!containers.length) return;
+
+        containers.each(function () {
+            const self = $(this);
+            const allItems = self.find(".lp-item");
+            const allOverlays = self.find(".lp-overlay");
+
+            allItems.each(function () {
+                const subSelf = $(this);
+                const overlay = subSelf.find(".lp-overlay");
+
+                overlay.click(function() {
+                    allItems.addClass("open");
+                    overlay.remove();
+                    allOverlays.remove();
+                })
+            });
+        })
+    }
+
     duplicatesForMobile();
     carousels();
     handleVideo();
     animatedContactHeading();
     solutionAccordion();
     faq();
+    packages();
 });
