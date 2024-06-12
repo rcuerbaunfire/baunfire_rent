@@ -134,7 +134,7 @@ $(document).ready(function () {
                         990: { margin: 32 },
                     },
                 });
-            
+
             } else if (self.hasClass("lp-items")) {
                 const carouselInstance = self.owlCarousel({
                     nav: true,
@@ -142,11 +142,10 @@ $(document).ready(function () {
                     loop: false,
                     navRewind: false,
                     dotsEach: true,
-                    autoWidth: true,
                     navText: [leftArrow, rightArrow],
                     responsive: {
-                        0: { margin: 20 },
-                        990: { margin: 24 },
+                        0: { autoWidth: false, margin: 20, items: 1 },
+                        768: { autoWidth: true, margin: 24 },
                     },
                 });
             }
