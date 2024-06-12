@@ -400,6 +400,10 @@ code {
 		.lp-overlay {
 			display: none;
 		}
+
+        .lp-inner {
+            padding-bottom: 42px;
+        }
 	}
 
 	.lp-highlight:not(.w-condition-invisible) {

@@ -365,6 +365,9 @@ code {
 .lp-item.open .lp-overlay {
   display: none;
 }
+.lp-item.open .lp-inner {
+  padding-bottom: 42px;
+}
 .lp-item .lp-highlight:not(.w-condition-invisible) + .lp-inner {
   border: 1px solid #8590fb;
   border-radius: 0 0 4px 4px;
