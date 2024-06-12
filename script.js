@@ -76,8 +76,9 @@ $(document).ready(function () {
                     dotsEach: true,
                     navText: [leftArrow, rightArrow],
                     responsive: {
-                        0: { autoWidth: false, margin: 16, items: 1 },
-                        768: { items: 3, margin: 24 },
+                        0: { margin: 16, items: 1 },
+                        768: { items: 2, margin: 24 },
+                        1280: { items: 3, margin: 24 },
                     },
                 });
 
