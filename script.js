@@ -386,7 +386,7 @@ $(document).ready(function () {
 
             allItems.each(function () {
                 const subSelf = $(this);
-                const overlay = subSelf.find(".lp-overlay .code-embed");
+                const overlay = subSelf.find(".lp-arrow");
 
                 overlay.click(function() {
                     allItems.addClass("open");
