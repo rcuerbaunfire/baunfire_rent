@@ -136,20 +136,18 @@ $(document).ready(function () {
                 });
 
             } else if (self.hasClass("lp-items")) {
-                setTimeout(() => {
-                    const carouselInstance = self.owlCarousel({
-                        nav: true,
-                        smartSpeed: 1000,
-                        loop: false,
-                        navRewind: false,
-                        dotsEach: true,
-                        navText: [leftArrow, rightArrow],
-                        responsive: {
-                            0: { autoWidth: false, margin: 20, items: 1 },
-                            768: { autoWidth: true, margin: 24 },
-                        },
-                    });
-                }, 1000);
+                const carouselInstance = self.owlCarousel({
+                    nav: true,
+                    smartSpeed: 1000,
+                    loop: false,
+                    navRewind: false,
+                    dotsEach: true,
+                    navText: [leftArrow, rightArrow],
+                    responsive: {
+                        0: { autoWidth: false, margin: 20, items: 1 },
+                        768: { autoWidth: true, margin: 24 },
+                    },
+                }); 
             }
         });
     }
