@@ -353,3 +353,20 @@ code {
 .faq-item .faq-body a {
   color: white;
 }
+
+.lp-item .lp-feat,
+.lp-item .lp-overlay {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.lp-item .lp-overlay {
+  opacity: 100%;
+  visibility: visible;
+}
+.lp-item.open .lp-feat {
+  height: "auto";
+}
+.lp-item.open .lp-overlay {
+  opacity: 0;
+  visibility: hidden;
+}

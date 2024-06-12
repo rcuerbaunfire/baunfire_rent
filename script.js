@@ -382,16 +382,16 @@ $(document).ready(function () {
         containers.each(function () {
             const self = $(this);
             const allItems = self.find(".lp-item");
-            const allOverlays = self.find(".lp-overlay");
+            // const allOverlays = self.find(".lp-overlay");
 
             allItems.each(function () {
                 const subSelf = $(this);
-                const overlay = subSelf.find(".lp-overlay");
+                const overlay = subSelf.find(".lp-overlay .code-embed");
 
                 overlay.click(function() {
                     allItems.addClass("open");
-                    overlay.remove();
-                    allOverlays.remove();
+                    // overlay.remove();
+                    // allOverlays.remove();
                 })
             });
         })

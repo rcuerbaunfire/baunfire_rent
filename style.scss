@@ -385,3 +385,26 @@ code {
         }
     }    
 }
+
+.lp-item {
+    .lp-feat,
+    .lp-overlay {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .lp-overlay {
+        opacity: 100%;
+        visibility: visible;
+    }
+
+    &.open {
+        .lp-feat {
+            height: "auto";
+        }
+
+        .lp-overlay {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}
