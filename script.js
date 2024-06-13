@@ -465,17 +465,20 @@ $(document).ready(function () {
             const self = $(this);
             const items = self.find(".pfp-item");
 
-            gsap.to(items, {
-                autoAlpha: 1,
-                y: 0,
-                duration: 0.8,
-                stagger: { each: 0.3 },
-                scrollTrigger: {
-                    trigger: self,
-                    start: "top 60%",
-                    invalidateOnRefresh: true,
-                },
-            });
+            items.each(function() {
+                const subSelf = $(this);
+
+                gsap.to(subSelf, {
+                    autoAlpha: 1,
+                    y: 0,
+                    duration: 0.8,
+                    scrollTrigger: {
+                        trigger: subSelf,
+                        start: "top 60%",
+                        invalidateOnRefresh: true,
+                    },
+                });
+            })
         })
     }
 
