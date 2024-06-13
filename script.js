@@ -406,7 +406,7 @@ $(document).ready(function () {
             gsap.to(
                 heroRight,
                 {
-                    delay: 1,
+                    delay: 2,
                     clipPath: "inset(0% 0% 0% 0%)",
                     duration: 0.8,
                     ease: Power2.easeOut
