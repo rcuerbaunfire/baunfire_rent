@@ -1,6 +1,42 @@
 $(document).ready(function () {
     console.log('bf script init');
 
+    function handleVideo() {
+        const containers = $(".video-block, .hero");
+        if (!containers.length) return;
+
+        attachScript();
+
+        function loadVideos() {
+            containers.each(function () {
+                const self = $(this);
+                const videoID = self.find("#video-id").text();
+                const videoBox = self.find(".vimeo-container");
+
+                var player = new Vimeo.Player(videoBox, {
+                    id: videoID,
+                    controls: false,
+                    autoplay: true,
+                    muted: true,
+                    background: true
+                });
+            });
+        }
+
+        function attachScript() {
+            const tag = document.createElement('script');
+            tag.src = `https://player.vimeo.com/api/player.js`;
+            tag.async = true;
+            tag.id = "vimeo-script"
+            const targetScriptTag = document.getElementsByTagName('script')[1];
+            targetScriptTag.parentNode.insertBefore(tag, targetScriptTag);
+
+            tag.onload = function () {
+                loadVideos();
+            }
+        }
+    };
+
     function duplicatesForMobile() {
         function featureCards() {
             const container = $(".feature-cards");
@@ -206,42 +242,6 @@ $(document).ready(function () {
                 )
         })
     }
-
-    function handleVideo() {
-        const containers = $(".video-block, .hero");
-        if (!containers.length) return;
-
-        attachScript();
-
-        function loadVideos() {
-            containers.each(function () {
-                const self = $(this);
-                const videoID = self.find("#video-id").text();
-                const videoBox = self.find(".vimeo-container");
-
-                var player = new Vimeo.Player(videoBox, {
-                    id: videoID,
-                    controls: false,
-                    autoplay: true,
-                    muted: true,
-                    background: true
-                });
-            });
-        }
-
-        function attachScript() {
-            const tag = document.createElement('script');
-            tag.src = `https://player.vimeo.com/api/player.js`;
-            tag.async = true;
-            tag.id = "vimeo-script"
-            const targetScriptTag = document.getElementsByTagName('script')[1];
-            targetScriptTag.parentNode.insertBefore(tag, targetScriptTag);
-
-            tag.onload = function () {
-                loadVideos();
-            }
-        }
-    };
 
     function solutionAccordion() {
         const containers = $(".solutions-accordion");
