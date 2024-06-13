@@ -184,7 +184,7 @@ $(document).ready(function () {
                         0: { autoWidth: false, margin: 20, items: 1 },
                         768: { autoWidth: true, margin: 24 },
                     },
-                }); 
+                });
             }
         });
     }
@@ -388,7 +388,7 @@ $(document).ready(function () {
                 const subSelf = $(this);
                 const overlay = subSelf.find(".lp-arrow");
 
-                overlay.click(function() {
+                overlay.click(function () {
                     allItems.addClass("open");
                 })
             });
@@ -415,6 +415,26 @@ $(document).ready(function () {
         })
     }
 
+    function ctaBoxSlideIn() {
+        const containers = $(".gs-container");
+        if (!containers.length) return;
+
+        containers.each(function () {
+            const self = $(this);
+
+            gsap.to(self, {
+                autoAlpha: 1,
+                y: 0,
+                duration: 0.8,
+                scrollTrigger: {
+                    trigger: self,
+                    start: "top 80%",
+                    invalidateOnRefresh: true,
+                },
+            });
+        })
+    }
+
     duplicatesForMobile();
     carousels();
     handleVideo();
@@ -423,4 +443,5 @@ $(document).ready(function () {
     faq();
     packages();
     heroSlideIn();
+    ctaBoxSlideIn();
 });
