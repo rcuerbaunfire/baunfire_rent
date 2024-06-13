@@ -395,6 +395,27 @@ $(document).ready(function () {
         })
     }
 
+    function heroSlideIn() {
+        const containers = $("section.hero");
+        if (!containers.length) return;
+
+        containers.each(function () {
+            const self = $(this);
+            const heroRight = self.find(".hero-right-container");
+
+            gsap.fromTo(
+                {
+                    clipPath: "inset(0 100% 0 0)"
+                },
+                {
+                    clipPath: "inset(0 0 0 0)",
+                    duration: 0.6,
+                    ease: Power2.easeOut
+                }
+            )
+        })
+    }
+
     duplicatesForMobile();
     carousels();
     handleVideo();
@@ -402,4 +423,5 @@ $(document).ready(function () {
     solutionAccordion();
     faq();
     packages();
+    heroSlideIn();
 });
