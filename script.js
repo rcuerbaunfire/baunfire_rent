@@ -450,7 +450,7 @@ $(document).ready(function () {
                 stagger: { each: 0.3 },
                 scrollTrigger: {
                     trigger: self,
-                    start: "top 70%",
+                    start: "top 60%",
                     invalidateOnRefresh: true,
                 },
             });
