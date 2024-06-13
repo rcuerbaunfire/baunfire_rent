@@ -403,15 +403,12 @@ $(document).ready(function () {
             const self = $(this);
             const heroRight = self.find(".hero-right-container");
 
-            gsap.fromTo(
+            gsap.to(
                 heroRight,
-                {
-                    clipPath: "inset(0% 100% 0% 0%)"
-                },
                 {
                     delay: 1,
                     clipPath: "inset(0% 0% 0% 0%)",
-                    duration: 0.6,
+                    duration: 0.8,
                     ease: Power2.easeOut
                 }
             )
