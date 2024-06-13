@@ -404,6 +404,7 @@ $(document).ready(function () {
             const heroRight = self.find(".hero-right-container");
 
             gsap.fromTo(
+                heroRight,
                 {
                     clipPath: "inset(0 100% 0 0)"
                 },
