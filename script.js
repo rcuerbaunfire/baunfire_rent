@@ -406,11 +406,11 @@ $(document).ready(function () {
             gsap.fromTo(
                 heroRight,
                 {
-                    clipPath: "inset(0 100% 0 0)"
+                    clipPath: "inset(0% 100% 0% 0%)"
                 },
                 {
                     delay: 1,
-                    clipPath: "inset(0 0 0 0)",
+                    clipPath: "inset(0% 0% 0% 0%)",
                     duration: 0.6,
                     ease: Power2.easeOut
                 }
