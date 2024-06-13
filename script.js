@@ -441,7 +441,7 @@ $(document).ready(function () {
 
         containers.each(function () {
             const self = $(this);
-            const items = self.find(".res-items");
+            const items = self.find(".res-items").children();
 
             gsap.to(items, {
                 autoAlpha: 1,
