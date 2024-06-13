@@ -435,6 +435,29 @@ $(document).ready(function () {
         })
     }
 
+    function resItemsSlideIn() {
+        const containers = $(".w-layout-blockcontainer.resources");
+        if (!containers.length) return;
+
+        containers.each(function () {
+            const self = $(this);
+            const items = self.find(".res-items");
+
+            gsap.to(items, {
+                autoAlpha: 1,
+                y: 0,
+                duration: 0.8,
+                stagger: { each: 0.3 },
+                scrollTrigger: {
+                    trigger: self,
+                    start: "top 80%",
+                    invalidateOnRefresh: true,
+                },
+            });
+        })
+    }
+
+
     duplicatesForMobile();
     carousels();
     handleVideo();
@@ -444,4 +467,5 @@ $(document).ready(function () {
     packages();
     heroSlideIn();
     ctaBoxSlideIn();
+    resItemsSlideIn();
 });
