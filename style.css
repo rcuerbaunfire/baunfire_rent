@@ -52,6 +52,10 @@ html * {
 .owl-nav .owl-next:not(.disabled) {
   -webkit-transform: scale(1);
           transform: scale(1);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 .owl-nav .owl-prev:not(.disabled):hover,
 .owl-nav .owl-next:not(.disabled):hover {
