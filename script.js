@@ -547,11 +547,11 @@ $(document).ready(function () {
                     )
                     .fromTo(lines,
                         {
-                            clipPath: "inset(0 0 0 0)",
+                            clipPath: "inset(0 0 100% 0)",
                             autoAlpha: 1,
                         },
                         {
-                            clipPath: "inset(0 0 100% 0)",
+                            clipPath: "inset(0 0 0 0)",
                             autoAlpha: 0,
                             duration: 0.8,
                         },
