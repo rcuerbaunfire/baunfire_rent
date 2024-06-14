@@ -409,3 +409,25 @@ code {
 .w-dyn-bind-empty {
   display: none;
 }
+
+.global-cta {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.global-cta svg circle,
+.global-cta svg path {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.global-cta:hover:not(.outlined):not(.white) svg circle, .global-cta:hover.white.outlined svg circle {
+  fill: #4561ec;
+}
+.global-cta:hover:not(.outlined):not(.white) svg path, .global-cta:hover.white.outlined svg path {
+  stroke: white;
+}
+.global-cta:hover.outlined:not(.white) svg circle, .global-cta:hover.white:not(.outlined) svg circle {
+  fill: white;
+}
+.global-cta:hover.outlined:not(.white) svg path, .global-cta:hover.white:not(.outlined) svg path {
+  stroke: #4561EC;
+}

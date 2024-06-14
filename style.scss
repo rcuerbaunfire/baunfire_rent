@@ -445,3 +445,42 @@ code {
 .w-dyn-bind-empty {
 	display: none;
 }
+
+.global-cta {
+    transition: all 0.3s ease-in-out;
+
+    svg {
+        circle,
+        path {
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    &:hover {
+        &:not(.outlined):not(.white),
+        &.white.outlined {
+            svg {
+                circle {
+                    fill: #4561ec;
+                }
+    
+                path {
+                    stroke: white;
+                }
+            }
+        }
+
+        &.outlined:not(.white),
+        &.white:not(.outlined) {
+            svg {
+                circle {
+                    fill: white;
+                }
+    
+                path {
+                    stroke: #4561EC;
+                }
+            }
+        }
+    }
+}
