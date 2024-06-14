@@ -419,15 +419,15 @@ code {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.global-cta:hover:not(.outlined):not(.white) svg circle, .global-cta:hover.white.outlined svg circle {
+.global-cta:hover:not(.outline):not(.white) svg circle, .global-cta:hover.white.outline svg circle {
   fill: #4561ec;
 }
-.global-cta:hover:not(.outlined):not(.white) svg path, .global-cta:hover.white.outlined svg path {
+.global-cta:hover:not(.outline):not(.white) svg path, .global-cta:hover.white.outline svg path {
   stroke: white;
 }
-.global-cta:hover.outlined:not(.white) svg circle, .global-cta:hover.white:not(.outlined) svg circle {
+.global-cta:hover.outline:not(.white) svg circle, .global-cta:hover.white:not(.outline) svg circle {
   fill: white;
 }
-.global-cta:hover.outlined:not(.white) svg path, .global-cta:hover.white:not(.outlined) svg path {
+.global-cta:hover.outline:not(.white) svg path, .global-cta:hover.white:not(.outline) svg path {
   stroke: #4561EC;
 }

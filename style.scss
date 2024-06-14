@@ -457,8 +457,8 @@ code {
     }
 
     &:hover {
-        &:not(.outlined):not(.white),
-        &.white.outlined {
+        &:not(.outline):not(.white),
+        &.white.outline {
             svg {
                 circle {
                     fill: #4561ec;
@@ -470,8 +470,8 @@ code {
             }
         }
 
-        &.outlined:not(.white),
-        &.white:not(.outlined) {
+        &.outline:not(.white),
+        &.white:not(.outline) {
             svg {
                 circle {
                     fill: white;
