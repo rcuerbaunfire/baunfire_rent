@@ -482,6 +482,87 @@ $(document).ready(function () {
         })
     }
 
+    function FiftyFiftyStatsSlideIn() {
+        const containers = $("section._50-50-stats-img");
+        if (!containers.length) return;
+
+        containers.each(function () {
+            const self = $(this);
+            const items = self.find(".ff-box");
+            const content = self.find(".ff-content");
+            const logos = self.find(".cl-logo");
+            const notes = self.find(".solutions-footnote");
+            const lines = self.find(".line-white");
+
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: self,
+                    start: "top 70%"
+                }
+            })
+            .fromTo(items, 
+                {
+                    autoAlpha: 0,
+                    y: 30,
+                }, 
+                {
+                    autoAlpha: 1,
+                    y: 0,
+                    ease: Power3.easeOut,
+                    duration: 0.6
+                }
+            )
+            .fromTo(logos, 
+                {
+                    autoAlpha: 0,
+                }, 
+                {
+                    autoAlpha: 1,
+                    y: 0,
+                    ease: Power3.easeOut,
+                    duration: 0.4
+                },
+                "<0.4"
+            )
+            .fromTo(content, 
+                {
+                    autoAlpha: 0,
+                    y: 20,
+                }, 
+                {
+                    autoAlpha: 1,
+                    y: 0,
+                    ease: Power3.easeOut,
+                    duration: 0.6
+                },
+                "<0.2"
+            )
+            .fromTo(lines, 
+                {
+                    width: 0,
+                }, 
+                {
+                    width: "100%",
+                    ease: Power3.easeOut,
+                    duration: 0.8
+                },
+                "<0.4"
+            )
+            .fromTo(notes, 
+                {
+                    autoAlpha: 0,
+                }, 
+                {
+                    autoAlpha: 1,
+                    y: 0,
+                    ease: Power3.easeOut,
+                    duration: 0.4
+                },
+                "<0.3"
+            )
+        })
+    }
+
     duplicatesForMobile();
     carousels();
     handleVideo();
@@ -493,4 +574,5 @@ $(document).ready(function () {
     ctaBoxSlideIn();
     resItemsSlideIn();
     propFixedScrollSlideIn();
+    FiftyFiftyStatsSlideIn();
 });
