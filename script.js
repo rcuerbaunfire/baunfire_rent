@@ -583,7 +583,7 @@ $(document).ready(function () {
                         {
                             width: "100%",
                             autoAlpha: 1,
-                            duration: 0.8,
+                            duration: 0.6,
                         },
                         "<0.2"
                     )
