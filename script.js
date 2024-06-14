@@ -504,7 +504,7 @@ $(document).ready(function () {
                 const subSelf = $(this);
                 const content = subSelf.find(".ff-content");
                 const logos = subSelf.find(".cl-logo");
-                const notes = subSelf.find(".solutions-footnote");
+                const notes = self.find(".solutions-footnote");
                 const lines = subSelf.find(".line-white");
 
                 tl
