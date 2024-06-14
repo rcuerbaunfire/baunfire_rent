@@ -485,8 +485,8 @@ code {
 	}
 }
 
-.w-richtext {
-	&.is-heading * {
+.richtext-heading {
+	& * {
         margin: 0 !important;
     }
 }

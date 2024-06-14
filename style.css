@@ -432,6 +432,6 @@ code {
   stroke: #4561ec;
 }
 
-.w-richtext.is-heading * {
+.richtext-heading * {
   margin: 0 !important;
 }
