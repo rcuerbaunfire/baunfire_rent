@@ -488,7 +488,7 @@ $(document).ready(function () {
 
         containers.each(function () {
             const self = $(this);
-            const items = self.find(".ff-box");
+            const items = self.find(".ff-cell");
 
             const tl = gsap.timeline({
                 defaults: {
@@ -502,13 +502,14 @@ $(document).ready(function () {
 
             items.each(function () {
                 const subSelf = $(this);
+                const item = subSelf.find(".ff-box");
                 const content = subSelf.find(".ff-content");
-                const logos = subSelf.find(".cl-logo");
-                const notes = self.find(".solutions-footnote");
-                const lines = subSelf.find(".line-white");
+                const logo = subSelf.find(".cl-logo");
+                const note = subSelf.find(".solutions-footnote");
+                const line = subSelf.find(".line-white");
 
                 tl
-                    .fromTo(subSelf,
+                    .fromTo(item,
                         {
                             autoAlpha: 0,
                             y: 30,
@@ -520,7 +521,7 @@ $(document).ready(function () {
                             duration: 0.6
                         }
                     )
-                    .fromTo(logos,
+                    .fromTo(logo,
                         {
                             autoAlpha: 0,
                         },
@@ -545,7 +546,7 @@ $(document).ready(function () {
                         },
                         "<0.2"
                     )
-                    .fromTo(lines,
+                    .fromTo(line,
                         {
                             clipPath: "inset(0 0 100% 0)",
                             autoAlpha: 1,
@@ -557,7 +558,7 @@ $(document).ready(function () {
                         },
                         "<0.4"
                     )
-                    .fromTo(notes,
+                    .fromTo(note,
                         {
                             autoAlpha: 0,
                         },
