@@ -78,7 +78,9 @@ html * {
 .sh-items .owl-stage,
 .sh-items .owl-item,
 .lp-items .owl-stage,
-.lp-items .owl-item {
+.lp-items .owl-item,
+.ar-items .owl-stage,
+.ar-items .owl-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,7 +90,8 @@ html * {
 .sol-items .owl-dots,
 .fc-items .owl-dots,
 .sh-items .owl-dots,
-.lp-items .owl-dots {
+.lp-items .owl-dots,
+.ar-items .owl-dots {
   height: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -106,7 +109,8 @@ html * {
 .res-items .owl-dot,
 .sol-items .owl-dot,
 .sh-items .owl-dot,
-.lp-items .owl-dot {
+.lp-items .owl-dot,
+.ar-items .owl-dot {
   background: #373839;
   height: 1px;
   padding: 0;
@@ -119,7 +123,8 @@ html * {
 .res-items .owl-dot.active,
 .sol-items .owl-dot.active,
 .sh-items .owl-dot.active,
-.lp-items .owl-dot.active {
+.lp-items .owl-dot.active,
+.ar-items .owl-dot.active {
   background: #7e93fb;
   height: 4px;
 }
@@ -158,8 +163,10 @@ html * {
 .fc-items .owl-dots {
   width: 100%;
 }
+
 .res-items .owl-dot:not(.active),
-.fc-items .owl-dot:not(.active) {
+.fc-items .owl-dot:not(.active),
+.ar-items .owl-dot:not(.active) {
   background: #adbbff;
 }
 
