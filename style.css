@@ -173,6 +173,10 @@ html * {
   background: #adbbff;
 }
 
+.ar-items .owl-dot.active {
+  background: #4561ec;
+}
+
 .tes-items .owl-item:not(.active) .tes-item * {
   color: #bebec4;
 }
