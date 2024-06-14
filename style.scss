@@ -107,7 +107,8 @@ html * {
 }
 
 .sh-items,
-.lp-items {
+.lp-items,
+.ar-items {
 	.owl-dot {
 		&:not(.active) {
 			background: #bebec4;

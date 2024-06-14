@@ -130,15 +130,18 @@ html * {
 }
 
 .sh-items .owl-dot:not(.active),
-.lp-items .owl-dot:not(.active) {
+.lp-items .owl-dot:not(.active),
+.ar-items .owl-dot:not(.active) {
   background: #bebec4;
 }
 .sh-items.owl-loaded,
-.lp-items.owl-loaded {
+.lp-items.owl-loaded,
+.ar-items.owl-loaded {
   overflow: visible;
 }
 .sh-items .owl-dots,
-.lp-items .owl-dots {
+.lp-items .owl-dots,
+.ar-items .owl-dots {
   width: calc(100% - 112px);
 }
 
