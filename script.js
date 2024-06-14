@@ -520,7 +520,7 @@ $(document).ready(function () {
                             ease: Power3.easeOut,
                             duration: 0.6
                         },
-                        "<0.4"
+                        "<0.2"
                     )
                     .fromTo(logo,
                         {
