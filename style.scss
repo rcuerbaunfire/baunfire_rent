@@ -486,10 +486,7 @@ code {
 }
 
 .w-richtext {
-	&.is-heading {
-		&,
-		& * {
-            margin: 0 !important;
-		}
-	}
+	&.is-heading * {
+        margin: 0 !important;
+    }
 }
