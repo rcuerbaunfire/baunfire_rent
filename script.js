@@ -415,6 +415,26 @@ $(document).ready(function () {
         })
     }
 
+    function LogoSlideIn() {
+        const containers = $(".pl-logo-container.is-home");
+        if (!containers.length) return;
+
+        containers.each(function () {
+            const self = $(this);
+
+            gsap.to(self, {
+                autoAlpha: 1,
+                y: 0,
+                duration: 0.8,
+                scrollTrigger: {
+                    trigger: self,
+                    start: "top 70%",
+                    invalidateOnRefresh: true,
+                },
+            });
+        })
+    }
+
     function ctaBoxSlideIn() {
         const containers = $(".gs-container");
         if (!containers.length) return;
@@ -584,6 +604,7 @@ $(document).ready(function () {
     faq();
     packages();
     heroSlideIn();
+    LogoSlideIn();
     ctaBoxSlideIn();
     resItemsSlideIn();
     propFixedScrollSlideIn();
