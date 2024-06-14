@@ -422,16 +422,24 @@ $(document).ready(function () {
         containers.each(function () {
             const self = $(this);
 
-            gsap.to(self, {
-                autoAlpha: 1,
-                y: 0,
-                duration: 0.8,
-                scrollTrigger: {
-                    trigger: self,
-                    start: "top 70%",
-                    invalidateOnRefresh: true,
+            gsap.fromTo(self,
+                {
+                    autoAlpha: 0,
+                    y: 30,
                 },
-            });
+                {
+                    autoAlpha: 1,
+                    y: 0,
+                    ease: Power3.easeOut,
+                    duration: 0.6,
+                    scrollTrigger: {
+                        trigger: self,
+                        start: "top 80%",
+                        invalidateOnRefresh: true,
+                    },
+                },
+                "<0.2"
+            )
         })
     }
 
@@ -451,7 +459,7 @@ $(document).ready(function () {
                     start: "top 80%",
                     invalidateOnRefresh: true,
                 },
-            });
+            })
         })
     }
 
