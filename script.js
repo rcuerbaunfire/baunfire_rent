@@ -185,6 +185,21 @@ $(document).ready(function () {
                         768: { autoWidth: true, margin: 24 },
                     },
                 });
+            
+            } else if (self.hasClass("ar-items")) {
+                const carouselInstance = self.owlCarousel({
+                    nav: true,
+                    autoWidth: true,
+                    smartSpeed: 1000,
+                    loop: false,
+                    navRewind: false,
+                    dotsEach: true,
+                    navText: [leftArrow, rightArrow],
+                    responsive: {
+                        0: { margin: 20 },
+                        768: { margin: 24 },
+                    },
+                });
             }
         });
     }
