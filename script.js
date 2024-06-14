@@ -434,11 +434,10 @@ $(document).ready(function () {
                     duration: 0.6,
                     scrollTrigger: {
                         trigger: self,
-                        start: "top 80%",
+                        start: "top 70%",
                         invalidateOnRefresh: true,
                     },
                 },
-                "<0.2"
             )
         })
     }
