@@ -548,10 +548,12 @@ $(document).ready(function () {
                     )
                     .fromTo(line,
                         {
-                            clipPath: "inset(0% 0% 100% 0%)",
+                            width: 0,
+                            autoAlpha: 0,
                         },
                         {
-                            clipPath: "inset(0% 0% 0% 0%)",
+                            width: "100%",
+                            autoAlpha: 1,
                             duration: 0.8,
                         },
                         "<0.4"
