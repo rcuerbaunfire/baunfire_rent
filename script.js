@@ -509,7 +509,7 @@ $(document).ready(function () {
         })
     }
 
-    function FiftyFiftyStatsSlideIn() {
+    function fiftyFiftyStatsSlideIn() {
         const containers = $("section._50-50-stats-img");
         if (!containers.length) return;
 
@@ -583,7 +583,7 @@ $(document).ready(function () {
                         {
                             width: "100%",
                             autoAlpha: 1,
-                            duration: 0.6,
+                            duration: 0.8,
                         },
                         "<0.2"
                     )
@@ -597,7 +597,7 @@ $(document).ready(function () {
                             ease: Power3.easeOut,
                             duration: 0.4
                         },
-                        "<0.3"
+                        "<0.2"
                     )
             })
         })
@@ -615,5 +615,5 @@ $(document).ready(function () {
     ctaBoxSlideIn();
     resItemsSlideIn();
     propFixedScrollSlideIn();
-    FiftyFiftyStatsSlideIn();
+    fiftyFiftyStatsSlideIn();
 });
