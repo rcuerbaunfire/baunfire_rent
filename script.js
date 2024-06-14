@@ -474,7 +474,7 @@ $(document).ready(function () {
                     duration: 0.8,
                     scrollTrigger: {
                         trigger: subSelf,
-                        start: "top 70%",
+                        start: "top 65",
                         invalidateOnRefresh: true,
                     },
                 });
