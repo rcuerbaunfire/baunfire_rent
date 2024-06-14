@@ -429,5 +429,9 @@ code {
   fill: white;
 }
 .global-cta:hover.outline:not(.white) svg path, .global-cta:hover.white:not(.outline) svg path {
-  stroke: #4561EC;
+  stroke: #4561ec;
+}
+
+.w-richtext.is-heading, .w-richtext.is-heading * {
+  margin: 0 !important;
 }

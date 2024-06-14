@@ -160,13 +160,13 @@ html * {
 .res-items,
 .fc-items,
 .ar-items {
-    .owl-dot:not(.active) {
+	.owl-dot:not(.active) {
 		background: #adbbff;
 	}
 }
 
 .ar-items {
-    .owl-dot.active {
+	.owl-dot.active {
 		background: #4561ec;
 	}
 }
@@ -447,40 +447,49 @@ code {
 }
 
 .global-cta {
-    transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 
-    svg {
-        circle,
-        path {
-            transition: all 0.3s ease-in-out;
-        }
-    }
+	svg {
+		circle,
+		path {
+			transition: all 0.3s ease-in-out;
+		}
+	}
 
-    &:hover {
-        &:not(.outline):not(.white),
-        &.white.outline {
-            svg {
-                circle {
-                    fill: #4561ec;
-                }
-    
-                path {
-                    stroke: white;
-                }
-            }
-        }
+	&:hover {
+		&:not(.outline):not(.white),
+		&.white.outline {
+			svg {
+				circle {
+					fill: #4561ec;
+				}
 
-        &.outline:not(.white),
-        &.white:not(.outline) {
-            svg {
-                circle {
-                    fill: white;
-                }
-    
-                path {
-                    stroke: #4561EC;
-                }
-            }
-        }
-    }
+				path {
+					stroke: white;
+				}
+			}
+		}
+
+		&.outline:not(.white),
+		&.white:not(.outline) {
+			svg {
+				circle {
+					fill: white;
+				}
+
+				path {
+					stroke: #4561ec;
+				}
+			}
+		}
+	}
+}
+
+.w-richtext {
+	&.is-heading {
+		&,
+		& * {
+            margin: 0 !important;
+		}
+	}
 }
