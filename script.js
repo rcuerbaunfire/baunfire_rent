@@ -525,6 +525,7 @@ $(document).ready(function () {
                     .fromTo(logo,
                         {
                             autoAlpha: 0,
+                            y: 20,
                         },
                         {
                             autoAlpha: 1,
