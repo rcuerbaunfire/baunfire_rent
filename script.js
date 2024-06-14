@@ -465,7 +465,7 @@ $(document).ready(function () {
             const self = $(this);
             const items = self.find(".pfp-item");
 
-            items.each(function() {
+            items.each(function () {
                 const subSelf = $(this);
 
                 gsap.to(subSelf, {
@@ -489,77 +489,87 @@ $(document).ready(function () {
         containers.each(function () {
             const self = $(this);
             const items = self.find(".ff-box");
-            const content = self.find(".ff-content");
-            const logos = self.find(".cl-logo");
-            const notes = self.find(".solutions-footnote");
-            const lines = self.find(".line-white");
 
-            gsap.timeline({
+            const tl = gsap.timeline({
+                defaults: {
+                    overwrite: true
+                },
                 scrollTrigger: {
                     trigger: self,
                     start: "top 70%"
                 }
+            });
+
+            items.each(function () {
+                const subSelf = $(this);
+                const content = subSelf.find(".ff-content");
+                const logos = subSelf.find(".cl-logo");
+                const notes = subSelf.find(".solutions-footnote");
+                const lines = subSelf.find(".line-white");
+
+                tl
+                    .fromTo(subSelf,
+                        {
+                            autoAlpha: 0,
+                            y: 30,
+                        },
+                        {
+                            autoAlpha: 1,
+                            y: 0,
+                            ease: Power3.easeOut,
+                            duration: 0.6
+                        }
+                    )
+                    .fromTo(logos,
+                        {
+                            autoAlpha: 0,
+                        },
+                        {
+                            autoAlpha: 1,
+                            y: 0,
+                            ease: Power3.easeOut,
+                            duration: 0.4
+                        },
+                        "<0.4"
+                    )
+                    .fromTo(content,
+                        {
+                            autoAlpha: 0,
+                            y: 20,
+                        },
+                        {
+                            autoAlpha: 1,
+                            y: 0,
+                            ease: Power3.easeOut,
+                            duration: 0.6
+                        },
+                        "<0.2"
+                    )
+                    .fromTo(lines,
+                        {
+                            clipPath: "inset(0 0 0 0)",
+                            autoAlpha: 1,
+                        },
+                        {
+                            clipPath: "inset(0 0 100% 0)",
+                            autoAlpha: 0,
+                            duration: 0.8,
+                        },
+                        "<0.4"
+                    )
+                    .fromTo(notes,
+                        {
+                            autoAlpha: 0,
+                        },
+                        {
+                            autoAlpha: 1,
+                            y: 0,
+                            ease: Power3.easeOut,
+                            duration: 0.4
+                        },
+                        "<0.3"
+                    )
             })
-            .fromTo(items, 
-                {
-                    autoAlpha: 0,
-                    y: 30,
-                }, 
-                {
-                    autoAlpha: 1,
-                    y: 0,
-                    ease: Power3.easeOut,
-                    duration: 0.6
-                }
-            )
-            .fromTo(logos, 
-                {
-                    autoAlpha: 0,
-                }, 
-                {
-                    autoAlpha: 1,
-                    y: 0,
-                    ease: Power3.easeOut,
-                    duration: 0.4
-                },
-                "<0.4"
-            )
-            .fromTo(content, 
-                {
-                    autoAlpha: 0,
-                    y: 20,
-                }, 
-                {
-                    autoAlpha: 1,
-                    y: 0,
-                    ease: Power3.easeOut,
-                    duration: 0.6
-                },
-                "<0.2"
-            )
-            .fromTo(lines, 
-                {
-                    width: 0,
-                }, 
-                {
-                    width: "100%",
-                    ease: Power3.easeOut,
-                    duration: 0.8
-                },
-                "<0.4"
-            )
-            .fromTo(notes, 
-                {
-                    autoAlpha: 0,
-                }, 
-                {
-                    autoAlpha: 1,
-                    y: 0,
-                    ease: Power3.easeOut,
-                    duration: 0.4
-                },
-                "<0.3"
-            )
         })
     }
 
