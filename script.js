@@ -519,7 +519,8 @@ $(document).ready(function () {
                             y: 0,
                             ease: Power3.easeOut,
                             duration: 0.6
-                        }
+                        },
+                        "<0.4"
                     )
                     .fromTo(logo,
                         {
@@ -556,7 +557,7 @@ $(document).ready(function () {
                             autoAlpha: 1,
                             duration: 0.8,
                         },
-                        "<0.4"
+                        "<0.2"
                     )
                     .fromTo(note,
                         {
