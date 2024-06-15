@@ -483,7 +483,7 @@ $(document).ready(function () {
 
         containers.each(function () {
             const self = $(this);
-            const items = self.find(".res-items .res-card");
+            const items = self.find(".res-items .w-layout-cell");
 
             const mm = gsap.matchMedia();
 
