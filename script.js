@@ -185,7 +185,7 @@ $(document).ready(function () {
                         768: { autoWidth: true, margin: 24 },
                     },
                 });
-            
+
             } else if (self.hasClass("ar-items")) {
                 const carouselInstance = self.owlCarousel({
                     nav: true,
@@ -485,17 +485,48 @@ $(document).ready(function () {
             const self = $(this);
             const items = self.find(".res-items").children();
 
-            gsap.to(items, {
-                autoAlpha: 1,
-                y: 0,
-                duration: 0.8,
-                stagger: { each: 0.3 },
-                scrollTrigger: {
-                    trigger: self,
-                    start: "top 60%",
-                    invalidateOnRefresh: true,
+            const mm = gsap.matchMedia();
+
+            mm.add(
+                {
+                    isDesktop: `(min-width: 768px)`,
+                    isMobile: `(max-width: 767px)`,
                 },
-            });
+                (context) => {
+                    let { isDesktop, isMobile } = context.conditions;
+
+                    if (isMobile) {
+                        gsap.set(items, {
+                            autoAlpha: 1,
+                            y: 0,
+                        });
+                    }
+
+                    if (isDesktop) {
+                        gsap.fromTo(items,
+                            {
+                                autoAlpha: 0,
+                                y: 30,
+                            },
+                            {
+                                autoAlpha: 1,
+                                y: 0,
+                                duration: 0.8,
+                                stagger: { each: 0.3 },
+                                scrollTrigger: {
+                                    trigger: self,
+                                    start: "top 60%",
+                                    invalidateOnRefresh: true,
+                                },
+                            }
+                        );
+                    }
+
+                    return () => { };
+                }
+            );
+
+
         })
     }
 
