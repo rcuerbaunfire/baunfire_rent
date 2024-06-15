@@ -648,6 +648,49 @@ $(document).ready(function () {
             })
         })
     }
+    
+    function aboutUsSlideIn() {
+        const containers = $("section.about-us.is-home");
+        if (!containers.length) return;
+
+        containers.each(function () {
+            const self = $(this);
+            const image = self.find("img");
+            const content = self.find(".eyebrow-container, .ab-content");
+
+            gsap.fromTo(image,
+                {
+                    autoAlpha: 0,
+                    y: 30,
+                },
+                {
+                    autoAlpha: 1,
+                    y: 0,
+                    duration: 0.8,
+                    scrollTrigger: {
+                        trigger: image,
+                        start: "top 60%",
+                        invalidateOnRefresh: true,
+                    },
+                }
+            );
+
+            gsap.fromTo(content,
+                {
+                    autoAlpha: 0,
+                },
+                {
+                    autoAlpha: 1,
+                    duration: 0.6,
+                    scrollTrigger: {
+                        trigger: content,
+                        start: "top 60%",
+                        invalidateOnRefresh: true,
+                    },
+                }
+            );
+        })
+    }
 
     duplicatesForMobile();
     carousels();
@@ -662,4 +705,5 @@ $(document).ready(function () {
     resItemsSlideIn();
     propFixedScrollSlideIn();
     fiftyFiftyStatsSlideIn();
+    aboutUsSlideIn();
 });
