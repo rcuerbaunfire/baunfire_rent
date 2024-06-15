@@ -438,3 +438,8 @@ code {
 .richtext-heading * {
   margin: 0 !important;
 }
+
+.lp-highlight.w-condition-invisible {
+  opacity: 0;
+  display: block !important;
+}
