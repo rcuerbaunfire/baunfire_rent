@@ -678,9 +678,11 @@ $(document).ready(function () {
             gsap.fromTo(content,
                 {
                     autoAlpha: 0,
+                    y: 30,
                 },
                 {
                     autoAlpha: 1,
+                    y: 0,
                     duration: 0.6,
                     scrollTrigger: {
                         trigger: content,
