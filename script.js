@@ -483,7 +483,6 @@ $(document).ready(function () {
 
         containers.each(function () {
             const self = $(this);
-            const items = self.find(".res-items").children();
 
             const mm = gsap.matchMedia();
 
@@ -496,14 +495,14 @@ $(document).ready(function () {
                     let { isDesktop, isMobile } = context.conditions;
 
                     if (isMobile) {
-                        gsap.set(items, {
+                        gsap.set(self.find(".res-items").children(), {
                             autoAlpha: 1,
                             y: 0,
                         });
                     }
 
                     if (isDesktop) {
-                        gsap.fromTo(items,
+                        gsap.fromTo(self.find(".res-items").children(),
                             {
                                 autoAlpha: 0,
                                 y: 30,
