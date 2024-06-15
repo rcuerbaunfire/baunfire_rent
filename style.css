@@ -447,3 +447,9 @@ code {
 .res-items .w-layout-cell {
   overflow: hidden;
 }
+
+.global-heading-horizontal.is-faq,
+.global-heading-left.is-faq,
+.global-heading-right.is-faq {
+  margin: 0 !important;
+}

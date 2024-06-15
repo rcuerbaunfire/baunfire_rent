@@ -503,3 +503,11 @@ code {
 .res-items .w-layout-cell {
     overflow: hidden;
 }
+
+.global-heading-horizontal,
+.global-heading-left,
+.global-heading-right {
+    &.is-faq {
+        margin: 0 !important;
+    }
+}
