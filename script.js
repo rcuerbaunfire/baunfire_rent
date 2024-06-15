@@ -515,7 +515,7 @@ $(document).ready(function () {
                                 stagger: { each: 0.3 },
                                 scrollTrigger: {
                                     trigger: self,
-                                    start: "top 60%",
+                                    start: "top 50%",
                                     invalidateOnRefresh: true,
                                 },
                             }
