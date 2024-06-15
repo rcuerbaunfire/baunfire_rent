@@ -669,7 +669,7 @@ $(document).ready(function () {
                     duration: 0.8,
                     scrollTrigger: {
                         trigger: image,
-                        start: "top 60%",
+                        start: "top 50%",
                         invalidateOnRefresh: true,
                     },
                 }
