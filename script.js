@@ -483,6 +483,7 @@ $(document).ready(function () {
 
         containers.each(function () {
             const self = $(this);
+            const items = self.find(".res-items .res-card");
 
             const mm = gsap.matchMedia();
 
@@ -495,14 +496,14 @@ $(document).ready(function () {
                     let { isDesktop, isMobile } = context.conditions;
 
                     if (isMobile) {
-                        gsap.set(self.find(".res-items").children(), {
+                        gsap.set(items, {
                             autoAlpha: 1,
                             y: 0,
                         });
                     }
 
                     if (isDesktop) {
-                        gsap.fromTo(self.find(".res-items").children(),
+                        gsap.fromTo(items,
                             {
                                 autoAlpha: 0,
                                 y: 30,
