@@ -686,7 +686,7 @@ $(document).ready(function () {
                     duration: 0.6,
                     scrollTrigger: {
                         trigger: content,
-                        start: "top 60%",
+                        start: "top 40%",
                         invalidateOnRefresh: true,
                     },
                 }
