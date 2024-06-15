@@ -49,6 +49,10 @@ html * {
 			}
 		}
 	}
+
+    &.disabled {
+        display: none;
+    }
 }
 
 .res-items .owl-stage {
