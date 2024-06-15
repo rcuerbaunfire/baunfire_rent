@@ -655,7 +655,7 @@ $(document).ready(function () {
 
         containers.each(function () {
             const self = $(this);
-            const image = self.find("img");
+            const image = self.find(".global-container > img");
             const content = self.find(".eyebrow-container, .ab-content");
 
             gsap.fromTo(image,
