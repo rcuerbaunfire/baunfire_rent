@@ -849,7 +849,7 @@ $(document).ready(function () {
                         y: trigger,
                     },
                     ease: "none",
-                    duration: 0,
+                    duration: 0.4,
                 });
             });
 
