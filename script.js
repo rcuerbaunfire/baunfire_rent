@@ -848,7 +848,7 @@ $(document).ready(function () {
                         offsetY: 140,
                         y: trigger,
                     },
-                    ease: "none",
+                    ease: Power3.easeOut,
                     duration: 0.4,
                 });
             });
