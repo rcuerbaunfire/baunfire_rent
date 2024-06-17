@@ -3,6 +3,10 @@ html * {
 	-webkit-font-smoothing: antialiased;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 .owl-carousel.owl-loaded {
 	display: flex;
 }

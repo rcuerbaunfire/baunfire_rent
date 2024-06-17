@@ -2,10 +2,10 @@ $(document).ready(function () {
     console.log('bf script init');
 
     function nav() {
+        const nav = $(".w-nav");
+
         function navSlideIn() {
             if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-                const nav = $(".w-nav");
-
                 gsap.fromTo(nav,
                     {
                         autoAlpha: 0,
@@ -22,8 +22,8 @@ $(document).ready(function () {
         }
 
         function preventScroll() {
-            const trigger = document.getElementById("menu-trigger");
-            const bodyEl = document.getElementsByTagName("body")[0];
+            const trigger = $("menu-trigger");
+            const bodyEl = $("body");
 
             const mm = gsap.matchMedia();
 
@@ -36,17 +36,21 @@ $(document).ready(function () {
                     let { isDesktop, isMobile } = context.conditions;
 
                     if (isMobile) {
-                        let numOfClicks = 0;
-
-                        trigger.onclick = () => {
-                            numOfClicks += 1;
-                            const isNumOfClicksEven = numOfClicks % 2 === 0;
-                            isNumOfClicksEven ? bodyEl.style.overflow = "auto" : bodyEl.style.overflow = "hidden";
-                        };
+                        trigger.click(function() {
+                            if (nav.hasClass("active")) {
+                                nav.removeClass("active");
+                                bodyEl.removeClass("no-scroll");
+                            } else {
+                                nav.addClass("active");
+                                bodyEl.addClass("no-scroll");
+                            }
+                        });
                     }
 
                     if (isDesktop) {
-                        bodyEl.style.overflow = "auto";
+                        trigger.off("click");
+                        nav.removeClass("active");
+                        bodyEl.removeClass("no-scroll");
                     }
 
                     return () => { };
