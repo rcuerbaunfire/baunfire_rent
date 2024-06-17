@@ -845,7 +845,7 @@ $(document).ready(function () {
 
                 gsap.to(window, {
                     scrollTo: {
-                        offsetY: 140,
+                        offsetY: 160,
                         y: trigger,
                     },
                     ease: Power3.easeOut,
