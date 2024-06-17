@@ -504,7 +504,8 @@ code {
   display: -ms-flexbox !important;
   display: flex !important;
 }
-.navbar_component.hovering .nav-dd-toggle .navbar_link {
+.navbar_component.hovering .nav-dd-toggle .navbar_link,
+.navbar_component.hovering .navbar_link.client-login {
   color: white !important;
 }
 .navbar_component .main-nav-dd .nav-dd-list-container {

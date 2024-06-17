@@ -574,7 +574,8 @@ code {
             display: flex !important;
         }
 
-        .nav-dd-toggle .navbar_link {
+        .nav-dd-toggle .navbar_link,
+        .navbar_link.client-login {
             color: white !important;
         }
     }
