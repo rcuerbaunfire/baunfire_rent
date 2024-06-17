@@ -57,8 +57,24 @@ $(document).ready(function () {
             );
         }
 
+        function dropdown() {
+            const dds = $(".main-nav-dd");
+
+            dds.click(function() {
+                const self = $(this);
+
+                if (self.hasClass("active")) {
+                    self.removeClass("active");
+                } else {
+                    dds.removeClass("active");
+                    self.addClass("active");
+                }
+            })
+        }
+
         navSlideIn();
         preventScroll();
+        dropdown();
     }
 
     function handleVideo() {
