@@ -458,6 +458,9 @@ code {
   margin: 0 !important;
 }
 
+.ar-list-item, .ar-list-item * {
+  cursor: pointer;
+}
 .ar-list-item .ar-list-label {
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;

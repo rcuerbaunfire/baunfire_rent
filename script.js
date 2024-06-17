@@ -840,6 +840,7 @@ $(document).ready(function () {
                 const trigger = self.find(`.ar-carousel[data-ar="${key}"]`);
                 if (!trigger.length) return;
 
+                arLinks.removeClass("active");
                 subSelf.addClass("active");
 
                 gsap.to(window, {

@@ -517,10 +517,14 @@ code {
 }
 
 .ar-list-item {
+    &, & * {
+        cursor: pointer;
+    }
+    
     .ar-list-label {
         transition: color 0.3s ease-in-out;
     }
-    
+
     &.active {
         .ar-orb {
             display: block;
