@@ -4,7 +4,7 @@ $(document).ready(function () {
     function navSlideIn() {
         const nav = $(".w-nav");
 
-        gsap.fromTo(image,
+        gsap.fromTo(nav,
             {
                 autoAlpha: 0,
                 y: "-100%",
@@ -713,6 +713,7 @@ $(document).ready(function () {
         })
     }
 
+    navSlideIn();
     duplicatesForMobile();
     carousels();
     handleVideo();
@@ -727,5 +728,4 @@ $(document).ready(function () {
     propFixedScrollSlideIn();
     fiftyFiftyStatsSlideIn();
     aboutUsSlideIn();
-    navSlideIn();
 });
