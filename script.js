@@ -763,7 +763,73 @@ $(document).ready(function () {
 
         containers.each(function () {
             const self = $(this);
+            const arList = self.find(".ar-list");
+            const arListInner = self.find(".ar-list-inner");
             const arLinks = self.find(".ar-list-item");
+            const arCarousels = self.find(".ar-carousel");
+            let mm = gsap.matchMedia();
+
+            mm.add({
+                isDesktop: `(min-width: 991px)`,
+                isMobile: `(max-width: 990px)`,
+            }, (context) => {
+                let { isDesktop, isMobile } = context.conditions;
+                let scrollingST = null;
+
+                ScrollTrigger.create({
+                    pin: true,
+                    start: isDesktop ? "top 120px" : "top 20px",
+                    trigger: arListInner,
+                    endTrigger: arList,
+                    invalidateOnRefresh: true,
+                    // onEnter: () => {
+                    //     table.addClass("online");
+                    // },
+                    end: () => "+=" + (arList.outerHeight() - arListInner.outerHeight()),
+                    // onLeaveBack: () => {
+                    //     table.removeClass("online");
+
+                    //     if (isMobile && !table.hasClass("active")) {
+                    //         tableHead.trigger("click");
+                    //     }
+                    // }
+                });
+
+                // if (isDesktop) {
+                //     tableHead.off("click");
+                    
+                //     if (scrollingST) {
+                //         scrollingST.disable(true);
+                //     }
+                // }
+
+                // if (isMobile) {
+                //     if (!scrollingST) {
+                //         scrollingST = ScrollTrigger.create({
+                //             trigger: "body",
+                //             start: "top top",
+                //             onUpdate: (self) => {
+                //                 if (self.direction === 1) {
+                //                     table.removeClass("move-down");
+                //                 } else {
+                //                     table.addClass("move-down");
+                //                 }
+                //             },
+                //         });
+                //     } else {
+                //         scrollingST.enable(true);
+                //     }
+
+                //     tableHead.click(function() {
+                //         table.toggleClass("active");
+                //     })
+
+                //     tableHead.trigger("click");
+                // }
+
+                return () => { }
+            });
+
             arLinks.first().addClass("active");
 
             arLinks.click(function () {
@@ -773,7 +839,7 @@ $(document).ready(function () {
                 const key = subSelf.data("ar");
                 const trigger = self.find(`.ar-carousel[data-ar="${key}"]`);
                 if (!trigger.length) return;
-                
+
                 subSelf.addClass("active");
 
                 gsap.to(window, {
@@ -785,6 +851,31 @@ $(document).ready(function () {
                     duration: 0,
                 });
             });
+
+            arCarousels.each(function () {
+                const subSelf = $(this);
+                const key = subSelf.data("ar");
+                const target = self.find(`.ar-list-item[data-ar="${key}"]`);
+
+                if (!key.length) return;
+
+                ScrollTrigger.create({
+                    start: "top center",
+                    trigger: subSelf,
+                    onEnter: () => {
+                        arLinks.removeClass("active");
+                        target.addClass("active");
+                    },
+                    onLeaveBack: () => {
+                        const prevSibling = subSelf.prev();
+
+                        if (prevSibling.length) {
+                            arLinks.removeClass("active");
+                            target.prev().addClass("active");
+                        }
+                    },
+                });
+            })
         });
     }
 
