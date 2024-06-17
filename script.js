@@ -1,6 +1,23 @@
 $(document).ready(function () {
     console.log('bf script init');
 
+    function navSlideIn() {
+        const nav = $(".w-nav");
+
+        gsap.fromTo(image,
+            {
+                autoAlpha: 0,
+                y: "-100%",
+            },
+            {
+                autoAlpha: 1,
+                y: 0,
+                duration: 0.8,
+                ease: Power2.easeOut
+            }
+        );
+    }
+
     function handleVideo() {
         const containers = $(".video-block, .hero");
         if (!containers.length) return;
@@ -648,7 +665,7 @@ $(document).ready(function () {
             })
         })
     }
-    
+
     function aboutUsSlideIn() {
         const containers = $("section.about-us.is-home");
         if (!containers.length) return;
@@ -667,6 +684,7 @@ $(document).ready(function () {
                     autoAlpha: 1,
                     y: 0,
                     duration: 0.8,
+                    ease: Power3.easeOut,
                     scrollTrigger: {
                         trigger: image,
                         start: "top 50%",
@@ -684,6 +702,7 @@ $(document).ready(function () {
                     autoAlpha: 1,
                     y: 0,
                     duration: 0.6,
+                    ease: Power3.easeOut,
                     scrollTrigger: {
                         trigger: content,
                         start: "top 40%",
@@ -708,4 +727,5 @@ $(document).ready(function () {
     propFixedScrollSlideIn();
     fiftyFiftyStatsSlideIn();
     aboutUsSlideIn();
+    navSlideIn();
 });
