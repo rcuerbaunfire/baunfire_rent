@@ -507,6 +507,12 @@ code {
 .navbar_component.hovering .nav-dd-toggle .navbar_link {
   color: white !important;
 }
+.navbar_component .main-nav-dd .nav-dd-list-container {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
 .navbar_component .main-nav-dd:hover .nav-dd-list-container {
+  opacity: 1;
   visibility: visible;
 }
