@@ -3,6 +3,8 @@ $(document).ready(function () {
 
     function navSlideIn() {
         const nav = $(".w-nav");
+        const trigger = document.getElementById("menu-trigger");
+        const bodyEl = document.getElementsByTagName("body")[0];
 
         gsap.fromTo(nav,
             {
@@ -14,6 +16,34 @@ $(document).ready(function () {
                 y: 0,
                 duration: 0.8,
                 ease: Power2.easeOut
+            }
+        );
+
+        const mm = gsap.matchMedia();
+
+        mm.add(
+            {
+                isDesktop: `(min-width: 991px)`,
+                isMobile: `(max-width: 990px)`,
+            },
+            (context) => {
+                let { isDesktop, isMobile } = context.conditions;
+
+                if (isMobile) {
+                    let numOfClicks = 0;
+            
+                    trigger.onclick = () => {
+                        numOfClicks += 1;
+                        const isNumOfClicksEven = numOfClicks % 2 === 0;
+                        isNumOfClicksEven ? bodyEl.style.overflow = "auto" : bodyEl.style.overflow = "hidden";
+                    };
+                }
+
+                if (isDesktop) {
+                    bodyEl.style.overflow = "auto";
+                }
+
+                return () => { };
             }
         );
     }
