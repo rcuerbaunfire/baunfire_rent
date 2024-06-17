@@ -581,7 +581,7 @@ code {
 
     .main-nav-dd {
         &:hover {
-            & + .nav-dd-list-container {
+            .nav-dd-list-container {
                 visibility: visible;
             }
         }
