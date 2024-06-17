@@ -484,8 +484,21 @@ code {
 }
 
 .navbar_component .nav-dd-toggle .navbar_link {
-  -webkit-transition: color 0.3s ease-out;
-  transition: color 0.3s ease-out;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+  position: relative;
+}
+.navbar_component .nav-dd-toggle .navbar_link::before {
+  content: "";
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  background: #7E93FB;
 }
 .navbar_component.hovering {
   background: black !important;
@@ -506,4 +519,7 @@ code {
 }
 .navbar_component .main-nav-dd:hover .nav-dd-list-container {
   visibility: visible;
+}
+.navbar_component .main-nav-dd:hover .nav-dd-toggle .navbar_link::before {
+  opacity: 1;
 }

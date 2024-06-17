@@ -556,7 +556,20 @@ code {
 
 .navbar_component {
     .nav-dd-toggle .navbar_link {
-        transition: color 0.3s ease-out;
+        transition: color 0.3s ease-in-out;
+        position: relative;
+
+        &::before {
+            content: '';
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            background: #7E93FB;
+        }
     }
 
     &.hovering {
@@ -582,6 +595,12 @@ code {
         &:hover {
             .nav-dd-list-container {
                 visibility: visible;
+            }
+
+            .nav-dd-toggle .navbar_link {
+                &::before {
+                    opacity: 1;
+                }
             }
         }
     }
