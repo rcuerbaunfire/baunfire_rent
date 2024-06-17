@@ -1,51 +1,61 @@
 $(document).ready(function () {
     console.log('bf script init');
 
-    function navSlideIn() {
-        const nav = $(".w-nav");
-        const trigger = document.getElementById("menu-trigger");
-        const bodyEl = document.getElementsByTagName("body")[0];
+    function nav() {
+        function navSlideIn() {
+            if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+                const nav = $(".w-nav");
 
-        gsap.fromTo(nav,
-            {
-                autoAlpha: 0,
-                y: "-100%",
-            },
-            {
-                autoAlpha: 1,
-                y: 0,
-                duration: 0.8,
-                ease: Power2.easeOut
+                gsap.fromTo(nav,
+                    {
+                        autoAlpha: 0,
+                        y: "-100%",
+                    },
+                    {
+                        autoAlpha: 1,
+                        y: 0,
+                        duration: 0.8,
+                        ease: Power2.easeOut
+                    }
+                );
             }
-        );
+        }
 
-        const mm = gsap.matchMedia();
+        function preventScroll() {
+            const trigger = document.getElementById("menu-trigger");
+            const bodyEl = document.getElementsByTagName("body")[0];
 
-        mm.add(
-            {
-                isDesktop: `(min-width: 991px)`,
-                isMobile: `(max-width: 990px)`,
-            },
-            (context) => {
-                let { isDesktop, isMobile } = context.conditions;
+            const mm = gsap.matchMedia();
 
-                if (isMobile) {
-                    let numOfClicks = 0;
-            
-                    trigger.onclick = () => {
-                        numOfClicks += 1;
-                        const isNumOfClicksEven = numOfClicks % 2 === 0;
-                        isNumOfClicksEven ? bodyEl.style.overflow = "auto" : bodyEl.style.overflow = "hidden";
-                    };
+            mm.add(
+                {
+                    isDesktop: `(min-width: 991px)`,
+                    isMobile: `(max-width: 990px)`,
+                },
+                (context) => {
+                    let { isDesktop, isMobile } = context.conditions;
+
+                    if (isMobile) {
+                        let numOfClicks = 0;
+
+                        trigger.onclick = () => {
+                            numOfClicks += 1;
+                            const isNumOfClicksEven = numOfClicks % 2 === 0;
+                            isNumOfClicksEven ? bodyEl.style.overflow = "auto" : bodyEl.style.overflow = "hidden";
+                        };
+                    }
+
+                    if (isDesktop) {
+                        bodyEl.style.overflow = "auto";
+                    }
+
+                    return () => { };
                 }
+            );
+        }
 
-                if (isDesktop) {
-                    bodyEl.style.overflow = "auto";
-                }
-
-                return () => { };
-            }
-        );
+        navSlideIn();
+        preventScroll();
     }
 
     function handleVideo() {
@@ -743,7 +753,7 @@ $(document).ready(function () {
         })
     }
 
-    navSlideIn();
+    nav();
     duplicatesForMobile();
     carousels();
     handleVideo();
