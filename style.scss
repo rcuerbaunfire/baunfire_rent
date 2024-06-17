@@ -555,8 +555,6 @@ code {
 }
 
 .navbar_component {
-    transition: background 0.3s ease-out;
-
     .nav-dd-toggle .navbar_link {
         transition: color 0.3s ease-out;
     }
@@ -581,14 +579,8 @@ code {
     }
 
     .main-nav-dd {
-        .nav-dd-list-container {
-            opacity: 0;
-            transition: opacity 0.3s ease-out;
-        }
-
         &:hover {
             .nav-dd-list-container {
-                opacity: 1;
                 visibility: visible;
             }
         }
