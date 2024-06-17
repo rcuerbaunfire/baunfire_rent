@@ -523,3 +523,6 @@ code {
 .navbar_component .main-nav-dd:hover .nav-dd-toggle .navbar_link::before {
   opacity: 1;
 }
+.navbar_component .rent-title-container .indigo-highlight {
+  color: #7E93FB;
+}
