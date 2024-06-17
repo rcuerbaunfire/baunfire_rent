@@ -91,7 +91,8 @@ $(document).ready(function () {
                     controls: false,
                     autoplay: true,
                     muted: true,
-                    background: true
+                    background: true,
+                    referrerpolicy: "origin"
                 });
             });
         }
