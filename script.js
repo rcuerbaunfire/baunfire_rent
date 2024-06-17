@@ -36,7 +36,7 @@ $(document).ready(function () {
                     let { isDesktop, isMobile } = context.conditions;
 
                     if (isMobile) {
-                        trigger.click(function() {
+                        trigger.click(function () {
                             if (nav.hasClass("active")) {
                                 nav.removeClass("active");
                                 bodyEl.removeClass("no-scroll");
@@ -757,6 +757,37 @@ $(document).ready(function () {
         })
     }
 
+    function allResources() {
+        const containers = $(".all-resource-carousel");
+        if (!containers.length) return;
+
+        containers.each(function () {
+            const self = $(this);
+            const arLinks = self.find(".ar-list-item");
+            arLinks.first().addClass("active");
+
+            arLinks.click(function () {
+                const subSelf = $(this);
+                if (subSelf.hasClass("active")) return;
+
+                const key = subSelf.data("ar");
+                const trigger = self.find(`.ar-carousel[data-ar="${key}"]`);
+                if (!trigger.length) return;
+                
+                subSelf.addClass("active");
+
+                gsap.to(window, {
+                    scrollTo: {
+                        offsetY: 120,
+                        y: trigger,
+                    },
+                    ease: "none",
+                    duration: 0,
+                });
+            });
+        });
+    }
+
     nav();
     duplicatesForMobile();
     carousels();
@@ -772,4 +803,5 @@ $(document).ready(function () {
     propFixedScrollSlideIn();
     fiftyFiftyStatsSlideIn();
     aboutUsSlideIn();
+    allResources();
 });

@@ -515,3 +515,19 @@ code {
 		margin: 0 !important;
 	}
 }
+
+.ar-list-item {
+    .ar-list-label {
+        transition: color 0.3s ease-in-out;
+    }
+    
+    &.active {
+        .ar-orb {
+            display: block;
+        }
+
+        .ar-list-label {
+            color: black;
+        }
+    }
+}
