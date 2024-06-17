@@ -247,24 +247,20 @@ $(document).ready(function () {
                 });
 
             } else if (self.hasClass("ar-items")) {
-                if (self.children().length > 2) {
-                    const carouselInstance = self.owlCarousel({
-                        nav: true,
-                        autoWidth: true,
-                        smartSpeed: 1000,
-                        loop: false,
-                        items: 2,
-                        navRewind: false,
-                        dotsEach: true,
-                        navText: [leftArrow, rightArrow],
-                        responsive: {
-                            0: { margin: 20 },
-                            768: { margin: 24 },
-                        },
-                    });
-                } else {
-                    self.removeClass("owl-carousel");
-                }
+                const carouselInstance = self.owlCarousel({
+                    nav: true,
+                    autoWidth: true,
+                    smartSpeed: 1000,
+                    loop: false,
+                    items: 1,
+                    navRewind: false,
+                    dotsEach: true,
+                    navText: [leftArrow, rightArrow],
+                    responsive: {
+                        0: { margin: 20 },
+                        768: { margin: 24 },
+                    },
+                });
             }
         });
     }
