@@ -216,6 +216,12 @@ html * {
 	.owl-dot:last-child.active span:first-of-type {
 		display: block;
 	}
+
+    &.is-ar {
+        .owl-dots {
+            color: #7E93FB;
+        }
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -520,7 +526,7 @@ code {
     &, & * {
         cursor: pointer;
     }
-    
+
     .ar-list-label {
         transition: color 0.3s ease-in-out;
     }
