@@ -252,6 +252,7 @@ $(document).ready(function () {
                     autoWidth: true,
                     smartSpeed: 1000,
                     loop: false,
+                    items: 1,
                     navRewind: false,
                     dotsEach: true,
                     navText: [leftArrow, rightArrow],
