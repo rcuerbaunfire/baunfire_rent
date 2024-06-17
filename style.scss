@@ -515,25 +515,3 @@ code {
 		margin: 0 !important;
 	}
 }
-
-.menu-dropdown {
-    &.w-dropdown-list {
-        display: block;
-        visibility: hidden;
-        pointer-events: none;
-    }
-
-	.navigation-mobile-dropdown-container {
-		opacity: 0;
-		transition: opacity 0.3s linear;
-	}
-
-	&.w--open {
-        visibility: visible;
-        pointer-events: auto;
-
-		.navigation-mobile-dropdown-container {
-			opacity: 100%;
-		}
-	}
-}
