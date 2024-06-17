@@ -482,3 +482,14 @@ code {
 .social-link:hover svg path[fill="#4561EC"] {
   fill: #7E93FB;
 }
+
+.navbar_component {
+  -webkit-transition: background 0.3s ease-out;
+  transition: background 0.3s ease-out;
+}
+.navbar_component.hovering {
+  background: black !important;
+}
+.navbar_component .main-nav-dd:hover + .nav-dd-list-container {
+  visibility: visible;
+}

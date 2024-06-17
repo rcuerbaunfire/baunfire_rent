@@ -553,3 +553,19 @@ code {
         }
     }
 }
+
+.navbar_component {
+    transition: background 0.3s ease-out;
+
+    &.hovering {
+        background: black !important;
+    }
+
+    .main-nav-dd {
+        &:hover {
+            & + .nav-dd-list-container {
+                visibility: visible;
+            }
+        }
+    }
+}

@@ -60,16 +60,13 @@ $(document).ready(function () {
         function dropdown() {
             const dds = $(".main-nav-dd");
 
-            dds.click(function() {
-                const self = $(this);
-
-                if (self.hasClass("active")) {
-                    self.removeClass("active");
-                } else {
-                    dds.removeClass("active");
-                    self.addClass("active");
+            dds.hover(
+                function () {
+                    nav.addClass("hovering");
+                }, function () {
+                    nav.removeClass("hovering");
                 }
-            })
+            );
         }
 
         navSlideIn();
@@ -813,7 +810,7 @@ $(document).ready(function () {
 
                 // if (isDesktop) {
                 //     tableHead.off("click");
-                    
+
                 //     if (scrollingST) {
                 //         scrollingST.disable(true);
                 //     }
