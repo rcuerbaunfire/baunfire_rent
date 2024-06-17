@@ -459,7 +459,7 @@ code {
 }
 
 .menu-dropdown.w-dropdown-list {
-  position: relative;
+  display: block;
   visibility: hidden;
   pointer-events: none;
 }

@@ -518,7 +518,7 @@ code {
 
 .menu-dropdown {
     &.w-dropdown-list {
-        position: relative;
+        display: block;
         visibility: hidden;
         pointer-events: none;
     }
@@ -531,7 +531,7 @@ code {
 	&.w--open {
         visibility: visible;
         pointer-events: auto;
-        
+
 		.navigation-mobile-dropdown-container {
 			opacity: 100%;
 		}
