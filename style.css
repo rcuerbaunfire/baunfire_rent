@@ -494,13 +494,15 @@ code {
 .navbar_component.hovering {
   background: black !important;
 }
-.navbar_component.hovering .main-logo-dark,
+.navbar_component.hovering .main-logo-black,
 .navbar_component.hovering .search-icon-black {
   display: none !important;
 }
 .navbar_component.hovering .main-logo-white,
 .navbar_component.hovering .search-icon-white {
-  display: block !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 .navbar_component.hovering .nav-dd-toggle .navbar_link {
   color: white;
