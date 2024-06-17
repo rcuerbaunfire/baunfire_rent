@@ -557,8 +557,24 @@ code {
 .navbar_component {
     transition: background 0.3s ease-out;
 
+    .nav-dd-toggle .navbar_link {
+        transition: color 0.3s ease-out;
+    }
+
     &.hovering {
         background: black !important;
+
+        .main-logo-dark {
+            display: none !important;
+        }
+
+        .main-logo-white {
+            display: block !important;
+        }
+
+        .nav-dd-toggle .navbar_link {
+            color: white;
+        }
     }
 
     .main-nav-dd {

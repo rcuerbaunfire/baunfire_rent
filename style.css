@@ -487,8 +487,21 @@ code {
   -webkit-transition: background 0.3s ease-out;
   transition: background 0.3s ease-out;
 }
+.navbar_component .nav-dd-toggle .navbar_link {
+  -webkit-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
+}
 .navbar_component.hovering {
   background: black !important;
+}
+.navbar_component.hovering .main-logo-dark {
+  display: none !important;
+}
+.navbar_component.hovering .main-logo-white {
+  display: block !important;
+}
+.navbar_component.hovering .nav-dd-toggle .navbar_link {
+  color: white;
 }
 .navbar_component .main-nav-dd:hover + .nav-dd-list-container {
   visibility: visible;
