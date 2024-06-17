@@ -474,3 +474,11 @@ code {
 .ar-list-item.active .ar-list-label {
   color: black;
 }
+
+.social-link .social-svg path[fill="#4561EC"] {
+  -webkit-transition: fill 0.3s ease-in-out;
+  transition: fill 0.3s ease-in-out;
+}
+.social-link:hover .social-svg path[fill="#4561EC"] {
+  fill: #7E93FB;
+}
