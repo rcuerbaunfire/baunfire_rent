@@ -778,7 +778,7 @@ $(document).ready(function () {
 
                 ScrollTrigger.create({
                     pin: true,
-                    start: isDesktop ? "top 140px" : "top 20px",
+                    start: isDesktop ? "top 160px" : "top 20px",
                     trigger: arListInner,
                     endTrigger: arList,
                     invalidateOnRefresh: true,
