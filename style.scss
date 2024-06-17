@@ -564,11 +564,13 @@ code {
     &.hovering {
         background: black !important;
 
-        .main-logo-dark {
+        .main-logo-dark,
+        .search-icon-black {
             display: none !important;
         }
 
-        .main-logo-white {
+        .main-logo-white,
+        .search-icon-white {
             display: block !important;
         }
 
