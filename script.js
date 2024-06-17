@@ -48,7 +48,6 @@ $(document).ready(function () {
                     }
 
                     if (isDesktop) {
-                        trigger.off("click");
                         nav.removeClass("active");
                         bodyEl.removeClass("no-scroll");
                     }
