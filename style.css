@@ -457,3 +457,21 @@ code {
 .global-heading-right.is-faq {
   margin: 0 !important;
 }
+
+.menu-dropdown.w-dropdown-list {
+  position: relative;
+  visibility: hidden;
+  pointer-events: none;
+}
+.menu-dropdown .navigation-mobile-dropdown-container {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+}
+.menu-dropdown.w--open {
+  visibility: visible;
+  pointer-events: auto;
+}
+.menu-dropdown.w--open .navigation-mobile-dropdown-container {
+  opacity: 100%;
+}

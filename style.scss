@@ -4,7 +4,7 @@ html * {
 }
 
 .no-scroll {
-    overflow: hidden;
+	overflow: hidden;
 }
 
 .owl-carousel.owl-loaded {
@@ -54,9 +54,9 @@ html * {
 		}
 	}
 
-    &.disabled {
-        display: none;
-    }
+	&.disabled {
+		display: none;
+	}
 }
 
 .res-items .owl-stage {
@@ -495,23 +495,45 @@ code {
 
 .richtext-heading {
 	& * {
-        margin: 0 !important;
-    }
+		margin: 0 !important;
+	}
 }
 
 .lp-highlight.w-condition-invisible {
-    opacity: 0;
-    display: block !important;
+	opacity: 0;
+	display: block !important;
 }
 
 .res-items .w-layout-cell {
-    overflow: hidden;
+	overflow: hidden;
 }
 
 .global-heading-horizontal,
 .global-heading-left,
 .global-heading-right {
-    &.is-faq {
-        margin: 0 !important;
+	&.is-faq {
+		margin: 0 !important;
+	}
+}
+
+.menu-dropdown {
+    &.w-dropdown-list {
+        position: relative;
+        visibility: hidden;
+        pointer-events: none;
     }
+
+	.navigation-mobile-dropdown-container {
+		opacity: 0;
+		transition: opacity 0.3s linear;
+	}
+
+	&.w--open {
+        visibility: visible;
+        pointer-events: auto;
+        
+		.navigation-mobile-dropdown-container {
+			opacity: 100%;
+		}
+	}
 }
