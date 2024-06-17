@@ -505,7 +505,7 @@ code {
   display: flex !important;
 }
 .navbar_component.hovering .nav-dd-toggle .navbar_link {
-  color: white;
+  color: white !important;
 }
 .navbar_component .main-nav-dd:hover + .nav-dd-list-container {
   visibility: visible;
