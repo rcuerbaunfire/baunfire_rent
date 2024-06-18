@@ -70,8 +70,7 @@ $(document).ready(function () {
         }
 
         function mobileAcc() {
-            const allItems = self.find(".navbar_mob_dd");
-            const allBody = self.find(".navbar_mob_dd_body");
+            const allItems = nav.find(".navbar_mob_dd");
 
             allItems.click(function () {
                 const subSelf = $(this);
