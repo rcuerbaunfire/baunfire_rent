@@ -756,4 +756,20 @@ code {
 			}
 		}
 	}
+
+    @media only screen and (max-width: 1160px) {
+		.navbar_actions {
+            &:not(.is-mob) {
+                display: none;
+            }
+        }
+
+        .navbar_menu {
+            display: none;
+        }
+
+        .navbar_mob_btn {
+            display: flex;
+        }
+	}
 }

@@ -78,8 +78,8 @@ $(document).ready(function () {
 
             mm.add(
                 {
-                    isDesktop: `(min-width: 991px)`,
-                    isMobile: `(max-width: 990px)`,
+                    isDesktop: `(min-width: 1161px)`,
+                    isMobile: `(max-width: 1160px)`,
                 },
                 (context) => {
                     let { isDesktop, isMobile } = context.conditions;
@@ -227,22 +227,7 @@ $(document).ready(function () {
             });
         }
 
-        function solutionHero() {
-            const container = $(".solutions-hero");
-            if (!container.length) return;
-
-            container.each(function () {
-                const self = $(this);
-                const targetContainer = self.find(".sh-phone-bg.is-desktop");
-                targetContainer.children().remove();
-
-                const sourceContainer = self.find(".sh-phone-bg.is-mobile");
-                sourceContainer.children().clone().appendTo(targetContainer);
-            });
-        }
-
         featureCards();
-        solutionHero();
     }
 
     function carousels() {

@@ -668,3 +668,16 @@ code {
 .navbar_component .navbar_search .navbar_search_inner input::placeholder {
   color: black;
 }
+@media only screen and (max-width: 1160px) {
+  .navbar_component .navbar_actions:not(.is-mob) {
+    display: none;
+  }
+  .navbar_component .navbar_menu {
+    display: none;
+  }
+  .navbar_component .navbar_mob_btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
