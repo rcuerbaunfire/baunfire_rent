@@ -260,6 +260,7 @@ $(document).ready(function () {
                     loop: false,
                     navRewind: false,
                     dotsEach: true,
+                    items: 1,
                     autoWidth: true,
                     navText: [leftArrow, rightArrow],
                     responsive: {
