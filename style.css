@@ -543,7 +543,7 @@ code {
     transition: all 0.4s ease-out;
   }
 }
-@media only screen and (max-width: 1160px) {
+@media only screen and (max-width: 990px) {
   .navbar_component.mob-active {
     background: black !important;
   }
@@ -667,27 +667,4 @@ code {
 }
 .navbar_component .navbar_search .navbar_search_inner input::placeholder {
   color: black;
-}
-@media only screen and (max-width: 1160px) {
-  .navbar_component .navbar_container {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding-top: 42px;
-    padding-bottom: 22px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .navbar_component .navbar_actions:not(.is-mob) {
-    display: none;
-  }
-  .navbar_component .navbar_menu {
-    display: none;
-  }
-  .navbar_component .navbar_mob_btn {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
 }
