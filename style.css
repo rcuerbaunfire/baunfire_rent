@@ -506,24 +506,24 @@ code {
           transform: translateY(16px);
 }
 @media only screen and (min-width: 991px) {
-  .navbar_component.hovering, .navbar_component.searching {
+  .navbar_component:not(.is-black).hovering, .navbar_component:not(.is-black).searching {
     background: black !important;
   }
-  .navbar_component.hovering .main-logo-black,
-  .navbar_component.hovering .search-icon-black, .navbar_component.searching .main-logo-black,
-  .navbar_component.searching .search-icon-black {
+  .navbar_component:not(.is-black).hovering .main-logo-black,
+  .navbar_component:not(.is-black).hovering .search-icon-black, .navbar_component:not(.is-black).searching .main-logo-black,
+  .navbar_component:not(.is-black).searching .search-icon-black {
     display: none !important;
   }
-  .navbar_component.hovering .main-logo-white,
-  .navbar_component.hovering .search-icon-white, .navbar_component.searching .main-logo-white,
-  .navbar_component.searching .search-icon-white {
+  .navbar_component:not(.is-black).hovering .main-logo-white,
+  .navbar_component:not(.is-black).hovering .search-icon-white, .navbar_component:not(.is-black).searching .main-logo-white,
+  .navbar_component:not(.is-black).searching .search-icon-white {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
   }
-  .navbar_component.hovering .nav-dd-toggle .navbar_link,
-  .navbar_component.hovering .navbar_link.client-login, .navbar_component.searching .nav-dd-toggle .navbar_link,
-  .navbar_component.searching .navbar_link.client-login {
+  .navbar_component:not(.is-black).hovering .nav-dd-toggle .navbar_link,
+  .navbar_component:not(.is-black).hovering .navbar_link.client-login, .navbar_component:not(.is-black).searching .nav-dd-toggle .navbar_link,
+  .navbar_component:not(.is-black).searching .navbar_link.client-login {
     color: white !important;
   }
   .navbar_component.searching .navbar_search {
