@@ -562,8 +562,7 @@ code {
   }
   .navbar_component.mob-active .navbar_mob .navbar_mob_inner {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    top: 0;
     -webkit-transition: all 0.4s ease-out;
     transition: all 0.4s ease-out;
   }
@@ -605,8 +604,8 @@ code {
 }
 .navbar_component .navbar_mob .navbar_mob_inner {
   opacity: 0;
-  -webkit-transform: translateY(16px);
-          transform: translateY(16px);
+  top: 16px;
+  position: relative;
 }
 .navbar_component .navbar_mob .navbar_mob_dd.open .navbar_mob_dd_body {
   padding-top: 32px;
