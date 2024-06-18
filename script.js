@@ -94,7 +94,7 @@ $(document).ready(function () {
                         muted: true,
                         background: true,
                         referrerpolicy: "origin",
-                        loop: true
+                        loop: false
                     });
                     
                     player.getDuration().then(function(duration) {
