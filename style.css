@@ -634,3 +634,18 @@ code {
   line-height: 140%;
   color: black;
 }
+.navbar_component .navbar_search .navbar_search_inner input::-webkit-input-placeholder {
+  color: black;
+}
+.navbar_component .navbar_search .navbar_search_inner input::-moz-placeholder {
+  color: black;
+}
+.navbar_component .navbar_search .navbar_search_inner input:-ms-input-placeholder {
+  color: black;
+}
+.navbar_component .navbar_search .navbar_search_inner input::-ms-input-placeholder {
+  color: black;
+}
+.navbar_component .navbar_search .navbar_search_inner input::placeholder {
+  color: black;
+}
