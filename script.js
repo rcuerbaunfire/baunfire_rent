@@ -514,7 +514,7 @@ $(document).ready(function () {
     }
 
     function faq() {
-        const containers = $(".faq");
+        const containers = $("section.faq");
         if (!containers.length) return;
 
         containers.each(function () {
