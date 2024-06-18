@@ -607,9 +607,12 @@ code {
 				display: flex;
 			}
 
-			.main-logo-black,
-			.search-icon-black {
+			.main-logo-black {
 				display: none !important;
+			}
+
+			.main-logo-white {
+				display: flex !important;
 			}
 		}
 	}

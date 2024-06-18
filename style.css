@@ -531,9 +531,13 @@ code {
     display: -ms-flexbox;
     display: flex;
   }
-  .navbar_component.mob-active .main-logo-black,
-  .navbar_component.mob-active .search-icon-black {
+  .navbar_component.mob-active .main-logo-black {
     display: none !important;
+  }
+  .navbar_component.mob-active .main-logo-white {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
   }
 }
 .navbar_component .main-nav-dd:hover .nav-dd-list-container {
