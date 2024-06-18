@@ -566,12 +566,24 @@ code {
 .navbar_mob_dd.open .navbar_mob_title {
   color: #7e93fb;
 }
+.navbar_mob_dd.open .navbar_mob_arrow {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
 .navbar_mob_dd.open .navbar_mob_arrow svg path {
   stroke: #7e93fb;
 }
 .navbar_mob_dd .navbar_mob_title {
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
+}
+.navbar_mob_dd .navbar_mob_arrow {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 .navbar_mob_dd .navbar_mob_arrow svg path {
   -webkit-transition: stroke 0.3s ease-in-out;

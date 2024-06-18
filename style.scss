@@ -660,8 +660,12 @@ code {
 			color: #7e93fb;
 		}
 
-        .navbar_mob_arrow svg path {
-            stroke: #7e93fb;
+        .navbar_mob_arrow {
+            transform: rotate(180deg);
+
+            svg path {
+                stroke: #7e93fb;
+            }
         }
 	}
 
@@ -669,7 +673,12 @@ code {
 		transition: color 0.3s ease-in-out;
 	}
 
-	.navbar_mob_arrow svg path {
-		transition: stroke 0.3s ease-in-out;
+	.navbar_mob_arrow {
+        transform: rotate(0deg);
+        transition: transform 0.3s ease-in-out;
+
+        svg path {
+		    transition: stroke 0.3s ease-in-out;
+        }
 	}
 }
