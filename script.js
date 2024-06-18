@@ -74,7 +74,7 @@ $(document).ready(function () {
             const allItems = nav.find(".navbar_mob_dd");
             
             mobileBtn.click(function() {
-                nav.toggleClass(".mob-active");
+                nav.toggleClass("mob-active");
             });
 
             allItems.each(function () {
