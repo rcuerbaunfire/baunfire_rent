@@ -599,15 +599,20 @@ code {
 		}
 	}
 
-    &.mob-active {
-        @media only screen and (max-width: 990px) {
-            background: black !important;
+	&.mob-active {
+		@media only screen and (max-width: 990px) {
+			background: black !important;
 
-            .navbar_mob {
-                display: flex;
-            }
-        }
-    }
+			.navbar_mob {
+				display: flex;
+			}
+
+			.main-logo-black,
+			.search-icon-black {
+				display: none !important;
+			}
+		}
+	}
 
 	.main-nav-dd {
 		&:hover {
