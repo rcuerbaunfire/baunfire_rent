@@ -538,3 +538,23 @@ code {
 .navbar_component .rent-title-container .indigo-highlight {
   color: #7e93fb;
 }
+
+.pr-link:hover::before {
+  opacity: 1;
+}
+.pr-link::before {
+  content: "";
+  position: absolute;
+  height: calc(100% + 24px);
+  width: calc(100% + 24px);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1215686275);
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
