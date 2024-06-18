@@ -560,7 +560,7 @@ code {
     display: -ms-flexbox !important;
     display: flex !important;
   }
-  .navbar_component.mob-active .navbar_mob .global-container.is-nav {
+  .navbar_component.mob-active .navbar_mob .navbar_mob_inner {
     opacity: 1;
     -webkit-transform: translateY(0);
             transform: translateY(0);
@@ -603,30 +603,30 @@ code {
   transition: opacity 0.3s ease-in-out;
   opacity: 0;
 }
-.navbar_component .navbar_mob .global-container.is-nav {
+.navbar_component .navbar_mob .navbar_mob_inner {
   opacity: 0;
   -webkit-transform: translateY(16px);
           transform: translateY(16px);
 }
-.navbar_component .navbar_mob_dd.open .navbar_mob_dd_body {
+.navbar_component .navbar_mob .navbar_mob_dd.open .navbar_mob_dd_body {
   padding-top: 32px;
   padding-bottom: 20px;
 }
-.navbar_component .navbar_mob_dd.open .navbar_mob_title {
+.navbar_component .navbar_mob .navbar_mob_dd.open .navbar_mob_title {
   color: #7e93fb;
 }
-.navbar_component .navbar_mob_dd.open .navbar_mob_arrow {
+.navbar_component .navbar_mob .navbar_mob_dd.open .navbar_mob_arrow {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-.navbar_component .navbar_mob_dd.open .navbar_mob_arrow svg path {
+.navbar_component .navbar_mob .navbar_mob_dd.open .navbar_mob_arrow svg path {
   stroke: #7e93fb;
 }
-.navbar_component .navbar_mob_dd .navbar_mob_title {
+.navbar_component .navbar_mob .navbar_mob_dd .navbar_mob_title {
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
-.navbar_component .navbar_mob_dd .navbar_mob_arrow {
+.navbar_component .navbar_mob .navbar_mob_dd .navbar_mob_arrow {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
@@ -634,7 +634,7 @@ code {
   transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
-.navbar_component .navbar_mob_dd .navbar_mob_arrow svg path {
+.navbar_component .navbar_mob .navbar_mob_dd .navbar_mob_arrow svg path {
   -webkit-transition: stroke 0.3s ease-in-out;
   transition: stroke 0.3s ease-in-out;
 }
