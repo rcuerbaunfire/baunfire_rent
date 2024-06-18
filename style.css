@@ -527,6 +527,9 @@ code {
     color: white !important;
   }
   .navbar_component.searching .navbar_search {
+    visibility: visible;
+  }
+  .navbar_component.searching .navbar_search .navbar_search_inner {
     opacity: 1;
     -webkit-transform: translateY(0);
             transform: translateY(0);
@@ -617,7 +620,7 @@ code {
   -webkit-transition: stroke 0.3s ease-in-out;
   transition: stroke 0.3s ease-in-out;
 }
-.navbar_component .navbar_search {
+.navbar_component .navbar_search .navbar_search_inner {
   opacity: 0;
   -webkit-transform: translateY(16px);
           transform: translateY(16px);

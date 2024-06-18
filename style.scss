@@ -582,7 +582,7 @@ code {
 
 	@media only screen and (min-width: 991px) {
 		&.hovering,
-        &.searching {
+		&.searching {
 			background: black !important;
 
 			.main-logo-black,
@@ -601,13 +601,17 @@ code {
 			}
 		}
 
-        &.searching {
-            .navbar_search {
-                opacity: 1;
-				transform: translateY(0);
-				transition: all 0.4s ease-out;
-            }
-        }
+		&.searching {
+			.navbar_search {
+                visibility: visible;
+                
+				.navbar_search_inner {
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition: all 0.4s ease-out;
+				}
+			}
+		}
 	}
 
 	&.mob-active {
@@ -711,8 +715,10 @@ code {
 		}
 	}
 
-    .navbar_search {
-        opacity: 0;
-        transform: translateY(16px);
-    }
+	.navbar_search {
+		.navbar_search_inner {
+			opacity: 0;
+			transform: translateY(16px);
+		}
+	}
 }
