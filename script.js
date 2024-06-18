@@ -86,29 +86,18 @@ $(document).ready(function () {
                 const videoID = self.find("#video-id").text();
                 const videoBox = self.find(".vimeo-container");
 
-                if (self.hasClass("hero")) {
-                    var player = new Vimeo.Player(videoBox, {
-                        id: videoID,
-                        controls: false,
-                        autoplay: true,
-                        muted: true,
-                        background: true,
-                        referrerpolicy: "origin",
-                        loop: false
-                    });
-                    
-                    // player.getDuration().then(function(duration) {
-                    //     player.on('ended', function() {
-                    //         player.setCurrentTime(duration - 0.1).then(function(seconds) {
-                    //             player.pause();
-                    //         }).catch(function(error) {
-                    //             console.error('Error seeking to the last frame:', error);
-                    //         });
-                    //     });
-                    // }).catch(function(error) {
-                    //     console.error('Error getting video duration:', error);
-                    // });
+                
+                var player = new Vimeo.Player(videoBox, {
+                    id: videoID,
+                    controls: false,
+                    autoplay: true,
+                    muted: true,
+                    background: true,
+                    referrerpolicy: "origin",
+                    loop: true
+                });
 
+                if (self.hasClass("hero")) {
                     player.getDuration().then(function(duration) {
                         var lastFrameTime = duration - 0.05;
                     
@@ -125,15 +114,6 @@ $(document).ready(function () {
                         });
                     }).catch(function(error) {
                         console.error('Error getting video duration:', error);
-                    });
-                } else {
-                    var player = new Vimeo.Player(videoBox, {
-                        id: videoID,
-                        controls: false,
-                        autoplay: true,
-                        muted: true,
-                        background: true,
-                        referrerpolicy: "origin",
                     });
                 }
             });
