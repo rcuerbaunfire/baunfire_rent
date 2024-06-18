@@ -548,9 +548,9 @@ code {
     background: black !important;
   }
   .navbar_component.mob-active .navbar_mob {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    visibility: visible;
+    height: calc(100vh - 108px);
+    padding-top: 34px;
   }
   .navbar_component.mob-active .main-logo-black {
     display: none !important;

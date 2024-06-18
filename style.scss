@@ -622,7 +622,9 @@ code {
 			background: black !important;
 
 			.navbar_mob {
-				display: flex;
+				visibility: visible;
+                height: calc(100vh - 108px);
+                padding-top: 34px;
 			}
 
 			.main-logo-black {
