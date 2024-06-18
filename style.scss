@@ -728,6 +728,8 @@ code {
 				font-weight: 600;
 				line-height: 140%;
                 color: black;
+                outline: none;
+                border: none;
 
                 &::placeholder {
                     color: black;

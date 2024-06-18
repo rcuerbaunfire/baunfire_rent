@@ -633,6 +633,8 @@ code {
   font-weight: 600;
   line-height: 140%;
   color: black;
+  outline: none;
+  border: none;
 }
 .navbar_component .navbar_search .navbar_search_inner input::-webkit-input-placeholder {
   color: black;
