@@ -97,13 +97,31 @@ $(document).ready(function () {
                         loop: false
                     });
                     
+                    // player.getDuration().then(function(duration) {
+                    //     player.on('ended', function() {
+                    //         player.setCurrentTime(duration - 0.1).then(function(seconds) {
+                    //             player.pause();
+                    //         }).catch(function(error) {
+                    //             console.error('Error seeking to the last frame:', error);
+                    //         });
+                    //     });
+                    // }).catch(function(error) {
+                    //     console.error('Error getting video duration:', error);
+                    // });
+
                     player.getDuration().then(function(duration) {
-                        player.on('ended', function() {
-                            player.setCurrentTime(duration - 0.1).then(function(seconds) {
-                                player.pause();
-                            }).catch(function(error) {
-                                console.error('Error seeking to the last frame:', error);
-                            });
+                        var lastFrameTime = duration - 0.05;
+                    
+                        player.on('timeupdate', function(data) {
+                            if (data.seconds >= lastFrameTime) {
+                                player.pause().then(function() {
+                                    player.setCurrentTime(lastFrameTime);
+                                }).catch(function(error) {
+                                    console.error('Error pausing the video:', error);
+                                });
+                    
+                                player.off('timeupdate');
+                            }
                         });
                     }).catch(function(error) {
                         console.error('Error getting video duration:', error);
