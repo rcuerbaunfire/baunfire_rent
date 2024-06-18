@@ -560,6 +560,13 @@ code {
     display: -ms-flexbox !important;
     display: flex !important;
   }
+  .navbar_component.mob-active .navbar_mob .global-container.is-nav {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+  }
 }
 .navbar_component .main-nav-dd:hover .nav-dd-list-container {
   visibility: visible;
@@ -595,6 +602,11 @@ code {
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
   opacity: 0;
+}
+.navbar_component .navbar_mob .global-container.is-nav {
+  opacity: 0;
+  -webkit-transform: translateY(16px);
+          transform: translateY(16px);
 }
 .navbar_component .navbar_mob_dd.open .navbar_mob_dd_body {
   padding-top: 32px;
