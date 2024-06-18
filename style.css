@@ -505,22 +505,32 @@ code {
   -webkit-transform: translateY(16px);
           transform: translateY(16px);
 }
-.navbar_component.hovering {
-  background: black !important;
-}
-.navbar_component.hovering .main-logo-black,
-.navbar_component.hovering .search-icon-black {
-  display: none !important;
-}
-.navbar_component.hovering .main-logo-white,
-.navbar_component.hovering .search-icon-white {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
-.navbar_component.hovering .nav-dd-toggle .navbar_link,
-.navbar_component.hovering .navbar_link.client-login {
-  color: white !important;
+@media only screen and (min-width: 991px) {
+  .navbar_component.hovering, .navbar_component.searching {
+    background: black !important;
+  }
+  .navbar_component.hovering .main-logo-black,
+  .navbar_component.hovering .search-icon-black, .navbar_component.searching .main-logo-black,
+  .navbar_component.searching .search-icon-black {
+    display: none !important;
+  }
+  .navbar_component.hovering .main-logo-white,
+  .navbar_component.hovering .search-icon-white, .navbar_component.searching .main-logo-white,
+  .navbar_component.searching .search-icon-white {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  .navbar_component.hovering .nav-dd-toggle .navbar_link,
+  .navbar_component.hovering .navbar_link.client-login, .navbar_component.searching .nav-dd-toggle .navbar_link,
+  .navbar_component.searching .navbar_link.client-login {
+    color: white !important;
+  }
+  .navbar_component.searching .navbar_search {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 @media only screen and (max-width: 990px) {
   .navbar_component.mob-active {

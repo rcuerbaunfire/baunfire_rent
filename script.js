@@ -88,6 +88,10 @@ $(document).ready(function () {
                         nav.removeClass("mob-active");
                     }
 
+                    if (isMobile) {
+                        nav.removeClass("searching");
+                    }
+
                     return () => { };
                 }
             );
@@ -136,10 +140,19 @@ $(document).ready(function () {
             });
         }
 
+        function search() {
+            const search = nav.find(".nav-search.is-desktop");
+
+            search.click(function () {
+                nav.toggleClass("searching");
+            });
+        }
+
         navSlideIn();
         preventScroll();
         dropdown();
         mobileAcc();
+        search();
     }
 
     function handleVideo() {
