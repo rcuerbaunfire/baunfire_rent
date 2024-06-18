@@ -72,8 +72,27 @@ $(document).ready(function () {
         function mobileAcc() {
             const mobileBtn = nav.find(".navbar_mob_btn");
             const allItems = nav.find(".navbar_mob_dd");
-            
-            mobileBtn.click(function() {
+
+            const mm = gsap.matchMedia();
+            let carouselInstance = null;
+
+            mm.add(
+                {
+                    isDesktop: `(min-width: 991px)`,
+                    isMobile: `(max-width: 990px)`,
+                },
+                (context) => {
+                    let { isDesktop, isMobile } = context.conditions;
+
+                    if (isDesktop) {
+                        nav.removeClass("mob-active");
+                    }
+
+                    return () => { };
+                }
+            );
+
+            mobileBtn.click(function () {
                 nav.toggleClass("mob-active");
             });
 
@@ -82,7 +101,7 @@ $(document).ready(function () {
                 const head = subSelf.find(".navbar_mob_dd_head");
                 const body = subSelf.find(".navbar_mob_dd_body");
 
-                head.click(function() {
+                head.click(function () {
                     if (!subSelf.hasClass("open")) {
                         subSelf.addClass("open");
                         gsap.fromTo(body,
@@ -100,7 +119,7 @@ $(document).ready(function () {
                         )
                     } else {
                         subSelf.removeClass("open");
-    
+
                         gsap.to(body, {
                             height: 0,
                             duration: 0.4,
@@ -135,7 +154,7 @@ $(document).ready(function () {
                 const videoID = self.find("#video-id").text();
                 const videoBox = self.find(".vimeo-container");
 
-                
+
                 var player = new Vimeo.Player(videoBox, {
                     id: videoID,
                     controls: false,
@@ -147,21 +166,21 @@ $(document).ready(function () {
                 });
 
                 if (self.hasClass("hero")) {
-                    player.getDuration().then(function(duration) {
+                    player.getDuration().then(function (duration) {
                         var lastFrameTime = duration - 0.05;
-                    
-                        player.on('timeupdate', function(data) {
+
+                        player.on('timeupdate', function (data) {
                             if (data.seconds >= lastFrameTime) {
-                                player.pause().then(function() {
+                                player.pause().then(function () {
                                     player.setCurrentTime(lastFrameTime);
-                                }).catch(function(error) {
+                                }).catch(function (error) {
                                     console.error('Error pausing the video:', error);
                                 });
-                    
+
                                 player.off('timeupdate');
                             }
                         });
-                    }).catch(function(error) {
+                    }).catch(function (error) {
                         console.error('Error getting video duration:', error);
                     });
                 }
