@@ -217,7 +217,7 @@ html * {
   display: block;
 }
 .tes-items.is-ar .owl-dots {
-  color: #7E93FB;
+  color: #7e93fb;
 }
 
 @media only screen and (max-width: 767px) {
@@ -480,15 +480,15 @@ code {
   transition: fill 0.3s ease-in-out;
 }
 .social-link:hover svg path[fill="#4561EC"] {
-  fill: #7E93FB;
+  fill: #7e93fb;
 }
 
-.navbar_component .nav-dd-toggle .navbar_link {
+.navbar_component .main-nav-dd .nav-dd-toggle .navbar_link {
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
   position: relative;
 }
-.navbar_component .nav-dd-toggle .navbar_link::before {
+.navbar_component .main-nav-dd .nav-dd-toggle .navbar_link::before {
   content: "";
   height: 3px;
   bottom: 0;
@@ -498,7 +498,14 @@ code {
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
-  background: #7E93FB;
+  background: #7e93fb;
+}
+.navbar_component .main-nav-dd .global-container {
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .navbar_component.hovering {
   background: black !important;
@@ -523,6 +530,11 @@ code {
 .navbar_component .main-nav-dd:hover .nav-dd-toggle .navbar_link::before {
   opacity: 1;
 }
+.navbar_component .main-nav-dd:hover .global-container {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
 .navbar_component .rent-title-container .indigo-highlight {
-  color: #7E93FB;
+  color: #7e93fb;
 }
