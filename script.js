@@ -92,7 +92,8 @@ $(document).ready(function () {
                     autoplay: true,
                     muted: true,
                     background: true,
-                    referrerpolicy: "origin"
+                    referrerpolicy: "origin",
+                    loop: false
                 });
             });
         }
