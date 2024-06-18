@@ -627,11 +627,11 @@ code {
 }
 
 .pr-link {
-    &:hover {
-        &::before {
-            opacity: 1;
-        }
-    }
+	&:hover {
+		&::before {
+			opacity: 1;
+		}
+	}
 
 	&::before {
 		content: "";
@@ -644,7 +644,32 @@ code {
 		z-index: -1;
 		border-radius: 4px;
 		background: #ffffff1f;
-        transition: opacity 0.3s ease-in-out;
-        opacity: 0;
+		transition: opacity 0.3s ease-in-out;
+		opacity: 0;
+	}
+}
+
+.navbar_mob_dd {
+	&.open {
+		.navbar_mob_dd_body {
+			padding-top: 32px;
+			padding-bottom: 20px;
+		}
+
+		.navbar_mob_title {
+			color: #7e93fb;
+		}
+
+        .navbar_mob_arrow svg path {
+            stroke: #7e93fb;
+        }
+	}
+
+	.navbar_mob_title {
+		transition: color 0.3s ease-in-out;
+	}
+
+	.navbar_mob_arrow svg path {
+		transition: stroke 0.3s ease-in-out;
 	}
 }

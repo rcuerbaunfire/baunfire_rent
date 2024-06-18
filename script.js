@@ -69,9 +69,38 @@ $(document).ready(function () {
             );
         }
 
+        function mobileAcc() {
+            const allItems = self.find(".navbar_mob_dd");
+            const allBody = self.find(".navbar_mob_dd_body");
+
+            allItems.click(function () {
+                const subSelf = $(this);
+
+                if (!subSelf.hasClass("open")) {
+                    const body = subSelf.find(".navbar_mob_dd_body");
+
+                    subSelf.addClass("open");
+                    gsap.fromTo(body,
+                        {
+                            height: 0,
+                            autoAlpha: 0,
+                        },
+                        {
+                            height: "auto",
+                            duration: 0.6,
+                            autoAlpha: 1,
+                            ease: Power2.easeOut,
+                            overwrite: true
+                        }
+                    )
+                }
+            });
+        }
+
         navSlideIn();
         preventScroll();
         dropdown();
+        mobileAcc();
     }
 
     function handleVideo() {
