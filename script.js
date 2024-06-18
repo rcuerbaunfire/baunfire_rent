@@ -72,40 +72,43 @@ $(document).ready(function () {
         function mobileAcc() {
             const allItems = nav.find(".navbar_mob_dd");
 
-            allItems.click(function () {
+            allItems.each(function () {
                 const subSelf = $(this);
+                const head = subSelf.find(".navbar_mob_dd_head");
                 const body = subSelf.find(".navbar_mob_dd_body");
 
-                if (!subSelf.hasClass("open")) {
-                    subSelf.addClass("open");
-                    gsap.fromTo(body,
-                        {
-                            height: 0,
-                            autoAlpha: 0,
-                        },
-                        {
-                            height: "auto",
-                            duration: 0.4,
-                            autoAlpha: 1,
-                            ease: Power2.easeOut,
-                            overwrite: true
-                        }
-                    )
-                } else {
-                    subSelf.removeClass("open");
-
-                    gsap.to(body, {
-                        height: 0,
-                        duration: 0.4,
-                        ease: Power2.easeOut,
-                        overwrite: true,
-                        onStart: () => {
-                            gsap.set(body, {
+                head.click(function() {
+                    if (!subSelf.hasClass("open")) {
+                        subSelf.addClass("open");
+                        gsap.fromTo(body,
+                            {
+                                height: 0,
                                 autoAlpha: 0,
-                            });
-                        },
-                    });
-                }
+                            },
+                            {
+                                height: "auto",
+                                duration: 0.4,
+                                autoAlpha: 1,
+                                ease: Power2.easeOut,
+                                overwrite: true
+                            }
+                        )
+                    } else {
+                        subSelf.removeClass("open");
+    
+                        gsap.to(body, {
+                            height: 0,
+                            duration: 0.4,
+                            ease: Power2.easeOut,
+                            overwrite: true,
+                            onStart: () => {
+                                gsap.set(body, {
+                                    autoAlpha: 0,
+                                });
+                            },
+                        });
+                    }
+                });
             });
         }
 
