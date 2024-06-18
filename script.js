@@ -141,7 +141,7 @@ $(document).ready(function () {
         }
 
         function search() {
-            const search = nav.find(".nav-search.is-desktop");
+            const search = nav.find(".navbar_search_btn.is-desktop");
 
             search.click(function () {
                 nav.toggleClass("searching");
