@@ -599,6 +599,16 @@ code {
 		}
 	}
 
+    &.mob-active {
+        @media only screen and (max-width: 990px) {
+            background: black !important;
+
+            .navbar_mob {
+                display: flex;
+            }
+        }
+    }
+
 	.main-nav-dd {
 		&:hover {
 			.nav-dd-list-container {
@@ -624,61 +634,61 @@ code {
 			color: #7e93fb;
 		}
 	}
-}
 
-.pr-link {
-	&:hover {
+	.pr-link {
+		&:hover {
+			&::before {
+				opacity: 1;
+			}
+		}
+
 		&::before {
-			opacity: 1;
+			content: "";
+			position: absolute;
+			height: calc(100% + 24px);
+			width: calc(100% + 24px);
+			transform: translate(-50%, -50%);
+			top: 50%;
+			left: 50%;
+			z-index: -1;
+			border-radius: 4px;
+			background: #ffffff1f;
+			transition: opacity 0.3s ease-in-out;
+			opacity: 0;
 		}
 	}
 
-	&::before {
-		content: "";
-		position: absolute;
-		height: calc(100% + 24px);
-		width: calc(100% + 24px);
-		transform: translate(-50%, -50%);
-		top: 50%;
-		left: 50%;
-		z-index: -1;
-		border-radius: 4px;
-		background: #ffffff1f;
-		transition: opacity 0.3s ease-in-out;
-		opacity: 0;
-	}
-}
+	.navbar_mob_dd {
+		&.open {
+			.navbar_mob_dd_body {
+				padding-top: 32px;
+				padding-bottom: 20px;
+			}
 
-.navbar_mob_dd {
-	&.open {
-		.navbar_mob_dd_body {
-			padding-top: 32px;
-			padding-bottom: 20px;
+			.navbar_mob_title {
+				color: #7e93fb;
+			}
+
+			.navbar_mob_arrow {
+				transform: rotate(180deg);
+
+				svg path {
+					stroke: #7e93fb;
+				}
+			}
 		}
 
 		.navbar_mob_title {
-			color: #7e93fb;
+			transition: color 0.3s ease-in-out;
 		}
 
-        .navbar_mob_arrow {
-            transform: rotate(180deg);
+		.navbar_mob_arrow {
+			transform: rotate(0deg);
+			transition: transform 0.3s ease-in-out;
 
-            svg path {
-                stroke: #7e93fb;
-            }
-        }
-	}
-
-	.navbar_mob_title {
-		transition: color 0.3s ease-in-out;
-	}
-
-	.navbar_mob_arrow {
-        transform: rotate(0deg);
-        transition: transform 0.3s ease-in-out;
-
-        svg path {
-		    transition: stroke 0.3s ease-in-out;
-        }
+			svg path {
+				transition: stroke 0.3s ease-in-out;
+			}
+		}
 	}
 }

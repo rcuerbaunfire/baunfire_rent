@@ -70,7 +70,12 @@ $(document).ready(function () {
         }
 
         function mobileAcc() {
+            const mobileBtn = nav.find(".navbar_mob_btn");
             const allItems = nav.find(".navbar_mob_dd");
+            
+            mobileBtn.click(function() {
+                nav.toggleClass(".mob-active");
+            });
 
             allItems.each(function () {
                 const subSelf = $(this);
