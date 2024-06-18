@@ -558,3 +558,22 @@ code {
   transition: opacity 0.3s ease-in-out;
   opacity: 0;
 }
+
+.navbar_mob_dd.open .navbar_mob_dd_body {
+  padding-top: 32px;
+  padding-bottom: 20px;
+}
+.navbar_mob_dd.open .navbar_mob_title {
+  color: #7e93fb;
+}
+.navbar_mob_dd.open .navbar_mob_arrow svg path {
+  stroke: #7e93fb;
+}
+.navbar_mob_dd .navbar_mob_title {
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.navbar_mob_dd .navbar_mob_arrow svg path {
+  -webkit-transition: stroke 0.3s ease-in-out;
+  transition: stroke 0.3s ease-in-out;
+}
