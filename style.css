@@ -625,3 +625,12 @@ code {
   -webkit-transform: translateY(16px);
           transform: translateY(16px);
 }
+.navbar_component .navbar_search .navbar_search_inner input {
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  color: black;
+}
