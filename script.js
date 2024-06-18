@@ -86,12 +86,26 @@ $(document).ready(function () {
                         },
                         {
                             height: "auto",
-                            duration: 0.6,
+                            duration: 0.4,
                             autoAlpha: 1,
                             ease: Power2.easeOut,
                             overwrite: true
                         }
                     )
+                } else {
+                    subSelf.removeClass("active");
+
+                    gsap.to(body, {
+                        height: 0,
+                        duration: 0.4,
+                        ease: Power2.easeOut,
+                        overwrite: true,
+                        onStart: () => {
+                            gsap.set(body, {
+                                autoAlpha: 0,
+                            });
+                        },
+                    });
                 }
             });
         }
