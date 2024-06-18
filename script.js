@@ -74,10 +74,9 @@ $(document).ready(function () {
 
             allItems.click(function () {
                 const subSelf = $(this);
+                const body = subSelf.find(".navbar_mob_dd_body");
 
                 if (!subSelf.hasClass("open")) {
-                    const body = subSelf.find(".navbar_mob_dd_body");
-
                     subSelf.addClass("open");
                     gsap.fromTo(body,
                         {
@@ -93,7 +92,7 @@ $(document).ready(function () {
                         }
                     )
                 } else {
-                    subSelf.removeClass("active");
+                    subSelf.removeClass("open");
 
                     gsap.to(body, {
                         height: 0,
