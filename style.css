@@ -669,6 +669,16 @@ code {
   color: black;
 }
 @media only screen and (max-width: 1160px) {
+  .navbar_component .navbar_container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-top: 42px;
+    padding-bottom: 22px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .navbar_component .navbar_actions:not(.is-mob) {
     display: none;
   }

@@ -582,7 +582,7 @@ code {
 
 	@media only screen and (min-width: 991px) {
 		&:not(.is-gray),
-        &:not(.is-black) {
+		&:not(.is-black) {
 			&.hovering,
 			&.searching {
 				background: black !important;
@@ -623,8 +623,8 @@ code {
 
 			.navbar_mob {
 				visibility: visible;
-                height: calc(100vh - 108px);
-                padding-top: 34px;
+				height: calc(100vh - 108px);
+				padding-top: 34px;
 			}
 
 			.main-logo-black {
@@ -635,11 +635,11 @@ code {
 				display: flex !important;
 			}
 
-            .navbar_mob .navbar_mob_inner {
-                opacity: 1;
+			.navbar_mob .navbar_mob_inner {
+				opacity: 1;
 				top: 0;
 				transition: all 0.4s ease-out;
-            }
+			}
 		}
 	}
 
@@ -692,47 +692,47 @@ code {
 		}
 	}
 
-    .navbar_mob {
-        .navbar_mob_inner {
-            opacity: 0;
-            top: 16px;
-            position: relative;
-        }
+	.navbar_mob {
+		.navbar_mob_inner {
+			opacity: 0;
+			top: 16px;
+			position: relative;
+		}
 
-        .navbar_mob_dd {
-            &.open {
-                .navbar_mob_dd_body {
-                    padding-top: 32px;
-                    padding-bottom: 20px;
-                }
-    
-                .navbar_mob_title {
-                    color: #7e93fb;
-                }
-    
-                .navbar_mob_arrow {
-                    transform: rotate(180deg);
-    
-                    svg path {
-                        stroke: #7e93fb;
-                    }
-                }
-            }
-    
-            .navbar_mob_title {
-                transition: color 0.3s ease-in-out;
-            }
-    
-            .navbar_mob_arrow {
-                transform: rotate(0deg);
-                transition: transform 0.3s ease-in-out;
-    
-                svg path {
-                    transition: stroke 0.3s ease-in-out;
-                }
-            }
-        }
-    }
+		.navbar_mob_dd {
+			&.open {
+				.navbar_mob_dd_body {
+					padding-top: 32px;
+					padding-bottom: 20px;
+				}
+
+				.navbar_mob_title {
+					color: #7e93fb;
+				}
+
+				.navbar_mob_arrow {
+					transform: rotate(180deg);
+
+					svg path {
+						stroke: #7e93fb;
+					}
+				}
+			}
+
+			.navbar_mob_title {
+				transition: color 0.3s ease-in-out;
+			}
+
+			.navbar_mob_arrow {
+				transform: rotate(0deg);
+				transition: transform 0.3s ease-in-out;
+
+				svg path {
+					transition: stroke 0.3s ease-in-out;
+				}
+			}
+		}
+	}
 
 	.navbar_search {
 		.navbar_search_inner {
@@ -757,19 +757,26 @@ code {
 		}
 	}
 
-    @media only screen and (max-width: 1160px) {
+	@media only screen and (max-width: 1160px) {
+		.navbar_container {
+			justify-content: space-between;
+			padding-top: 42px;
+			padding-bottom: 22px;
+			display: flex;
+		}
+        
 		.navbar_actions {
-            &:not(.is-mob) {
-                display: none;
-            }
-        }
+			&:not(.is-mob) {
+				display: none;
+			}
+		}
 
-        .navbar_menu {
-            display: none;
-        }
+		.navbar_menu {
+			display: none;
+		}
 
-        .navbar_mob_btn {
-            display: flex;
-        }
+		.navbar_mob_btn {
+			display: flex;
+		}
 	}
 }
