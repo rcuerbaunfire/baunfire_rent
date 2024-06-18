@@ -998,8 +998,28 @@ $(document).ready(function () {
         });
     }
 
+    function solHero() {
+        const containers = $(".solutions-hero");
+        if (!containers.length) return;
+
+        containers.each(function () {
+            const self = $(this);
+            const targetContainer = self.find(".sh-scenery.placeholder");
+
+            const paramImage = self.find(".image-sol");
+            paramImage.attr("class", "sh-scenery");
+
+            targetContainer.each(function() {
+                const subSelf = $(this);
+                paramImage.clone().insertBefore(subSelf);
+                subSelf.remove();
+            });
+        });
+    }
+
     nav();
     duplicatesForMobile();
+    solHero();
     carousels();
     handleVideo();
     animatedContactHeading();
