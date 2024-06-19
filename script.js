@@ -22,7 +22,7 @@ $(document).ready(function () {
         }
 
         function preventScroll() {
-            const trigger = $("#menu-trigger");
+            const trigger = $(".navbar_mob_btn");
             const bodyEl = $("body");
 
             const mm = gsap.matchMedia();
