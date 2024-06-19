@@ -431,7 +431,7 @@ code {
     }
 
     &:not(.has-overflow) {
-        .lp-arrow {
+        .lp-overlay {
             display: none;
             pointer-events: none;
         }

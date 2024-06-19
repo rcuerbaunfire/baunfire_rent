@@ -401,7 +401,7 @@ code {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
-.lp-item:not(.has-overflow) .lp-arrow {
+.lp-item:not(.has-overflow) .lp-overlay {
   display: none;
   pointer-events: none;
 }
