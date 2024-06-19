@@ -336,18 +336,23 @@ $(document).ready(function () {
                 });
 
             } else if (self.hasClass("lp-items")) {
-                const carouselInstance = self.owlCarousel({
-                    nav: true,
-                    smartSpeed: 1000,
-                    loop: false,
-                    navRewind: false,
-                    dotsEach: true,
-                    navText: [leftArrow, rightArrow],
-                    responsive: {
-                        0: { autoWidth: false, margin: 20, items: 1 },
-                        768: { autoWidth: true, margin: 24 },
-                    },
-                });
+                if (self.children().length > 3) {
+                    const carouselInstance = self.owlCarousel({
+                        nav: true,
+                        smartSpeed: 1000,
+                        loop: false,
+                        navRewind: false,
+                        dotsEach: true,
+                        navText: [leftArrow, rightArrow],
+                        responsive: {
+                            0: { autoWidth: false, margin: 20, items: 1 },
+                            768: { autoWidth: true, margin: 24 },
+                        },
+                    });
+                } else {
+                    self.removeClass("owl-carousel");
+                    self.addClass("no-owl-carousel");
+                }
 
             } else if (self.hasClass("ar-items")) {
                 const carouselInstance = self.owlCarousel({
