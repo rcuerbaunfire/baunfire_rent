@@ -350,6 +350,7 @@ $(document).ready(function () {
 
                         if (isMobile) {
                             self.addClass("owl-carousel");
+                            self.removeClass("no-owl-carousel");
 
                             if (!self.hasClass("owl-loaded")) {
                                 carouselInstance = self.owlCarousel({
@@ -370,6 +371,8 @@ $(document).ready(function () {
 
                         if (isDesktop) {
                             if (overflowable) {
+                                self.removeClass("no-owl-carousel");
+
                                 const carouselInstance = self.owlCarousel({
                                     nav: true,
                                     smartSpeed: 1000,
