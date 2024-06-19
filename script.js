@@ -566,10 +566,15 @@ $(document).ready(function () {
             allItems.each(function () {
                 const subSelf = $(this);
                 const overlay = subSelf.find(".lp-arrow");
+                const featContainer = subSelf.find(".lp-feat");
+
+                if (featContainer[0].scrollHeight > featContainer.innerHeight()) {
+                    self.addClass("has-overflow");
+                }
 
                 overlay.click(function () {
-                    allItems.addClass("open");
-                })
+                    allItems.toggleClass("open");
+                });
             });
         })
     }
@@ -994,7 +999,7 @@ $(document).ready(function () {
             const paramImage = self.find(".image-sol");
             paramImage.attr("class", "sh-scenery");
 
-            targetContainer.each(function() {
+            targetContainer.each(function () {
                 const subSelf = $(this);
                 paramImage.clone().insertBefore(subSelf);
                 subSelf.remove();

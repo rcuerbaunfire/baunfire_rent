@@ -425,17 +425,26 @@ code {
 		transition: all 0.3s ease-in-out;
 	}
 
+    .lp-arrow {
+        transition: transform 0.3s ease-in-out;
+        transform: rotate(0deg);
+    }
+
 	&.open {
 		.lp-feat {
 			height: auto;
 		}
 
 		.lp-overlay {
-			display: none;
+			background: none;
 		}
 
+        .lp-arrow {
+            transform: rotate(180deg);
+        }
+
 		.lp-inner {
-			padding-bottom: 42px;
+			padding-bottom: 62px;
 		}
 	}
 
