@@ -385,6 +385,7 @@ $(document).ready(function () {
                                 });
                             } else {
                                 self.removeClass("owl-carousel");
+                                self.addClass("no-owl-carousel");
 
                                 if (carouselInstance) {
                                     carouselInstance.trigger(
