@@ -569,8 +569,7 @@ $(document).ready(function () {
                 const featContainer = subSelf.find(".lp-feat");
 
                 if (featContainer[0].scrollHeight > featContainer.innerHeight()) {
-                    console.log(featContainer[0].scrollHeight, featContainer.innerHeight());
-                    self.addClass("has-overflow");
+                    subSelf.addClass("has-overflow");
                 }
 
                 overlay.click(function () {
