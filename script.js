@@ -361,7 +361,7 @@ $(document).ready(function () {
                                     navText: [leftArrow, rightArrow],
                                     responsive: {
                                         0: { autoWidth: false, margin: 20, items: 1 },
-                                        768: { autoWidth: false, margin: 20, items: 1 },
+                                        768: { autoWidth: true, margin: 24 },
                                         1366: { autoWidth: true, margin: 24 },
                                     },
                                 });
