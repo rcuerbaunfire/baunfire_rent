@@ -336,23 +336,69 @@ $(document).ready(function () {
                 });
 
             } else if (self.hasClass("lp-items")) {
-                if (self.children().length > 3) {
-                    const carouselInstance = self.owlCarousel({
-                        nav: true,
-                        smartSpeed: 1000,
-                        loop: false,
-                        navRewind: false,
-                        dotsEach: true,
-                        navText: [leftArrow, rightArrow],
-                        responsive: {
-                            0: { autoWidth: false, margin: 20, items: 1 },
-                            768: { autoWidth: true, margin: 24 },
-                        },
-                    });
-                } else {
-                    self.removeClass("owl-carousel");
-                    self.addClass("no-owl-carousel");
-                }
+                const mm = gsap.matchMedia();
+                const overflowable = self.children().length > 4;
+                let carouselInstance = null;
+
+                mm.add(
+                    {
+                        isDesktop: `(min-width: 768px)`,
+                        isMobile: `(max-width: 767px)`,
+                    },
+                    (context) => {
+                        let { isDesktop, isMobile } = context.conditions;
+
+                        if (isMobile) {
+                            self.addClass("owl-carousel");
+
+                            if (!self.hasClass("owl-loaded")) {
+                                carouselInstance = self.owlCarousel({
+                                    nav: true,
+                                    smartSpeed: 1000,
+                                    loop: false,
+                                    navRewind: false,
+                                    dotsEach: true,
+                                    navText: [leftArrow, rightArrow],
+                                    responsive: {
+                                        0: { autoWidth: false, margin: 20, items: 1 },
+                                        768: { autoWidth: true, margin: 24 },
+                                    },
+                                });
+                            }
+                        }
+
+                        if (isDesktop) {
+                            if (overflowable) {
+                                const carouselInstance = self.owlCarousel({
+                                    nav: true,
+                                    smartSpeed: 1000,
+                                    loop: false,
+                                    navRewind: false,
+                                    dotsEach: true,
+                                    navText: [leftArrow, rightArrow],
+                                    responsive: {
+                                        0: { autoWidth: false, margin: 20, items: 1 },
+                                        768: { autoWidth: true, margin: 24 },
+                                    },
+                                });
+                            } else {
+                                self.removeClass("owl-carousel");
+                                self.addClass("no-owl-carousel");
+
+                                if (carouselInstance) {
+                                    carouselInstance.trigger(
+                                        "destroy.owl.carousel"
+                                    );
+                                    carouselInstance = null;
+                                }
+                            }
+                        }
+
+                        return () => { };
+                    }
+                );
+
+                
 
             } else if (self.hasClass("ar-items")) {
                 const carouselInstance = self.owlCarousel({
