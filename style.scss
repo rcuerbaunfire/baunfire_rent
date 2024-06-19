@@ -430,6 +430,13 @@ code {
         transform: rotate(0deg);
     }
 
+    &:not(.has-overflow) {
+        .lp-arrow {
+            display: none;
+            pointer-events: none;
+        }
+    }
+
 	&.open {
 		.lp-feat {
 			height: auto;

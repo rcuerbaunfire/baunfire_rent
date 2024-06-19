@@ -393,14 +393,30 @@ code {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+.lp-item .lp-arrow {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.lp-item:not(.has-overflow) .lp-arrow {
+  display: none;
+  pointer-events: none;
+}
 .lp-item.open .lp-feat {
   height: auto;
 }
 .lp-item.open .lp-overlay {
-  display: none;
+  background: none;
+}
+.lp-item.open .lp-arrow {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .lp-item.open .lp-inner {
-  padding-bottom: 42px;
+  padding-bottom: 62px;
 }
 .lp-item .lp-highlight:not(.w-condition-invisible) + .lp-inner {
   border: 1px solid #8590fb;
