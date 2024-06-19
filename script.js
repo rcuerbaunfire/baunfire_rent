@@ -342,8 +342,8 @@ $(document).ready(function () {
 
                 mm.add(
                     {
-                        isDesktop: `(min-width: 768px)`,
-                        isMobile: `(max-width: 767px)`,
+                        isDesktop: `(min-width: 1366px)`,
+                        isMobile: `(max-width: 1365px)`,
                     },
                     (context) => {
                         let { isDesktop, isMobile } = context.conditions;
@@ -361,7 +361,8 @@ $(document).ready(function () {
                                     navText: [leftArrow, rightArrow],
                                     responsive: {
                                         0: { autoWidth: false, margin: 20, items: 1 },
-                                        768: { autoWidth: true, margin: 24 },
+                                        768: { autoWidth: false, margin: 20, items: 1 },
+                                        1366: { autoWidth: true, margin: 24 },
                                     },
                                 });
                             }
@@ -378,12 +379,12 @@ $(document).ready(function () {
                                     navText: [leftArrow, rightArrow],
                                     responsive: {
                                         0: { autoWidth: false, margin: 20, items: 1 },
-                                        768: { autoWidth: true, margin: 24 },
+                                        768: { autoWidth: false, margin: 20, items: 1 },
+                                        1366: { autoWidth: true, margin: 24 },
                                     },
                                 });
                             } else {
                                 self.removeClass("owl-carousel");
-                                self.addClass("no-owl-carousel");
 
                                 if (carouselInstance) {
                                     carouselInstance.trigger(
