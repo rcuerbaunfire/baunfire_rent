@@ -774,10 +774,8 @@ code {
 	}
 }
 
-.ar-carousels {
-    .ar-carousel {
-        &::after {
-            content: none !important;
-        }
+.ar-carousels .ar-carousel .ar-collection {
+    &::after {
+        content: none !important;
     }
 }

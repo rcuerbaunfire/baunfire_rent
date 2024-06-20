@@ -685,6 +685,6 @@ code {
   color: black;
 }
 
-.ar-carousels .ar-carousel::after {
+.ar-carousels .ar-carousel .ar-collection::after {
   content: none !important;
 }
