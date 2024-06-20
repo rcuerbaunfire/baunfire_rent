@@ -996,7 +996,7 @@ $(document).ready(function () {
 
                     gsap.to(window, {
                         scrollTo: {
-                            offsetY: isDesktop ? 160 : 240,
+                            offsetY: isDesktop ? 160 : 200,
                             y: trigger,
                         },
                         ease: Power3.easeOut,
