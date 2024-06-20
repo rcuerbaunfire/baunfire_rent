@@ -777,7 +777,7 @@ code {
 .ar-carousels {
     .ar-carousel {
         &::after {
-            content: none;
+            content: none !important;
         }
     }
 }
