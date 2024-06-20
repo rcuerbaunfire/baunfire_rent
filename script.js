@@ -964,7 +964,7 @@ $(document).ready(function () {
                     }
 
                     scrollingST = ScrollTrigger.create({
-                        pin: true,
+                        pin: arList,
                         start: "top 108px",
                         end: "bottom top",
                         trigger: arInner,
