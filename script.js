@@ -988,13 +988,22 @@ $(document).ready(function () {
                 arLinks.removeClass("active");
                 subSelf.addClass("active");
 
-                gsap.to(window, {
-                    scrollTo: {
-                        offsetY: 160,
-                        y: trigger,
-                    },
-                    ease: Power3.easeOut,
-                    duration: 0.4,
+                mm.add({
+                    isDesktop: `(min-width: 991px)`,
+                    isMobile: `(max-width: 990px)`,
+                }, (context) => {
+                    let { isDesktop, isMobile } = context.conditions;
+
+                    gsap.to(window, {
+                        scrollTo: {
+                            offsetY: isDesktop ? 160 : 240,
+                            y: trigger,
+                        },
+                        ease: Power3.easeOut,
+                        duration: 0.4,
+                    });
+
+                    return () => { }
                 });
             });
 
