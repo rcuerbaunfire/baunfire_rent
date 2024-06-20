@@ -684,3 +684,13 @@ code {
 .navbar_component .navbar_search .navbar_search_inner input::placeholder {
   color: black;
 }
+
+.ar-carousels .ar-carousel:not(:last-child)::after {
+  content: "";
+  background: #bebec4;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200vw;
+  height: 1px;
+}
