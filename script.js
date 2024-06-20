@@ -403,7 +403,7 @@ $(document).ready(function () {
                     }
                 );
 
-                
+
 
             } else if (self.hasClass("ar-items")) {
                 const carouselInstance = self.owlCarousel({
@@ -928,6 +928,7 @@ $(document).ready(function () {
         containers.each(function () {
             const self = $(this);
             const arList = self.find(".ar-list");
+            const arInner = self.find(".ar-inner");
             const arListInner = self.find(".ar-list-inner");
             const arLinks = self.find(".ar-list-item");
             const arCarousels = self.find(".ar-carousel");
@@ -940,56 +941,36 @@ $(document).ready(function () {
                 let { isDesktop, isMobile } = context.conditions;
                 let scrollingST = null;
 
-                ScrollTrigger.create({
-                    pin: true,
-                    start: isDesktop ? "top 160px" : "top 20px",
-                    trigger: arListInner,
-                    endTrigger: arList,
-                    invalidateOnRefresh: true,
-                    // onEnter: () => {
-                    //     table.addClass("online");
-                    // },
-                    end: () => "+=" + (arList.outerHeight() - arListInner.outerHeight()),
-                    // onLeaveBack: () => {
-                    //     table.removeClass("online");
+                if (isDesktop) {
+                    if (scrollingST) {
+                        scrollingST.disable(true);
+                        scrollingST = null;
+                    }
 
-                    //     if (isMobile && !table.hasClass("active")) {
-                    //         tableHead.trigger("click");
-                    //     }
-                    // }
-                });
+                    scrollingST = ScrollTrigger.create({
+                        pin: true,
+                        start: "top 160px",
+                        trigger: arListInner,
+                        endTrigger: arList,
+                        invalidateOnRefresh: true,
+                        end: () => "+=" + (arList.outerHeight() - arListInner.outerHeight()),
+                    });
+                }
 
-                // if (isDesktop) {
-                //     tableHead.off("click");
+                if (isMobile) {
+                    if (scrollingST) {
+                        scrollingST.disable(true);
+                        scrollingST = null;
+                    }
 
-                //     if (scrollingST) {
-                //         scrollingST.disable(true);
-                //     }
-                // }
-
-                // if (isMobile) {
-                //     if (!scrollingST) {
-                //         scrollingST = ScrollTrigger.create({
-                //             trigger: "body",
-                //             start: "top top",
-                //             onUpdate: (self) => {
-                //                 if (self.direction === 1) {
-                //                     table.removeClass("move-down");
-                //                 } else {
-                //                     table.addClass("move-down");
-                //                 }
-                //             },
-                //         });
-                //     } else {
-                //         scrollingST.enable(true);
-                //     }
-
-                //     tableHead.click(function() {
-                //         table.toggleClass("active");
-                //     })
-
-                //     tableHead.trigger("click");
-                // }
+                    scrollingST = ScrollTrigger.create({
+                        pin: true,
+                        start: "top 108px",
+                        end: "bottom top",
+                        trigger: arInner,
+                        invalidateOnRefresh: true,
+                    });
+                }
 
                 return () => { }
             });
