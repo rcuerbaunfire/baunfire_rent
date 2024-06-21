@@ -166,6 +166,7 @@ $(document).ready(function () {
                 const self = $(this);
                 const videoID = self.find("#video-id").text();
                 const videoBox = self.find(".vimeo-container");
+                const videoThumb = self.find(".vimeo-thumb");
 
 
                 var player = new Vimeo.Player(videoBox, {
@@ -183,6 +184,7 @@ $(document).ready(function () {
                         var lastFrameTime = duration - 0.05;
 
                         player.on('timeupdate', function (data) {
+                            videoThumb.remove();
                             if (data.seconds >= lastFrameTime) {
                                 player.pause().then(function () {
                                     player.setCurrentTime(lastFrameTime);
