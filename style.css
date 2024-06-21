@@ -112,7 +112,7 @@ html * {
   width: calc(100% - 182px);
 }
 @media only screen and (max-width: 767px) {
-  .sol-items {
+  .sol-items .owl-dots {
     width: calc(100% - 90px);
   }
 }
