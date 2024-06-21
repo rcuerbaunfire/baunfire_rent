@@ -184,7 +184,7 @@ $(document).ready(function () {
                         var lastFrameTime = duration - 0.05;
 
                         player.on('timeupdate', function (data) {
-                            videoThumb.remove();
+                            videoThumb.fadeOut();
                             if (data.seconds >= lastFrameTime) {
                                 player.pause().then(function () {
                                     player.setCurrentTime(lastFrameTime);
