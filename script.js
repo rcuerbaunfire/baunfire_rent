@@ -304,6 +304,7 @@ $(document).ready(function () {
                             if (!self.hasClass("owl-loaded")) {
                                 carouselInstance = self.owlCarousel({
                                     nav: true,
+                                    navText: [leftArrow, rightArrow],
                                     items: 1,
                                     smartSpeed: 1000,
                                     loop: false,
