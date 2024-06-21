@@ -567,6 +567,7 @@ code {
     visibility: visible;
     height: calc(100vh - 108px);
     padding-top: 34px;
+    height: calc(100dvh - 108px);
   }
   .navbar_component.mob-active .main-logo-black {
     display: none !important;
