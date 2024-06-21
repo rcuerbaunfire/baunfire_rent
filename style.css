@@ -111,6 +111,11 @@ html * {
 .sol-items .owl-dots {
   width: calc(100% - 182px);
 }
+@media only screen and (min-width: 992px) {
+  .sol-items {
+    width: calc(100% - 90px);
+  }
+}
 
 .fc-items .owl-dot,
 .res-items .owl-dot,
@@ -221,12 +226,10 @@ html * {
 }
 
 @media only screen and (max-width: 767px) {
-  .sol-items .owl-nav,
   .sh-items .owl-nav,
   .lp-items .owl-nav {
     display: none;
   }
-  .sol-items .owl-dots,
   .sh-items .owl-dots,
   .lp-items .owl-dots {
     width: 100%;
