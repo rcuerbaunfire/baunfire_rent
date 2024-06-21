@@ -88,7 +88,8 @@ html * {
 	}
 }
 
-.sol-items {
+.sol-items,
+.res-items {
 	.owl-dots {
 		width: calc(100% - 182px);
 
@@ -162,7 +163,6 @@ html * {
 	}
 }
 
-.res-items,
 .fc-items {
 	.owl-dots {
 		width: 100%;

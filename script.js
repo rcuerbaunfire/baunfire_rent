@@ -181,7 +181,7 @@ $(document).ready(function () {
 
                 if (self.hasClass("hero")) {
                     let visible = true;
-                    
+
                     player.getDuration().then(function (duration) {
                         var lastFrameTime = duration - 0.05;
 
@@ -190,7 +190,7 @@ $(document).ready(function () {
                                 videoThumb.fadeOut();
                                 visible = false;
                             }
-                            
+
                             if (data.seconds >= lastFrameTime) {
                                 player.pause().then(function () {
                                     player.setCurrentTime(lastFrameTime);
@@ -288,7 +288,46 @@ $(document).ready(function () {
                     },
                 });
 
-            } else if (self.hasClass("res-items") || self.hasClass("fc-items")) {
+            } else if (self.hasClass("res-items")) {
+                const mm = gsap.matchMedia();
+                let carouselInstance = null;
+
+                mm.add(
+                    {
+                        isDesktop: `(min-width: 768px)`,
+                        isMobile: `(max-width: 767px)`,
+                    },
+                    (context) => {
+                        let { isDesktop, isMobile } = context.conditions;
+
+                        if (isMobile) {
+                            if (!self.hasClass("owl-loaded")) {
+                                carouselInstance = self.owlCarousel({
+                                    nav: true,
+                                    items: 1,
+                                    smartSpeed: 1000,
+                                    loop: false,
+                                    navRewind: false,
+                                    dotsEach: true,
+                                    margin: 16,
+                                });
+                            }
+                        }
+
+                        if (isDesktop) {
+                            if (carouselInstance) {
+                                carouselInstance.trigger(
+                                    "destroy.owl.carousel"
+                                );
+                                carouselInstance = null;
+                            }
+                        }
+
+                        return () => { };
+                    }
+                );
+
+            } else if (self.hasClass("fc-items")) {
                 const mm = gsap.matchMedia();
                 let carouselInstance = null;
 

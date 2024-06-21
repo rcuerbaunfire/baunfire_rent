@@ -108,11 +108,13 @@ html * {
           align-items: center;
 }
 
-.sol-items .owl-dots {
+.sol-items .owl-dots,
+.res-items .owl-dots {
   width: calc(100% - 182px);
 }
 @media only screen and (max-width: 767px) {
-  .sol-items .owl-dots {
+  .sol-items .owl-dots,
+  .res-items .owl-dots {
     width: calc(100% - 112px);
   }
 }
@@ -174,7 +176,6 @@ html * {
   }
 }
 
-.res-items .owl-dots,
 .fc-items .owl-dots {
   width: 100%;
 }
