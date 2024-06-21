@@ -180,11 +180,17 @@ $(document).ready(function () {
                 });
 
                 if (self.hasClass("hero")) {
+                    let visible = true;
+                    
                     player.getDuration().then(function (duration) {
                         var lastFrameTime = duration - 0.05;
 
                         player.on('timeupdate', function (data) {
-                            videoThumb.fadeOut();
+                            if (visible) {
+                                videoThumb.fadeOut();
+                                visible = false;
+                            }
+                            
                             if (data.seconds >= lastFrameTime) {
                                 player.pause().then(function () {
                                     player.setCurrentTime(lastFrameTime);
