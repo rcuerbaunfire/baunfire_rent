@@ -717,27 +717,27 @@ $(document).ready(function () {
             const heroLeft = self.find(".hero-left-container");
 
             gsap.timeline()
-            .fromTo(
-                heroLeft,
-                {
-                    autoAlpha: 0,
-                },
-                {
-                    autoAlpha: 1,
-                    duration: 0.6,
-                    ease: Power2.easeOut
-                }
-            )
-            .to(
-                heroRight,
-                {
-                    delay: 0.4,
-                    clipPath: "inset(0% 0% 0% 0%)",
-                    duration: 0.8,
-                    ease: Power2.easeOut
-                },
-                "<0.2"
-            )
+                .fromTo(
+                    heroLeft,
+                    {
+                        autoAlpha: 0,
+                    },
+                    {
+                        autoAlpha: 1,
+                        duration: 0.6,
+                        ease: Power2.easeOut
+                    }
+                )
+                .to(
+                    heroRight,
+                    {
+                        delay: 0.4,
+                        clipPath: "inset(0% 0% 0% 0%)",
+                        duration: 0.8,
+                        ease: Power2.easeOut
+                    },
+                    "<0.2"
+                )
         })
     }
 
@@ -1143,7 +1143,21 @@ $(document).ready(function () {
             items.parent().remove();
         }
 
+        function emptyStats() {
+            const items = $(".kf-stats");
+
+            items.each(function () {
+                const self = $(this);
+                const empties = self.find(".w-dyn-bind-empty");
+
+                if (empties.length >= 6) {
+                    self.remove();
+                }
+            })
+        }
+
         emptyCTA();
+        emptyStats();
     }
 
     nav();
