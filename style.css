@@ -4,7 +4,12 @@ html * {
 }
 
 @media only screen and (max-width: 767px) {
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     -webkit-hyphens: auto;
         -ms-hyphens: auto;
             hyphens: auto;
@@ -440,6 +445,18 @@ code {
 .lp-item .lp-feat ul {
   list-style: none;
   padding: 0;
+}
+.lp-item .lp-feat ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.lp-item .lp-feat ul li svg {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  top: 1px;
+  position: relative;
 }
 
 .about-cartd-description,
