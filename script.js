@@ -168,7 +168,7 @@ $(document).ready(function () {
                 const videoBox = self.find(".vimeo-container");
                 const videoThumb = self.find(".vimeo-thumb");
 
-                console.log(videoID, videoBox);
+                if (!videoBox.length && !videoID) return;
 
                 var player = new Vimeo.Player(videoBox, {
                     id: videoID,
