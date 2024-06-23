@@ -794,7 +794,7 @@ $(document).ready(function () {
 
         containers.each(function () {
             const self = $(this);
-            const items = self.find(".res-items .w-layout-cell");
+            const items = self.find(".res-items .w-dyn-item");
 
             const mm = gsap.matchMedia();
 

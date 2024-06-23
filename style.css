@@ -476,7 +476,7 @@ code {
   display: block !important;
 }
 
-.res-items .w-layout-cell {
+.res-items .w-dyn-item {
   overflow: hidden;
 }
 
