@@ -731,6 +731,7 @@ $(document).ready(function () {
             .to(
                 heroRight,
                 {
+                    delay: 0.4,
                     clipPath: "inset(0% 0% 0% 0%)",
                     duration: 0.8,
                     ease: Power2.easeOut
