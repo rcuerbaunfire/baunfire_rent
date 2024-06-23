@@ -717,11 +717,14 @@ $(document).ready(function () {
             const heroLeft = self.find(".hero-left-container");
 
             gsap.timeline()
-            .to(
+            .fromTo(
                 heroLeft,
                 {
+                    autoAlpha: 0,
+                },
+                {
                     autoAlpha: 1,
-                    duration: 0.4,
+                    duration: 0.6,
                     ease: Power2.easeOut
                 }
             )
