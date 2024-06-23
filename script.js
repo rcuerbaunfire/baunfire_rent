@@ -681,7 +681,7 @@ $(document).ready(function () {
                 overlay.click(function () {
                     allItems.toggleClass("open");
 
-                    if (!allItems.hasClass("open")) {
+                    if (allItems.hasClass("open")) {
                         gsap.fromTo(
                             featContainer,
                             {
