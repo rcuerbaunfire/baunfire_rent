@@ -1137,6 +1137,15 @@ $(document).ready(function () {
         });
     }
 
+    function removeEmpties() {
+        function emptyCTA() {
+            const items = $(".cta.is-lp.w-dyn-bind-empty");
+            items.parent().remove();
+        }
+
+        emptyCTA();
+    }
+
     nav();
     duplicatesForMobile();
     solHero();
@@ -1154,4 +1163,5 @@ $(document).ready(function () {
     fiftyFiftyStatsSlideIn();
     aboutUsSlideIn();
     allResources();
+    removeEmpties();
 });
