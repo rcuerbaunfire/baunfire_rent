@@ -667,6 +667,7 @@ $(document).ready(function () {
         containers.each(function () {
             const self = $(this);
             const allItems = self.find(".lp-item");
+            const allFeatContainers = self.find(".lp-feat");
 
             allItems.each(function () {
                 const subSelf = $(this);
@@ -679,6 +680,35 @@ $(document).ready(function () {
 
                 overlay.click(function () {
                     allItems.toggleClass("open");
+
+                    if (!allItems.hasClass("open")) {
+                        gsap.fromTo(
+                            featContainer,
+                            {
+                                height: 0,
+                                autoAlpha: 0,
+                            },
+                            {
+                                height: "auto",
+                                duration: 0.6,
+                                autoAlpha: 1,
+                                ease: Power2.easeOut,
+                                overwrite: true,
+                            }
+                        );
+                    } else {
+                        gsap.to(featContainer, {
+                            height: 0,
+                            duration: 0.6,
+                            ease: Power2.easeOut,
+                            overwrite: true,
+                            onStart: () => {
+                                gsap.set(featContainer, {
+                                    autoAlpha: 0,
+                                });
+                            },
+                        });
+                    }
                 });
             });
         })
