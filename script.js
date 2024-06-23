@@ -686,12 +686,10 @@ $(document).ready(function () {
                             allFeatContainers,
                             {
                                 height: 0,
-                                autoAlpha: 0,
                             },
                             {
                                 height: "auto",
                                 duration: 0.6,
-                                autoAlpha: 1,
                                 ease: Power2.easeOut,
                                 overwrite: true,
                             }
@@ -701,12 +699,7 @@ $(document).ready(function () {
                             height: 0,
                             duration: 0.6,
                             ease: Power2.easeOut,
-                            overwrite: true,
-                            onStart: () => {
-                                gsap.set(allFeatContainers, {
-                                    autoAlpha: 0,
-                                });
-                            },
+                            overwrite: true
                         });
                     }
                 });
