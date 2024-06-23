@@ -437,7 +437,7 @@ code {
   border: 1px solid #8590fb;
   border-radius: 0 0 4px 4px;
 }
-.lp-item .lp-feat {
+.lp-item .lp-feat ul {
   list-style: none;
   padding: 0;
 }
