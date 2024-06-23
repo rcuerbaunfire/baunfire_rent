@@ -714,15 +714,26 @@ $(document).ready(function () {
         containers.each(function () {
             const self = $(this);
             const heroRight = self.find(".hero-right-container");
+            const heroLeft = self.find(".hero-left-container");
 
-            gsap.to(
+            gsap.timeline()
+            .to(
+                heroLeft,
+                {
+                    autoAlpha: 1,
+                    duration: 0.4,
+                    ease: Power2.easeOut
+                }
+            )
+            .to(
                 heroRight,
                 {
                     delay: 1,
                     clipPath: "inset(0% 0% 0% 0%)",
                     duration: 0.8,
                     ease: Power2.easeOut
-                }
+                },
+                "<0.2"
             )
         })
     }
