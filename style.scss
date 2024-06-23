@@ -4,7 +4,9 @@ html * {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    hyphens: auto;
+    @media only screen and (max-width: 767px) {
+        hyphens: auto;
+    }
 }
 
 .no-scroll {

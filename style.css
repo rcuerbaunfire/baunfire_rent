@@ -3,10 +3,12 @@ html * {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
+@media only screen and (max-width: 767px) {
+  h1, h2, h3, h4, h5, h6 {
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+  }
 }
 
 .no-scroll {
