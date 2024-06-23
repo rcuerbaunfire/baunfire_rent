@@ -683,7 +683,7 @@ $(document).ready(function () {
 
                     if (allItems.hasClass("open")) {
                         gsap.fromTo(
-                            featContainer,
+                            allFeatContainers,
                             {
                                 height: 0,
                                 autoAlpha: 0,
@@ -697,13 +697,13 @@ $(document).ready(function () {
                             }
                         );
                     } else {
-                        gsap.to(featContainer, {
+                        gsap.to(allFeatContainers, {
                             height: 0,
                             duration: 0.6,
                             ease: Power2.easeOut,
                             overwrite: true,
                             onStart: () => {
-                                gsap.set(featContainer, {
+                                gsap.set(allFeatContainers, {
                                     autoAlpha: 0,
                                 });
                             },
