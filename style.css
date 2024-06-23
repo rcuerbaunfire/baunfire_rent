@@ -437,6 +437,10 @@ code {
   border: 1px solid #8590fb;
   border-radius: 0 0 4px 4px;
 }
+.lp-item .lp-feat {
+  list-style: none;
+  padding: 0;
+}
 
 .about-cartd-description,
 .two-line-text {

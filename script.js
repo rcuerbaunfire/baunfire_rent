@@ -668,6 +668,7 @@ $(document).ready(function () {
             const self = $(this);
             const allItems = self.find(".lp-item");
             const allFeatContainers = self.find(".lp-feat");
+            const allFeatItem = allFeatContainers.find("li");
 
             allItems.each(function () {
                 const subSelf = $(this);
@@ -704,6 +705,8 @@ $(document).ready(function () {
                     }
                 });
             });
+
+            allFeatItem.insertBefore(`<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M19.5 7L9.50009 17.0001L4.5 12" stroke="#7E93FB" stroke-width="1.5"/></svg>`);
         })
     }
 
