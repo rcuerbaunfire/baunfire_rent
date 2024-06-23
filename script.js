@@ -867,7 +867,7 @@ $(document).ready(function () {
                             ease: Power3.easeOut,
                             duration: 0.6
                         },
-                        "<0.2"
+                        "<0.1"
                     )
                     .fromTo(logo,
                         {
@@ -880,7 +880,7 @@ $(document).ready(function () {
                             ease: Power3.easeOut,
                             duration: 0.4
                         },
-                        "<0.4"
+                        "<0.3"
                     )
                     .fromTo(content,
                         {
