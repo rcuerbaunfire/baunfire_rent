@@ -445,6 +445,14 @@ code {
 .lp-item .lp-feat ul {
   list-style: none;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
 }
 .lp-item .lp-feat ul li {
   display: -webkit-box;
