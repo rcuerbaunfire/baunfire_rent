@@ -706,7 +706,7 @@ $(document).ready(function () {
                 });
             });
 
-            allFeatItem.before(`<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M19.5 7L9.50009 17.0001L4.5 12" stroke="#7E93FB" stroke-width="1.5"/></svg>`);
+            allFeatItem.prepend(`<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M19.5 7L9.50009 17.0001L4.5 12" stroke="#7E93FB" stroke-width="1.5"/></svg>`);
         })
     }
 
