@@ -836,8 +836,6 @@ $(document).ready(function () {
                     return () => { };
                 }
             );
-
-
         })
     }
 
