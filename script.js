@@ -700,7 +700,7 @@ $(document).ready(function () {
                         gsap.fromTo(
                             allFeatContainers,
                             {
-                                height: 178,
+                                height: 186,
                             },
                             {
                                 height: "auto",
@@ -711,7 +711,7 @@ $(document).ready(function () {
                         );
                     } else {
                         gsap.to(allFeatContainers, {
-                            height: 178,
+                            height: 186,
                             duration: 0.6,
                             ease: Power2.easeOut,
                             overwrite: true
