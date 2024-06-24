@@ -236,7 +236,20 @@ $(document).ready(function () {
             });
         }
 
+        function featureCardsDark() {
+            const container = $(".feature-cards");
+            if (!container.length) return;
+
+            container.each(function () {
+                const self = $(this);
+                const targetContainer = self.find(".fc-inner.mobile-owl-carousel");
+                const darkboxes = self.find(".darkbox")
+                darkboxes.clone().appendTo(targetContainer);
+            });
+        }
+
         featureCards();
+        featureCardsDark();
     }
 
     function carousels() {
