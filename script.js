@@ -237,7 +237,7 @@ $(document).ready(function () {
         }
 
         function featureCardsDark() {
-            const container = $(".feature-cards");
+            const container = $(".feature-cards-dark");
             if (!container.length) return;
 
             container.each(function () {
