@@ -126,12 +126,14 @@ html * {
 }
 
 .sol-items .owl-dots,
-.res-items .owl-dots {
+.res-items .owl-dots,
+.fc-items .owl-dots {
   width: calc(100% - 182px);
 }
 @media only screen and (max-width: 767px) {
   .sol-items .owl-dots,
-  .res-items .owl-dots {
+  .res-items .owl-dots,
+  .fc-items .owl-dots {
     width: calc(100% - 112px);
   }
 }
@@ -191,10 +193,6 @@ html * {
     min-width: calc(100% + 60px);
     overflow: hidden;
   }
-}
-
-.fc-items .owl-dots {
-  width: 100%;
 }
 
 .res-items .owl-dot:not(.active),

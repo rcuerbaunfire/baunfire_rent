@@ -104,7 +104,8 @@ h6 {
 }
 
 .sol-items,
-.res-items {
+.res-items,
+.fc-items {
 	.owl-dots {
 		width: calc(100% - 182px);
 
@@ -175,12 +176,6 @@ h6 {
 			min-width: calc(100% + 60px);
 			overflow: hidden;
 		}
-	}
-}
-
-.fc-items {
-	.owl-dots {
-		width: 100%;
 	}
 }
 

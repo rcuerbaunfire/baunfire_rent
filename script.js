@@ -344,13 +344,14 @@ $(document).ready(function () {
                         if (isMobile) {
                             if (!self.hasClass("owl-loaded")) {
                                 carouselInstance = self.owlCarousel({
-                                    nav: false,
+                                    nav: true,
                                     items: 1,
                                     smartSpeed: 1000,
                                     loop: false,
                                     navRewind: false,
                                     dotsEach: true,
-                                    margin: 16,
+                                    margin: 12,
+                                    navText: [leftArrow, rightArrow],
                                 });
                             }
                         }
