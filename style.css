@@ -244,12 +244,10 @@ html * {
 }
 
 @media only screen and (max-width: 767px) {
-  .sh-items .owl-nav,
-  .lp-items .owl-nav {
+  .sh-items .owl-nav {
     display: none;
   }
-  .sh-items .owl-dots,
-  .lp-items .owl-dots {
+  .sh-items .owl-dots {
     width: 100%;
   }
 }
