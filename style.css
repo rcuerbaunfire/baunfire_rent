@@ -127,13 +127,15 @@ html * {
 
 .sol-items .owl-dots,
 .res-items .owl-dots,
-.fc-items .owl-dots {
+.fc-items .owl-dots,
+.lp-items .owl-dots {
   width: calc(100% - 182px);
 }
 @media only screen and (max-width: 767px) {
   .sol-items .owl-dots,
   .res-items .owl-dots,
-  .fc-items .owl-dots {
+  .fc-items .owl-dots,
+  .lp-items .owl-dots {
     width: calc(100% - 112px);
   }
 }

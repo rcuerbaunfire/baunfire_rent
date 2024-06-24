@@ -411,7 +411,7 @@ $(document).ready(function () {
                                     dotsEach: true,
                                     navText: [leftArrow, rightArrow],
                                     responsive: {
-                                        0: { autoWidth: false, margin: 20, items: 1 },
+                                        0: { autoWidth: false, margin: 12, items: 1 },
                                         768: { autoWidth: true, margin: 24 },
                                         1366: { autoWidth: true, margin: 24 },
                                     },
@@ -431,7 +431,7 @@ $(document).ready(function () {
                                     dotsEach: true,
                                     navText: [leftArrow, rightArrow],
                                     responsive: {
-                                        0: { autoWidth: false, margin: 20, items: 1 },
+                                        0: { autoWidth: false, margin: 12, items: 1 },
                                         768: { autoWidth: true, margin: 24 },
                                         1366: { autoWidth: true, margin: 24 },
                                     },
