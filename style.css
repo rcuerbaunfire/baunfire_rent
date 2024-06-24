@@ -737,3 +737,10 @@ code {
   border-top-right-radius: 4px;
   overflow: hidden;
 }
+
+@media only screen and (max-width: 990px) {
+  body,
+  section {
+    max-width: 100vw;
+  }
+}
