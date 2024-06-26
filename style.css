@@ -770,3 +770,7 @@ code {
   color: #4561EC !important;
   font-weight: 600;
 }
+
+.transition-fade {
+  visibility: hidden;
+}
