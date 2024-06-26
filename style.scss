@@ -841,3 +841,10 @@ code {
 .blog-details h5 {
     font-weight: normal;
 }
+
+.blog-content {
+    div:empty,
+    p:empty {
+        display: none;
+    }
+}

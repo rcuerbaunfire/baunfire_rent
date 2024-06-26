@@ -755,3 +755,8 @@ code {
 .blog-details h5 {
   font-weight: normal;
 }
+
+.blog-content div:empty,
+.blog-content p:empty {
+  display: none;
+}
