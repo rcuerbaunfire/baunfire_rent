@@ -1178,6 +1178,14 @@ $(document).ready(function () {
         emptyElements.remove();
     }
 
+    function refresh() {
+        const triggers = ScrollTrigger.getAll();
+
+        triggers.forEach(trigger => {
+            trigger.refresh(true);
+        });
+    }
+
     nav();
     duplicatesForMobile();
     solHero();
@@ -1197,4 +1205,5 @@ $(document).ready(function () {
     allResources();
     removeEmpties();
     blogCleanup();
+    refresh();
 });
