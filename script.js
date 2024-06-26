@@ -1240,6 +1240,8 @@ $(document).ready(function () {
     duplicatesForMobile();
     solHero();
     carousels();
+    animatedFade();
+    animatedTop();
     handleVideo();
     animatedContactHeading();
     solutionAccordion();
@@ -1255,8 +1257,6 @@ $(document).ready(function () {
     allResources();
     removeEmpties();
     blogCleanup();
-    animatedFade();
-    animatedTop();
     
     setTimeout(() => {
         refresh();
