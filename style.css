@@ -761,6 +761,8 @@ code {
   display: none;
 }
 .blog-content .w-richtext:before,
-.blog-content .w-richtext:after {
+.blog-content .w-richtext:after,
+.blog-content .w-embed:before,
+.blog-content .w-embed:after {
   content: none !important;
 }

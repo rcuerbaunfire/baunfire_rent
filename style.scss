@@ -849,7 +849,9 @@ code {
 	}
 
 	.w-richtext:before,
-	.w-richtext:after {
-        content: none !important;
+	.w-richtext:after,
+	.w-embed:before,
+	.w-embed:after {
+		content: none !important;
 	}
 }
