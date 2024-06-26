@@ -1229,8 +1229,8 @@ $(document).ready(function () {
     }
 
     function refresh() {
+        ScrollTrigger.sort();
         const triggers = ScrollTrigger.getAll();
-
         triggers.forEach(trigger => {
             trigger.refresh(true);
         });
