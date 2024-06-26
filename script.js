@@ -1026,53 +1026,6 @@ $(document).ready(function () {
         })
     }
 
-    function aboutUsSlideIn() {
-        const containers = $("section.about-us.is-home");
-        if (!containers.length) return;
-
-        containers.each(function () {
-            const self = $(this);
-            const image = self.find(".global-container > img");
-            const content = self.find(".eyebrow-container, .ab-content");
-
-            gsap.fromTo(image,
-                {
-                    autoAlpha: 0,
-                    y: 30,
-                },
-                {
-                    autoAlpha: 1,
-                    y: 0,
-                    duration: 0.8,
-                    ease: Power3.easeOut,
-                    scrollTrigger: {
-                        trigger: image,
-                        start: "top 50%",
-                        invalidateOnRefresh: true,
-                    },
-                }
-            );
-
-            gsap.fromTo(content,
-                {
-                    autoAlpha: 0,
-                    y: 30,
-                },
-                {
-                    autoAlpha: 1,
-                    y: 0,
-                    duration: 0.6,
-                    ease: Power3.easeOut,
-                    scrollTrigger: {
-                        trigger: content,
-                        start: "top 40%",
-                        invalidateOnRefresh: true,
-                    },
-                }
-            );
-        })
-    }
-
     function allResources() {
         const containers = $(".all-resource-carousel");
         if (!containers.length) return;
