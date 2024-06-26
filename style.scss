@@ -237,6 +237,13 @@ h6 {
 			color: #7e93fb;
 		}
 	}
+
+    &.no-carousel {
+        .tes-item {
+            border: none;
+            width: 100%;
+        }
+    }
 }
 
 @media only screen and (max-width: 767px) {
