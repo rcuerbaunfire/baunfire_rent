@@ -1206,7 +1206,6 @@ $(document).ready(function () {
     resItemsSlideIn();
     propFixedScrollSlideIn();
     fiftyFiftyStatsSlideIn();
-    aboutUsSlideIn();
     allResources();
     removeEmpties();
     blogCleanup();
