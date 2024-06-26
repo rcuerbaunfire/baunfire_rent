@@ -845,7 +845,7 @@ $(document).ready(function () {
 
             gsap.to(self, {
                 autoAlpha: 1,
-                y: 0,]
+                y: 0,
                 duration: 0.8,
                 overwrite: true,
                 ease: Power2.easeOut,
