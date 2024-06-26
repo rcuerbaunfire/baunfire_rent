@@ -771,6 +771,7 @@ code {
   font-weight: 600;
 }
 
-.transition-fade {
+.transition-fade,
+.transition-top {
   visibility: hidden;
 }
