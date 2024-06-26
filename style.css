@@ -760,3 +760,7 @@ code {
 .blog-content p:empty {
   display: none;
 }
+.blog-content .w-richtext:before,
+.blog-content .w-richtext:after {
+  content: none !important;
+}

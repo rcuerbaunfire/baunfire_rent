@@ -839,12 +839,17 @@ code {
 .blog-details h3,
 .blog-details h4,
 .blog-details h5 {
-    font-weight: normal;
+	font-weight: normal;
 }
 
 .blog-content {
-    div:empty,
-    p:empty {
-        display: none;
-    }
+	div:empty,
+	p:empty {
+		display: none;
+	}
+
+	.w-richtext:before,
+	.w-richtext:after {
+        content: none !important;
+	}
 }
