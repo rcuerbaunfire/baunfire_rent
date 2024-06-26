@@ -828,7 +828,7 @@ $(document).ready(function () {
                     duration: 0.6,
                     scrollTrigger: {
                         trigger: self,
-                        start: "top 70%",
+                        start: "top 65%",
                         invalidateOnRefresh: true,
                     },
                 },
@@ -845,14 +845,13 @@ $(document).ready(function () {
 
             gsap.to(self, {
                 autoAlpha: 1,
-                y: 0,
+                y: 0,]
                 duration: 0.8,
+                overwrite: true,
+                ease: Power2.easeOut,
                 scrollTrigger: {
                     trigger: self,
                     start: "top 65%",
-                    duration: 0.8,
-                    overwrite: true,
-                    ease: Power2.easeOut,
                     invalidateOnRefresh: true,
                 },
             })
