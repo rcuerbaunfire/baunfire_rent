@@ -287,16 +287,17 @@ $(document).ready(function () {
 
                     globalCTA.click(function () {
                         player.unload().then(function () {
-                            desc.fadeOut();
-                            player = new Vimeo.Player(videoBox, {
-                                id: videoID,
-                                controls: true,
-                                autoplay: true,
-                                muted: false,
-                                referrerpolicy: "origin",
-                            });
                         }).catch(function (error) {
                             console.error('Error unloading the player:', error);
+                        });
+                        
+                        desc.fadeOut();
+                        player = new Vimeo.Player(videoBox, {
+                            id: videoID,
+                            controls: true,
+                            autoplay: true,
+                            muted: false,
+                            referrerpolicy: "origin",
                         });
                     })
                 }
