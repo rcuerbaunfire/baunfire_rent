@@ -51,12 +51,30 @@ $(document).ready(function () {
         }
     }
 
-    function refresh() {
-        ScrollTrigger.sort();
-        const triggers = ScrollTrigger.getAll();
-        triggers.forEach(trigger => {
-            trigger.refresh(true);
-        });
+    function refresh(firstLoad = false) {
+        if (firstLoad) {
+            $('body').imagesLoaded()
+                .always(function (instance) {
+                    console.log('all images loaded');
+                })
+                .done(function (instance) {
+                    const triggers = ScrollTrigger.getAll();
+                    triggers.forEach(trigger => {
+                        trigger.refresh(true);
+                    });
+                })
+                .fail(function () {
+                    //
+                })
+                .progress(function (instance, image) {
+                    //
+                });
+        } else {
+            const triggers = ScrollTrigger.getAll();
+            triggers.forEach(trigger => {
+                trigger.refresh(true);
+            });
+        }
     }
 
     function nav() {
@@ -1211,8 +1229,5 @@ $(document).ready(function () {
     allResources();
     removeEmpties();
     blogCleanup();
-
-    setTimeout(() => {
-        refresh();
-    }, 1000);
+    refresh(true);
 });
