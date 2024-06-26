@@ -283,11 +283,11 @@ $(document).ready(function () {
                     });
                 } else {
                     const globalCTA = self.find(".global-cta.vid-play");
-                    const desc = self.find(".video-description-container");
+                    const itemsToHide = self.find(".video-description-container, .video-overlay");
 
                     globalCTA.click(function () {
                         player.destroy().then(function () {
-                            desc.fadeOut();
+                            itemsToHide.fadeOut();
                             player = new Vimeo.Player(videoBox, {
                                 id: videoID,
                                 controls: true,
