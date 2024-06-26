@@ -854,4 +854,11 @@ code {
 	.w-embed:after {
 		content: none !important;
 	}
+
+    p {
+        a {
+            color: #4561EC !important;
+            font-weight: 600;
+        }
+    }
 }
