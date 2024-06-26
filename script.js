@@ -1178,8 +1178,8 @@ $(document).ready(function () {
         emptyElements.remove();
     }
 
-    function animatedFade() {
-        const fadedElements = gsap.utils.toArray(".transition-fade");
+    function animatedTop() {
+        const fadedElements = gsap.utils.toArray(".transition-top");
         if (fadedElements.length) {
             fadedElements.forEach((el) => {
                 gsap.fromTo(el,
@@ -1192,10 +1192,35 @@ $(document).ready(function () {
                         autoAlpha: 1,
                         scrollTrigger: {
                             trigger: el,
-                            start: "top 70%",
+                            start: "top 65%",
                             duration: 0.8,
                             overwrite: true,
                             ease: Power2.easeOut,
+                            invalidateOnRefresh: true,
+                        },
+                    }
+                );
+            });
+        }
+    }
+
+    function animatedFade() {
+        const fadedElements = gsap.utils.toArray(".transition-fade");
+        if (fadedElements.length) {
+            fadedElements.forEach((el) => {
+                gsap.fromTo(el,
+                    {
+                        autoAlpha: 0,
+                    },
+                    {
+                        autoAlpha: 1,
+                        scrollTrigger: {
+                            trigger: el,
+                            start: "top 65%",
+                            duration: 0.8,
+                            overwrite: true,
+                            ease: Power2.easeOut,
+                            invalidateOnRefresh: true,
                         },
                     }
                 );
@@ -1231,5 +1256,6 @@ $(document).ready(function () {
     removeEmpties();
     blogCleanup();
     animatedFade();
+    animatedTop();
     refresh();
 });
