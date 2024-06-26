@@ -849,7 +849,10 @@ $(document).ready(function () {
                 duration: 0.8,
                 scrollTrigger: {
                     trigger: self,
-                    start: "top 80%",
+                    start: "top 65%",
+                    duration: 0.8,
+                    overwrite: true,
+                    ease: Power2.easeOut,
                     invalidateOnRefresh: true,
                 },
             })
@@ -1209,7 +1212,7 @@ $(document).ready(function () {
     allResources();
     removeEmpties();
     blogCleanup();
-    
+
     setTimeout(() => {
         refresh();
     }, 1000);
