@@ -836,7 +836,7 @@ $(document).ready(function () {
                                 stagger: { each: 0.3 },
                                 scrollTrigger: {
                                     trigger: self,
-                                    start: "top 50%",
+                                    start: "top 30%",
                                     markers: true,
                                     invalidateOnRefresh: true,
                                 },
