@@ -541,7 +541,7 @@ code {
 		}
 
 		&.outline:not(.white),
-		&.white:not(.outline) {
+		&.white:not(.outline):not(.vid-play) {
 			svg {
 				circle {
 					fill: white;

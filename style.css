@@ -497,10 +497,10 @@ code {
 .global-cta:hover:not(.outline):not(.white) svg path, .global-cta:hover.white.outline svg path {
   stroke: white;
 }
-.global-cta:hover.outline:not(.white) svg circle, .global-cta:hover.white:not(.outline) svg circle {
+.global-cta:hover.outline:not(.white) svg circle, .global-cta:hover.white:not(.outline):not(.vid-play) svg circle {
   fill: white;
 }
-.global-cta:hover.outline:not(.white) svg path, .global-cta:hover.white:not(.outline) svg path {
+.global-cta:hover.outline:not(.white) svg path, .global-cta:hover.white:not(.outline):not(.vid-play) svg path {
   stroke: #4561ec;
 }
 
