@@ -629,17 +629,12 @@ $(document).ready(function () {
         containers.each(function () {
             const self = $(this);
             const allItems = self.find(".faq-item");
-            const allBody = self.find(".faq-body");
 
             allItems.click(function () {
                 const subSelf = $(this);
+                const body = subSelf.find(".faq-body");
 
                 if (!subSelf.hasClass("open")) {
-                    const body = subSelf.find(".faq-body");
-
-                    resetItems(allBody);
-                    allItems.removeClass("open");
-
                     subSelf.addClass("open");
                     gsap.fromTo(body,
                         {
@@ -654,29 +649,22 @@ $(document).ready(function () {
                             overwrite: true
                         }
                     )
+                } else {
+                    subSelf.removeClass("open");
+                    gsap.to(body, {
+                        height: 0,
+                        duration: 0.6,
+                        ease: Power2.easeOut,
+                        overwrite: true,
+                        onStart: () => {
+                            gsap.set(body, {
+                                autoAlpha: 0,
+                            });
+                        },
+                    });
                 }
             });
-
-            allItems[0].click();
-        })
-
-        function resetItems(items) {
-            items.each(function () {
-                const self = $(this);
-
-                gsap.to(self, {
-                    height: 0,
-                    duration: 0.6,
-                    ease: Power2.easeOut,
-                    overwrite: true,
-                    onStart: () => {
-                        gsap.set(self, {
-                            autoAlpha: 0,
-                        });
-                    },
-                });
-            })
-        }
+        });
     }
 
     function packages() {
