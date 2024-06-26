@@ -263,29 +263,34 @@ $(document).ready(function () {
             const self = $(this);
 
             if (self.hasClass("tes-items")) {
-                const carouselInstance = self.owlCarousel({
-                    nav: true,
-                    smartSpeed: 1000,
-                    items: 1,
-                    loop: true,
-                    navRewind: false,
-                    dotsEach: true,
-                    navText: [leftArrow, rightArrow],
-                    margin: 60,
-                });
+                if (self.children().length > 1) {
+                    const carouselInstance = self.owlCarousel({
+                        nav: true,
+                        smartSpeed: 1000,
+                        items: 1,
+                        loop: true,
+                        navRewind: false,
+                        dotsEach: true,
+                        navText: [leftArrow, rightArrow],
+                        margin: 60,
+                    });
 
-                const dots = self.find(".owl-dot");
-                dots.each(function (index) {
-                    const dot = $(this);
-                    const num = index + 1;
+                    const dots = self.find(".owl-dot");
+                    dots.each(function (index) {
+                        const dot = $(this);
+                        const num = index + 1;
 
-                    if (num == dots.length) {
-                        dot.children().remove();
-                        dot.html(`<span>${num}</span>/<span>${num}</span>`);
-                    } else {
-                        dot.children("span").text(num);
-                    }
-                });
+                        if (num == dots.length) {
+                            dot.children().remove();
+                            dot.html(`<span>${num}</span>/<span>${num}</span>`);
+                        } else {
+                            dot.children("span").text(num);
+                        }
+                    });
+                } else {
+                    self.removeClass("owl-carousel");
+                    self.addClass("no-carousel");
+                }
 
             } else if (self.hasClass("sol-items")) {
                 const carouselInstance = self.owlCarousel({
