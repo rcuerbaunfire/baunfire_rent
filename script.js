@@ -1182,6 +1182,14 @@ $(document).ready(function () {
         emptyStats();
     }
 
+    function blogCleanup() {
+        const container = $(".blog-content");
+        if (!container.length) return;
+
+        const emptyElements = container.find("div:empty, p:empty");
+        emptyElements.remove();
+    }
+
     nav();
     duplicatesForMobile();
     solHero();
@@ -1200,4 +1208,5 @@ $(document).ready(function () {
     aboutUsSlideIn();
     allResources();
     removeEmpties();
+    blogCleanup();
 });
