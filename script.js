@@ -1257,5 +1257,8 @@ $(document).ready(function () {
     blogCleanup();
     animatedFade();
     animatedTop();
-    refresh();
+    
+    setTimeout(() => {
+        refresh();
+    }, 1000);
 });
