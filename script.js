@@ -1178,6 +1178,31 @@ $(document).ready(function () {
         emptyElements.remove();
     }
 
+    function animatedFade() {
+        const fadedElements = gsap.utils.toArray(".transition-fade");
+        if (fadedElements.length) {
+            fadedElements.forEach((el) => {
+                gsap.fromTo(el,
+                    {
+                        autoAlpha: 0,
+                        y: 20,
+                    },
+                    {
+                        y: 0,
+                        autoAlpha: 1,
+                        scrollTrigger: {
+                            trigger: el,
+                            start: "top 70%",
+                            duration: 0.8,
+                            overwrite: true,
+                            ease: Power2.easeOut,
+                        },
+                    }
+                );
+            });
+        }
+    }
+
     function refresh() {
         const triggers = ScrollTrigger.getAll();
 
@@ -1205,5 +1230,6 @@ $(document).ready(function () {
     allResources();
     removeEmpties();
     blogCleanup();
+    animatedFade();
     refresh();
 });
