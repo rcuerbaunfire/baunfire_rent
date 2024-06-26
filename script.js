@@ -837,6 +837,7 @@ $(document).ready(function () {
                                 scrollTrigger: {
                                     trigger: self,
                                     start: "top 50%",
+                                    markers: true,
                                     invalidateOnRefresh: true,
                                 },
                             }
