@@ -238,12 +238,12 @@ h6 {
 		}
 	}
 
-    &.no-carousel {
-        .tes-item {
-            border: none;
-            width: 100%;
-        }
-    }
+	&.no-carousel {
+		.tes-item {
+			border: none;
+			width: 100%;
+		}
+	}
 }
 
 @media only screen and (max-width: 767px) {
@@ -832,4 +832,12 @@ code {
 	section {
 		max-width: 100vw;
 	}
+}
+
+.blog-details h1,
+.blog-details h2,
+.blog-details h3,
+.blog-details h4,
+.blog-details h5 {
+    font-weight: normal;
 }
