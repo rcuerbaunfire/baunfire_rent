@@ -1,6 +1,64 @@
 $(document).ready(function () {
     console.log('bf script init');
 
+    function animatedTop() {
+        const fadedElements = gsap.utils.toArray(".transition-top");
+        if (fadedElements.length) {
+            fadedElements.forEach((el) => {
+                gsap.fromTo(el,
+                    {
+                        autoAlpha: 0,
+                        y: 20,
+                    },
+                    {
+                        y: 0,
+                        autoAlpha: 1,
+                        scrollTrigger: {
+                            trigger: el,
+                            start: "top 65%",
+                            duration: 0.8,
+                            overwrite: true,
+                            ease: Power2.easeOut,
+                            invalidateOnRefresh: true,
+                        },
+                    }
+                );
+            });
+        }
+    }
+
+    function animatedFade() {
+        const fadedElements = gsap.utils.toArray(".transition-fade");
+        if (fadedElements.length) {
+            fadedElements.forEach((el) => {
+                gsap.fromTo(el,
+                    {
+                        autoAlpha: 0,
+                    },
+                    {
+                        autoAlpha: 1,
+                        scrollTrigger: {
+                            trigger: el,
+                            start: "top 65%",
+                            duration: 0.8,
+                            overwrite: true,
+                            ease: Power2.easeOut,
+                            invalidateOnRefresh: true,
+                        },
+                    }
+                );
+            });
+        }
+    }
+
+    function refresh() {
+        ScrollTrigger.sort();
+        const triggers = ScrollTrigger.getAll();
+        triggers.forEach(trigger => {
+            trigger.refresh(true);
+        });
+    }
+
     function nav() {
         const nav = $(".w-nav");
 
@@ -1178,70 +1236,12 @@ $(document).ready(function () {
         emptyElements.remove();
     }
 
-    function animatedTop() {
-        const fadedElements = gsap.utils.toArray(".transition-top");
-        if (fadedElements.length) {
-            fadedElements.forEach((el) => {
-                gsap.fromTo(el,
-                    {
-                        autoAlpha: 0,
-                        y: 20,
-                    },
-                    {
-                        y: 0,
-                        autoAlpha: 1,
-                        scrollTrigger: {
-                            trigger: el,
-                            start: "top 65%",
-                            duration: 0.8,
-                            overwrite: true,
-                            ease: Power2.easeOut,
-                            invalidateOnRefresh: true,
-                        },
-                    }
-                );
-            });
-        }
-    }
-
-    function animatedFade() {
-        const fadedElements = gsap.utils.toArray(".transition-fade");
-        if (fadedElements.length) {
-            fadedElements.forEach((el) => {
-                gsap.fromTo(el,
-                    {
-                        autoAlpha: 0,
-                    },
-                    {
-                        autoAlpha: 1,
-                        scrollTrigger: {
-                            trigger: el,
-                            start: "top 65%",
-                            duration: 0.8,
-                            overwrite: true,
-                            ease: Power2.easeOut,
-                            invalidateOnRefresh: true,
-                        },
-                    }
-                );
-            });
-        }
-    }
-
-    function refresh() {
-        ScrollTrigger.sort();
-        const triggers = ScrollTrigger.getAll();
-        triggers.forEach(trigger => {
-            trigger.refresh(true);
-        });
-    }
-
+    animatedFade();
+    animatedTop();
     nav();
     duplicatesForMobile();
     solHero();
     carousels();
-    animatedFade();
-    animatedTop();
     handleVideo();
     animatedContactHeading();
     solutionAccordion();
