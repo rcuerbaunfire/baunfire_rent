@@ -766,7 +766,7 @@ code {
 .blog-content .w-embed:after {
   content: none !important;
 }
-.blog-content p a {
+.blog-content a {
   color: #4561EC !important;
   font-weight: 600;
   text-decoration: none !important;
